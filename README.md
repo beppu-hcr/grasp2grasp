@@ -40,7 +40,7 @@ python train_ae.py --config /path/to/vae_config
 ```
 
 ## Pre-save Features
-Precompute and save Hand latent representations, GWH, Jacobian information using scripts in `./dataset/scripts` (⚠️ outputs ~1.1 TB)
+Precompute and save Hand latent representations, GWH, Jacobian information using scripts in `./dataset/scripts` (⚠️ outputs ~2 TB)
 
 ## Train SB Models
 ```
