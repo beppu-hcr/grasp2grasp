@@ -27,8 +27,7 @@ conda activate grasp2grasp
 ```
 
 ## Data Download
-Visit visit
-[https://irvlutd.github.io/MultiGripperGrasp/](https://irvlutd.github.io/MultiGripperGrasp/) and download the MultiGripperGrasp dataset.
+Visit [https://irvlutd.github.io/MultiGripperGrasp/](https://irvlutd.github.io/MultiGripperGrasp/) and download the MultiGripperGrasp dataset.
 
 ## Data Preprocessing
 Preprocess the dataset (⚠️ outputs ~1.1 TB) using scripts in `./dataset/preproc`
