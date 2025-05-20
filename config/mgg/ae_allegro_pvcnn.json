@@ -1,0 +1,40 @@
+{
+    "file_name":"ae_allegro_pvcnn_kl",
+    "data_dir": "/data/XXX/data/grasp_data",
+    "hand": "Allegro",
+    "hand_encoder": "PVCNN",
+    "seed": 0,
+    "epochs": 18,
+    "batch_size": 256,
+    "learning_rate": 3e-4,
+    "use_cuda": 1,
+    "gpu": "1",
+    "num_threads": 24,
+    "dataloader_workers": 16,
+    "train_mode": "TrainTest",
+    "dataset": "mgg",
+    "encoder_layer_sizes": [
+        1472,
+        2048,
+        1024,
+        768
+    ],
+    "decoder_layer_sizes": [
+        2048,
+        1024,
+        256,
+        25
+    ],
+    "obj_inchannel": 3,
+    "model_type": "LLM",
+    "loss_type": "CD",
+    "weight": [
+        1.0,
+        1.5,
+        0.0,
+        0.0,
+        2.0,
+        1e-5
+    ],
+    "other":"a40:1024,ae"
+}

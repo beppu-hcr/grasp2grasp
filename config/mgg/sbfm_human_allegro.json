@@ -1,0 +1,22 @@
+{
+    "file_name": "sbfm_human_allegro",
+    "data_dir": "/data/XXX/data/grasp_data",
+    "hand1": "HumanHand",
+    "hand2": "Allegro",
+    "seed": 42,
+    "epochs": 1000,
+    "batch_size": 256,
+    "learning_rate": 3e-4,
+    "warmup_total_steps": 12,
+    "grad_clip": 1.0,
+    "ema_decay": 0.9999,
+    "use_cuda": 1,
+    "gpu": "0, 1",
+    "parallel": 1,
+    "num_threads": 24,
+    "train_mode": "Train",
+    "dataset": "mgg",
+    "ckpt_save_interval": 25,
+    "pbar": 1,
+    "autoencoder_path": "checkpoints/ae.pth"
+}
