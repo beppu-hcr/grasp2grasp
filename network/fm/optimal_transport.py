@@ -7,7 +7,7 @@ import numpy as np
 import ot as pot
 import torch
 
-from network.fm.distance import compute_cross_chamfer_distance, monte_carlo_iou
+from network.fm.distance import compute_cross_chamfer_distance, monte_carlo_iou, cross_9d_distance
 
 
 class OTPlanSampler:
@@ -86,7 +86,8 @@ class OTPlanSampler:
                 x0 = x0.reshape(x0.shape[0], -1)
             if x1.dim() > 2:
                 x1 = x1.reshape(x1.shape[0], -1)
-            M = torch.cdist(x0, x1) ** 2
+            # M = torch.cdist(x0, x1) ** 2
+            M = cross_9d_distance(x0, x1)  # squared distance
         elif self.cost == "chamfer":
             M = compute_cross_chamfer_distance(x0, x1, K=128) ** 2
         elif self.cost == "gwh":

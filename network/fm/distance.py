@@ -1,6 +1,7 @@
 import torch
 from chamfer_distance import ChamferDistance as chamfer_dist
 from pytorch3d.loss import chamfer_distance
+from pytorch3d.transforms import rotation_6d_to_matrix
 import numpy as np
 from scipy.spatial import ConvexHull
 
@@ -27,6 +28,36 @@ def subsample_point_clouds(batch_points, K):
     # Gather along the points dimension
     subsampled = torch.gather(batch_points, 1, indices)
     return subsampled
+
+def cross_9d_distance(pose1: torch.Tensor, pose2: torch.Tensor) -> torch.Tensor:
+    """
+    Compute pairwise SE(3) distance between two batches of poses.
+
+    Args:
+        pose1: Tensor of shape (B1, 9) -- [t (3), rot6d (6)]
+        pose2: Tensor of shape (B2, 9)
+
+    Returns:
+        dist: Tensor of shape (B1, B2) where
+              dist[i,j] = ||t1[i]-t2[j]||^2 + ||R1[i]-R2[j]||_F^2
+    """
+    # split translation and rotation
+    t1, r6_1 = pose1[:, :3], pose1[:, 3:]
+    t2, r6_2 = pose2[:, :3], pose2[:, 3:]
+
+    # convert 6D -> 3x3
+    R1 = rotation_6d_to_matrix(r6_1)  # (B1,3,3)
+    R2 = rotation_6d_to_matrix(r6_2)  # (B2,3,3)
+
+    # pairwise squared‐L2 on translations
+    # resulting shape: (B1, B2)
+    d_t = torch.sum((t1[:, None, :] - t2[None, :, :]) ** 2, dim=2)
+
+    # pairwise squared Frobenius on rotations
+    # shape (B1, B2)
+    d_r = torch.sum((R1[:, None, :, :] - R2[None, :, :, :]) ** 2, dim=(2, 3))
+
+    return d_t + 0.1 * d_r
 
 def compute_cross_chamfer_distance(batch1, batch2, K=None):
     """
