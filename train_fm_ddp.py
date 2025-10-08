@@ -142,6 +142,6 @@ if __name__ == '__main__':
     if not os.path.exists(ckpt_dir):
         os.makedirs(ckpt_dir)
 
-    shutil.copy(args.config, save_root)
+    # shutil.copy(args.config, save_root)
 
     main(args)
