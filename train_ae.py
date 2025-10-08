@@ -322,11 +322,11 @@ if __name__ == '__main__':
                                   num_workers=args.dataloader_workers,drop_last=True, pin_memory=True,
                                   persistent_workers=True)
     if 'Val' in args.train_mode:
-        val_dataset = GraspDataset(root_dir=args.data_dir, hand=args.hand, split="val", seed=args.seed, contact=False)
-        val_loader = DataLoader(dataset=val_dataset, batch_size=args.batch_size, shuffle=False,
+        eval_dataset = GraspDataset(root_dir=args.data_dir, hand=args.hand, split="val", seed=args.seed, contact=False)
+        eval_loader = DataLoader(dataset=eval_dataset, batch_size=args.batch_size, shuffle=False,
                                   num_workers=args.dataloader_workers, pin_memory=True,
                                   persistent_workers=True)
-    if 'Test' in args.train_mode:
+    elif 'Test' in args.train_mode:
         eval_dataset = GraspDataset(root_dir=args.data_dir, hand=args.hand, split="test", seed=args.seed, contact=False)
         eval_loader = DataLoader(dataset=eval_dataset, batch_size=args.batch_size, shuffle=False,
                                   num_workers=args.dataloader_workers, pin_memory=True,

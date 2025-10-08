@@ -22,12 +22,12 @@ conda activate grasp2grasp
 If you encounter any issue, you might have to build [pytorch3d==0.7.2](https://github.com/facebookresearch/pytorch3d/tree/v0.7.2) and [xformers==0.0.21](https://github.com/facebookresearch/xformers/tree/v0.0.21) from source.
 
 ## Data Download
-Visit [https://irvlutd.github.io/MultiGripperGrasp/](https://utdallas.app.box.com/v/multi-gripper-grasp-data/) and download the MultiGripperGrasp dataset.
-
-Place and extract the dataset under `./data/`.
+Download the [MultiGripperGrasp dataset](https://utdallas.app.box.com/v/multi-gripper-grasp-data/). Place and extract the dataset under `./data/`.
 
 ## Data Preprocessing
-Preprocess the dataset using:
+> ⚠️ **IMPORTANT:** Please reserve at least 1 TB of disk space. Due to the size of the dataset, the preprocessing takes ~2 days to finish on a 48-core CPU.
+
+Preprocess the dataset and generate point cloud observations using:
 ```
 cd dataset/preproc && \
 python mgg_parse_objects.py && \
@@ -36,7 +36,6 @@ python mgg_to_pc_parallel_human.py && \
 python mgg_to_pc_parallel_shadow.py && \
 python process_contact.py
 ```
-> ⚠️ **IMPORTANT:** Please reserve at least 1 TB of disk space. Due to the size of the dataset, the preprocessing takes ~2 days to finish on a 48-core CPU.
 
 ## Train VAE
 Train the VAE using:
@@ -66,7 +65,7 @@ cd dataset/scripts && \
 python compute_gwh.py
 ```
 
-(Optional) We provided the precomputed Jacobian of each grasp [here](https://drive.google.com/drive/folders/1pywlCBnUkQbcb2vUbBa5Mpuozq416Jas?usp=drive_link). We also provide the scripts `collect_jacobian.py` under `./dataset/scripts` to save the Jacobian of new grasps. Note that `collect_jacobian.py` is implemented with a customized version of [Warp](https://github.com/NVIDIA/warp). A PR of porting this to up-to-date version of Warp would be greatly appreciated.
+(Optional) We provided the precomputed Jacobian of each grasp [here](https://drive.google.com/drive/folders/1pywlCBnUkQbcb2vUbBa5Mpuozq416Jas?usp=drive_link).
 
 ## Train SB Models
 Train the SB model using:

@@ -1,6 +1,6 @@
 {
     "file_name":"ae_shadow_pvcnn_kl",
-    "data_dir": "/data/XXX/data/grasp_data",
+    "data_dir": "./data/grasp_data",
     "hand": "shadow_hand",
     "hand_encoder": "PVCNN",
     "seed": 0,
@@ -11,7 +11,7 @@
     "gpu": "1",
     "num_threads": 18,
     "dataloader_workers": 16,
-    "train_mode": "TrainTest",
+    "train_mode": "TrainVal",
     "dataset": "mgg",
     "encoder_layer_sizes": [
         1472,
