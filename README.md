@@ -22,7 +22,7 @@ conda activate grasp2grasp
 If you encounter any issue, you might have to build [pytorch3d==0.7.2](https://github.com/facebookresearch/pytorch3d/tree/v0.7.2) and [xformers==0.0.21](https://github.com/facebookresearch/xformers/tree/v0.0.21) from source.
 
 ## Data Download
-Visit [https://irvlutd.github.io/MultiGripperGrasp/](https://irvlutd.github.io/MultiGripperGrasp/) and download the MultiGripperGrasp dataset.
+Visit [https://irvlutd.github.io/MultiGripperGrasp/](https://utdallas.app.box.com/v/multi-gripper-grasp-data/) and download the MultiGripperGrasp dataset.
 
 Place and extract the dataset under `./data/`.
 

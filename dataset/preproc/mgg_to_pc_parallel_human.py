@@ -121,7 +121,7 @@ def process_graspit_data(graspit_path, shared_dict):
         Path.mkdir(Path(hand_obj_path), exist_ok=True)
 
         # Temp: Objects already generated. Copy them here
-        base_object_path = "/diskstation/XXX/data/mgg_pc/objects/npy"
+        base_object_path = Path(__file__).parent.parent.parent / "data/mgg_pc/objects/npy"
         src_object_path = f"{base_object_path}/{object_id}.npy"
         object_path = f"{output_path}/{object_id}.npy"
         # shutil.copy(src_object_path, object_path)
