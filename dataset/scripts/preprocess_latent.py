@@ -79,7 +79,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--config', type=str, help='Path to the JSON config file')
-    parser.add_argument('--split', type=str, help='split')
     args = parser.parse_args()
 
     with open(args.config, 'r') as configfile:
@@ -89,51 +88,13 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    if args.split == 'all':
-        splits = ['train', 'val', 'test', 'reserved']
-        for split in splits:
-            save_latent_features_by_object(
-                args,
-                root_dir='/data/XXX/data/grasp_data',
-                hand=args.hand,
-                split=split,
-                batch_size=496,
-                device='cuda'
-            )
-    else:
-        if 'train' in args.split:
-            save_latent_features_by_object(
-                args,
-                root_dir='/data/XXX/data/grasp_data',
-                hand=args.hand,
-                split='train',
-                batch_size=496,
-                device='cuda'
-            )
-        if 'val' in args.split:
-            save_latent_features_by_object(
-                args,
-                root_dir='/data/XXX/data/grasp_data',
-                hand=args.hand,
-                split='val',
-                batch_size=496,
-                device='cuda'
-            )
-        if 'test' in args.split:
-            save_latent_features_by_object(
-                args,
-                root_dir='/data/XXX/data/grasp_data',
-                hand=args.hand,
-                split='test',
-                batch_size=496,
-                device='cuda'
-            )
-        if 'reserved' in args.split:
-            save_latent_features_by_object(
-                args,
-                root_dir='/data/XXX/data/grasp_data',
-                hand=args.hand,
-                split='reserved',
-                batch_size=496,
-                device='cuda'
-            )
+    splits = ['train', 'val', 'test', 'reserved']
+    for split in splits:
+        save_latent_features_by_object(
+            args,
+            root_dir='../../data/grasp_data',
+            hand=args.hand,
+            split=split,
+            batch_size=496,
+            device='cuda'
+        )

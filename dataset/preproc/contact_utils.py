@@ -71,7 +71,7 @@ if __name__ == "__main__":
     # 1) READ OBJECT POINT CLOUD (XYZ)
     #    Example "object.xyz" contains Nx3 numeric values
     # --------------------------------------------------------------------
-    object_base_path = f'/diskstation/XXX/data/multigripper_grasp_data/Dataset/Object_Models/YCB'
+    object_base_path = f'./data/multigripper_grasp_data/Dataset/Object_Models/YCB'
     object_path = f'{object_base_path}/003_cracker_box/points.xyz'
     object_points = np.loadtxt(object_path, delimiter=' ')
     # object_points = np.loadtxt("object.xyz")  # shape: (N,3)

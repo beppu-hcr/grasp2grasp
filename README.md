@@ -1,58 +1,126 @@
-# Submission 25683: Grasp2Grasp: Vision-Based Dexterous Grasp Translation via Schrödinger Bridges
-
-
-> ⚠️ **IMPORTANT:** This repository is provided **for review only**.  
-> **DO NOT DISTRIBUTE** or share these materials.  
-> There is **no guarantee** that this code is fully tested or production-ready.
+# Grasp2Grasp: Vision-Based Dexterous Grasp Translation via Schrödinger Bridges (NeurIPS 2025)
 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Setup](#setup)
 - [Data Download](#data-download)
 - [Data Preprocessing](#data-preprocessing)
-- [Model Training](#model-training)
-  - [Train VAE](#train-vae)
-  - [Pre-save Features](#pre-save-features)
-  - [Train SB Models](#train-sb-models)
+- [Train VAE](#train-vae)
+- [Pre-save Features](#pre-save-features)
+- [Train SB Models](#train-sb-models)
 - [Usage](#usage)
 - [Notes](#notes)
 
 ## Introduction
-This anonymized repository accompanies Submission 25683: Grasp2Grasp: Vision-Based Dexterous Grasp Translation via Schrödinger Bridges. Use it strictly for peer review.
+This repository contains official implementation of [Grasp2Grasp: Vision-Based Dexterous Grasp Translation via Schrödinger Bridges](https://arxiv.org/abs/2506.02489).
 
 ## Setup
 ```
 conda env create -f environment.yml
 conda activate grasp2grasp
 ```
+If you encounter any issue, you might have to build [pytorch3d==0.7.2](https://github.com/facebookresearch/pytorch3d/tree/v0.7.2) and [xformers==0.0.21](https://github.com/facebookresearch/xformers/tree/v0.0.21) from source.
 
 ## Data Download
 Visit [https://irvlutd.github.io/MultiGripperGrasp/](https://irvlutd.github.io/MultiGripperGrasp/) and download the MultiGripperGrasp dataset.
 
-## Data Preprocessing
-Preprocess the dataset (⚠️ outputs ~1.1 TB) using scripts in `./dataset/preproc`
+Place and extract the dataset under `./data/`.
 
-## Model Training
-Train VAE
+## Data Preprocessing
+Preprocess the dataset using:
+```
+cd dataset/preproc && \
+python mgg_parse_objects.py && \
+python mgg_to_pc_parallel.py && \
+python mgg_to_pc_parallel_human.py && \
+python mgg_to_pc_parallel_shadow.py && \
+python process_contact.py
+```
+> ⚠️ **IMPORTANT:** Please reserve at least 1 TB of disk space. Due to the size of the dataset, the preprocessing takes ~2 days to finish on a 48-core CPU.
+
+## Train VAE
+Train the VAE using:
 ```
 python train_ae.py --config /path/to/vae_config
 ```
+We provide example config files under `./config/mgg`. You can also download and place the [trained checkpoints]() under `./logs`.
 
 ## Pre-save Features
-Precompute and save Hand latent representations, GWH, Jacobian information using scripts in `./dataset/scripts` (⚠️ outputs ~150 GB)
+Precompute and save object point clouds features:
+```
+cd dataset/scripts && \
+python save_mgg_pc_latent.py
+```
+You can download the pretrained LION checkpoints [here]().
+
+Precompute and save hand point clouds features:
+```
+cd dataset/scripts && \
+python preprocess_latent.py --config /path/to/vae_config
+```
+where `/path/to/vae_config` is the config file of the corresponding VAE.
+
+(Optional) Precompute and save grasp GWH:
+```
+cd dataset/scripts && \
+python compute_gwh.py
+```
+
+(Optional) We provided the precomputed Jacobian of each grasp [here](). We also provide the scripts `collect_jacobian.py` under `./dataset/scripts` to save the Jacobian of new grasps. Note that `collect_jacobian.py` is implemented with a customized version of [Warp](https://github.com/NVIDIA/warp). A PR of porting this to up-to-date version of Warp would be greatly appreciated.
 
 ## Train SB Models
+Train the SB model using:
 ```
 python train_fm_ddp.py --config /path/to/sb_config
 ```
+We provide an example config file `sbfm_human_allegro.json` under `./config/mgg`. Due to cloud drive size limit, we release the pretrained checkpoint of the `H->A` and `H->S` settings trained with the GWH silimarity metric [here]().
 
-## Usage
-After training, you can evaluate or sample:
+## Evaluation
+After training, you can sample via:
 ```
 python sample.py --config /path/to/sb_config
 ```
+Report the results by:
+```
+python eval_samples.py
+```
 
-## Notes
-> Review only: Do NOT distribute.
-> No warranty of correctness or completeness.
-> Use at your own risk.
+## (Optional) Isaac Gym Simulation
+Install extra dependencies:
+```
+pip install urdf-parser-py plotly transformations transforms3d
+```
+Install [Isaac Gym](https://developer.nvidia.com/isaac-gym) and run:
+```
+cd grasp_test && python isaac_test_right.py --robot_name <ROBOT_NAME> --eval_dir <PATH_TO_SAMPLE_FOLDER>
+```
+
+## Citation
+
+If you find this codebase useful in your research, consider citing:
+
+``` bibtex
+@inproceedings{
+    zhong2025grasp2grasp,
+    title={Grasp2Grasp: Vision-Based Dexterous Grasp Translation via Schr\"odinger Bridges},
+    author={Tao Zhong and Jonah Buchanan and Christine Allen-Blanchette},
+    booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems (NeurIPS)},
+    year={2025}
+}
+```
+
+## Credits
+
+The following repositories are used in this repository, either in close to original form or as an inspiration:
+
+* [GenDexGrasp](https://github.com/tengyu-liu/GenDexGrasp/tree/main)
+* [DexDiffuser](https://github.com/YuLiHN/DexDiffuser)
+* [UGG](https://github.com/Jiaxin-Lu/ugg)
+* [LION](https://github.com/nv-tlabs/LION)
+* [U-ViT](https://github.com/baofff/U-ViT/tree/main)
+* [FastGrasp](https://github.com/wuxiaofei01/FastGrasp)
+* [TorchCFM](https://github.com/atong01/conditional-flow-matching)
+
+## License
+
+Unless otherwise noted in the submodules, the rest of this repo is licensed under the MIT License. See [LICENSE](LICENSE) for more details.

@@ -280,19 +280,19 @@ def _traverse(root: Path,
 def main():
     ap = argparse.ArgumentParser("GWH pre-computation (fast I/O version)")
     ap.add_argument("--root", required=True, type=str,
+                    default='../../data/grasp_data',
                     help="root dataset folder (e.g. grasp_data)")
-    ap.add_argument("--hand", required=True, type=str,
-                    help="hand name (e.g. hand_1, hand_2)")
     ap.add_argument("-p", "--padding", type=float, default=0.008,
                     help="contact threshold (m)")
     ap.add_argument("-j", "--num-workers", type=int, default=os.cpu_count(),
                     help="multiprocessing workers (default: all cores)")
     args = ap.parse_args()
 
-    _traverse(Path(args.root).expanduser(),
-                hand=args.hand,
-              padding=args.padding,
-              num_workers=args.num_workers)
+    for hand in ["Allegro", "HumanHand", "shadow_hand"]:
+        _traverse(Path(args.root).expanduser(),
+                    hand=hand,
+                padding=args.padding,
+                num_workers=args.num_workers)
 
 
 if __name__ == "__main__":

@@ -3,14 +3,14 @@ from pathlib import Path
 import scipy.io as sio
 from tqdm import tqdm
 import trimesh
-from urdfpy.urdfpy.urdf import URDF
+from urdfpy import URDF
 
 
 def main():
-    object_models_path = '/diskstation/XXX/data/multigripper_grasp_data/Dataset/Object_Models'
+    object_models_path = Path(__file__).parent.parent.parent / 'data/multigripper_grasp_data/Dataset/Object_Models'
     google_object_path = f'{object_models_path}/GoogleScannedObjects'
     ycb_object_path = f'{object_models_path}/YCB'
-    output_path = '/diskstation/XXX/data/mgg_pc/objects'
+    output_path = Path(__file__).parent.parent.parent / 'data/mgg_pc/objects'
     Path.mkdir(Path(output_path), exist_ok=True)
     Path.mkdir(Path(f'{output_path}/mat'), exist_ok=True)
     Path.mkdir(Path(f'{output_path}/npy'), exist_ok=True)

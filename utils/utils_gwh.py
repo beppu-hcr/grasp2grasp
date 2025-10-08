@@ -247,9 +247,9 @@ if __name__ == "__main__":
                                         device="cuda")
         print(iou_6d.shape)  # torch.Size([64])
         print(iou_6d[:5])    # first 5 estimates
-    # hand_verts = np.load("/data/XXX/data/grasp_data/Allegro/003_cracker_box/hand_pc/allegro_hand_description_right_pc_0.npy")
+    # hand_verts = np.load("/data/jbuch/data/grasp_data/Allegro/003_cracker_box/hand_pc/allegro_hand_description_right_pc_0.npy")
     # hand_verts = hand_verts[:, :3]
-    # obj_mesh = trimesh.load("/data/XXX/data/mgg_pc/objects/obj/003_cracker_box.obj")
+    # obj_mesh = trimesh.load("/data/jbuch/data/mgg_pc/objects/obj/003_cracker_box.obj")
     # for _ in range(30):
     #     obj_mesh = obj_mesh.simplify_quadric_decimation(face_count=int(len(obj_mesh.faces) * 0.7))
     #     obj_mesh.remove_unreferenced_vertices()

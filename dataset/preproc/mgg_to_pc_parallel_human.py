@@ -9,8 +9,8 @@ import scipy.io as sio
 from scipy.spatial.transform import Rotation as R
 import shutil
 import trimesh
-from urdfpy.urdfpy.urdf import URDF
-from read_error_list import extract_error_objects
+from urdfpy import URDF
+# from read_error_list import extract_error_objects
 
 from contact_utils import *
 
@@ -21,7 +21,7 @@ TODO
 3. Update this to include object pc path
 """
 
-NUM_WORKERS = 16
+NUM_WORKERS = mp.cpu_count()
 
 
 def main():
@@ -30,13 +30,16 @@ def main():
                 # "Allegro": ["allegro_hand_description_right"], 
                 "HumanHand": ["HumanHand"]
     }
-    urdf_base_path = "/workspace/code/Point-VAE/isaac_sim_grasping/grippers"
-    graspit_base_path = "/diskstation/XXX/data/multigripper_grasp_data/Dataset/graspit_grasps"
-    output_path = "/diskstation/XXX/data/grasp_data"  
-    contact_threshold = 0.01  
+    # urdf_base_path = "/workspace/code/Point-VAE/isaac_sim_grasping/grippers"
+    urdf_base_path = Path(__file__).parent.parent.parent / "grippers"
+    # graspit_base_path = "/diskstation/XXX/data/multigripper_grasp_data/Dataset/graspit_grasps"
+    graspit_base_path = Path(__file__).parent.parent.parent / "data/multigripper_grasp_data/Dataset/graspit_grasps"
+    # output_path = "/diskstation/XXX/data/grasp_data" 
+    output_path = Path(__file__).parent.parent.parent / "data/grasp_data"
+    contact_threshold = 0.01
 
-    error_path = "/diskstation/XXX/data/grasp_data/HumanHand/error_log.txt"  # ensure this is the correct path to your error log file
-    error_objects = extract_error_objects(error_path)
+    # error_path = "/diskstation/XXX/data/grasp_data/HumanHand/error_log.txt"  # ensure this is the correct path to your error log file
+    # error_objects = extract_error_objects(error_path)
 
     for hand, hand_urdf_names in hands.items():
         Path.mkdir(Path(f"{output_path}/{hand}"), parents=True, exist_ok=True)
@@ -66,8 +69,8 @@ def main():
                 'robot': robot,
                 'non_stationary_joints': non_stationary_joints,
                 'contact_threshold': contact_threshold,
-                'data_output_path': data_output_path,
-                'error_objects': error_objects
+                'data_output_path': data_output_path
+                # 'error_objects': error_objects
             }
 
             graspit_paths = glob(f'{graspit_base_path}/{hand}/*.json')
@@ -102,9 +105,9 @@ def process_graspit_data(graspit_path, shared_dict):
             graspit_data = json.load(file)
 
         object_id = graspit_data['object_id']
-        if object_id not in shared_dict['error_objects']:
-            print(f"\tPass: {object_id}")
-            return
+        # if object_id not in shared_dict['error_objects']:
+        #     print(f"\tPass: {object_id}")
+        #     return
         print(f"\tProcessing: {object_id}")
 
         output_path = f"{data_output_path}/{object_id}"

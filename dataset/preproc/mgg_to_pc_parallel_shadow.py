@@ -9,8 +9,7 @@ import scipy.io as sio
 from scipy.spatial.transform import Rotation as R
 import shutil
 import trimesh
-from urdfpy.urdfpy.urdf import URDF
-import os
+from urdfpy import URDF
 
 from contact_utils import *
 
@@ -21,7 +20,7 @@ TODO
 3. Update this to include object pc path
 """
 
-NUM_WORKERS = 16
+NUM_WORKERS = mp.cpu_count()
 
 
 def main():
@@ -30,10 +29,13 @@ def main():
                 # "Allegro": ["allegro_hand_description_right"], 
                 # "HumanHand": ["HumanHand"]
     }
-    urdf_base_path = "/workspace/code/Point-VAE/isaac_sim_grasping/grippers"
-    graspit_base_path = "/diskstation/XXX/data/multigripper_grasp_data/Dataset/graspit_grasps"
-    output_path = "/diskstation/XXX/data/grasp_data"  
-    contact_threshold = 0.01  
+    # urdf_base_path = "/workspace/code/Point-VAE/isaac_sim_grasping/grippers"
+    urdf_base_path = Path(__file__).parent.parent.parent / "grippers"
+    # graspit_base_path = "/diskstation/XXX/data/multigripper_grasp_data/Dataset/graspit_grasps"
+    graspit_base_path = Path(__file__).parent.parent.parent / "data/multigripper_grasp_data/Dataset/graspit_grasps"
+    # output_path = "/diskstation/XXX/data/grasp_data" 
+    output_path = Path(__file__).parent.parent.parent / "data/grasp_data"
+    contact_threshold = 0.01
 
     for hand, hand_urdf_names in hands.items():
         Path.mkdir(Path(f"{output_path}/{hand}"), parents=True, exist_ok=True)
@@ -102,9 +104,9 @@ def process_graspit_data(graspit_path, shared_dict):
 
         output_path = f"{data_output_path}/{object_id}"
 
-        if os.path.exists(f"{data_output_path}/{object_id}/metadata.parquet"):
-            print(f"\tSkipping: {object_id}")
-            return
+        # if os.path.exists(f"{data_output_path}/{object_id}/metadata.parquet"):
+        #     print(f"\tSkipping: {object_id}")
+        #     return
 
         pc_path = f"{output_path}/hand_pc"
         contact_path = f"{output_path}/contact_pc"

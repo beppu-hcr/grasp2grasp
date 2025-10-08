@@ -1,49 +1,21 @@
-Manuscript Review License (MRL) 1.0
-------------------------------------
+MIT License
 
-Copyright (c) 2025 NeurIPS 2025 Submission 25683 Authors
+Copyright (c) 2024 Tao Zhong
 
-All rights reserved.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-1. Definitions
-   1.1. “Materials” means all files, documents, data, source code, models, and other content contained in this repository.
-   1.2. “Review Purpose” means the sole activity of reviewing, commenting on, and evaluating the Materials as part of a formal manuscript peer-review process for an academic conference.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-2. Grant of License
-   Subject to the terms and conditions of this License, the Licensor hereby grants you a non-exclusive, non-transferable, revocable license to access and use the Materials solely for the Review Purpose.
-
-3. Permitted Use
-   • You may download, view, and make limited copies of the Materials only as necessary to perform the Review Purpose.
-   • You may make confidential annotations or notes on your private copies, provided those copies are not distributed.
-
-4. Prohibited Uses
-   Except as expressly permitted in Section 3, you may not, under any circumstances:
-   a. Use the Materials for any personal, academic research (beyond review), educational, commercial, or other purposes;
-   b. Copy, reproduce, translate, adapt, modify, merge, publish, distribute, sublicense, sell, or otherwise exploit the Materials in whole or in part;
-   c. Redistribute or make the Materials available to any third party, whether via electronic means, print, or any other format;
-   d. Remove or alter any copyright, trademark, or other proprietary notices contained in the Materials.
-
-5. Confidentiality
-   The Materials are provided to you in confidence for the Review Purpose only. You agree to keep the Materials strictly confidential and to use at least the same degree of care in protecting them as you use to protect your own confidential materials, but in no event less than reasonable care.
-
-6. Termination  
-   This License and your rights under it will automatically terminate upon the earliest of:  
-   a. Your failure to comply with any term of this License; or  
-   b. The conclusion of the Review Purpose (i.e., the formal completion of the manuscript peer-review process, including submission of your review report).  
-   Upon termination, you shall promptly destroy or return all copies of the Materials in your possession.
-
-7. Disclaimer of Warranty
-   THE MATERIALS ARE PROVIDED “AS IS,” WITHOUT WARRANTY OF ANY KIND. THE LICENSOR DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
-
-8. Limitation of Liability
-   IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATING TO THIS LICENSE OR THE USE OF THE MATERIALS, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
-
-9. Governing Law
-   This License shall be governed by and construed in accordance with the laws of the jurisdiction in which the Licensor is domiciled, without regard to conflict of law principles.
-
-10. Contact
-   To request any rights beyond those granted herein (e.g., for academic research use beyond review, redistribution, or commercial licensing), please contact:
-   
-   NeurIPS 2025 Submission 25683 Authors
-------------------------------------
-End of Manuscript Review License (MRL) 1.0
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

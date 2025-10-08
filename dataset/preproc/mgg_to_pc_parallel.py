@@ -9,7 +9,7 @@ import scipy.io as sio
 from scipy.spatial.transform import Rotation as R
 import shutil
 import trimesh
-from urdfpy.urdfpy.urdf import URDF
+from urdfpy import URDF
 
 from contact_utils import *
 
@@ -20,7 +20,7 @@ TODO
 3. Update this to include object pc path
 """
 
-NUM_WORKERS = 8
+NUM_WORKERS = mp.cpu_count()
 
 
 def main():
@@ -28,10 +28,13 @@ def main():
                 "Allegro": ["allegro_hand_description_right"], 
                 # "HumanHand": ["HumanHand"]
     }
-    urdf_base_path = "/workspace/code/Point-VAE/isaac_sim_grasping/grippers"
-    graspit_base_path = "/diskstation/XXX/data/multigripper_grasp_data/Dataset/graspit_grasps"
-    output_path = "/diskstation/XXX/data/grasp_data"  
-    contact_threshold = 0.01  
+    # urdf_base_path = "/workspace/code/Point-VAE/isaac_sim_grasping/grippers"
+    urdf_base_path = Path(__file__).parent.parent.parent / "grippers"
+    # graspit_base_path = "/diskstation/XXX/data/multigripper_grasp_data/Dataset/graspit_grasps"
+    graspit_base_path = Path(__file__).parent.parent.parent / "data/multigripper_grasp_data/Dataset/graspit_grasps"
+    # output_path = "/diskstation/XXX/data/grasp_data" 
+    output_path = Path(__file__).parent.parent.parent / "data/grasp_data"
+    contact_threshold = 0.01
 
     for hand, hand_urdf_names in hands.items():
         Path.mkdir(Path(f"{output_path}/{hand}"), parents=True, exist_ok=True)
@@ -99,15 +102,15 @@ def process_graspit_data(graspit_path, shared_dict):
         Path.mkdir(Path(hand_obj_path), exist_ok=True)
 
         # Temp: Objects already generated. Copy them here
-        base_object_path = "/diskstation/XXX/data/mgg_pc/objects/npy"
+        base_object_path = Path(__file__).parent.parent.parent / "data/mgg_pc/objects/npy"
         src_object_path = f"{base_object_path}/{object_id}.npy"
         object_path = f"{output_path}/{object_id}.npy"
-        shutil.copy(src_object_path, object_path)
+        # shutil.copy(src_object_path, object_path)
 
         # Read Object Point Cloud (XYZ)
-        object_points = np.load(object_path)
+        object_points = np.load(src_object_path)
         kd_tree, obj_pcd = build_kdtree_for_object(object_points) # shape: (N,3)
-
+        np.save(object_path, sample_fixed_points(object_points, 2048))
         
         for grasp_idx in range(len(graspit_data['pose'])):
             # Hand Pose
@@ -149,13 +152,16 @@ def process_graspit_data(graspit_path, shared_dict):
                                                                     obj_pcd,
                                                                     points,
                                                                     contact_threshold)
+                if contact_points_dt.shape[0] == 0:
+                    continue
+                contact_points_dt = sample_fixed_points(contact_points_dt, 256)
 
                 # Hand Class flag
                 ones_col = np.zeros((points.shape[0], 1))
                 points = np.hstack([points, ones_col])
 
                 np.save(f"{pc_path}/{hand_name}_pc_{grasp_idx}.npy", points)
-                hand_mesh.export(f"{hand_obj_path}/{hand_name}_obj_{grasp_idx}.obj")
+                # hand_mesh.export(f"{hand_obj_path}/{hand_name}_obj_{grasp_idx}.obj")
                 np.save(f"{contact_path}/{hand_name}_contact_pc{grasp_idx}.npy", contact_points_dt)
                 info = [
                             hand_name, 

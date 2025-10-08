@@ -2,8 +2,9 @@ import sys
 import os
 from os.path import join as pjoin
 base_dir = os.path.dirname(__file__)
-sys.path.append(pjoin(base_dir, '..'))
-sys.path.append(pjoin(base_dir, '../LION/'))
+sys.path.append(pjoin(base_dir, '../..'))
+sys.path.append(pjoin(base_dir, '../../network/'))
+sys.path.append(pjoin(base_dir, '../../network/LION/'))
 
 import pickle
 import yaml
@@ -13,9 +14,9 @@ import trimesh
 import numpy as np
 import glob
 
-mesh_path = "/data/mgg_pc/objects/obj"
-save_path = "/data/mgg_pc/objects/object_pc"
-pc_args = "../checkpoints/lion/aeb159h_hvae_lion_B32/cfg.yml"
+mesh_path = pjoin(base_dir, '../..', "data/mgg_pc/objects/obj")
+save_path = pjoin(base_dir, '../..', "data/mgg_pc/objects/object_pc")
+pc_args = pjoin(base_dir, '../..', "logs/lion/aeb159h_hvae_lion_B32/cfg.yml")
 
 # scale_list = [1.0] #[0.1] # [0.06, 0.08, 0.1, 0.12, 0.15]
 scale = 6.6
@@ -35,7 +36,7 @@ with open(pc_args, 'r') as f:
     pc_args = edict(yaml.full_load(f))
 pc_latent_model = vae_adain.Model(cfg, pc_args)
 
-pc_checkpoint = "../checkpoints/lion/aeb159h_hvae_lion_B32/checkpoints/epoch_5999_iters_1667999.pt"
+pc_checkpoint = pjoin(base_dir, '../..', "logs/lion/aeb159h_hvae_lion_B32/checkpoints/epoch_5999_iters_1667999.pt")
 
 print('Load vae_checkpoint: {}', pc_checkpoint)
 vae_ckpt = torch.load(pc_checkpoint)

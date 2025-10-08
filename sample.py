@@ -138,6 +138,10 @@ def main():
     out_dict = {
         'method': args.file_name,
         'sample_qpos': {},
+        'source_qpos': {},
+        'obj_pc': {},
+        'hand1_pc': {},
+        'hand2_pc': {},
         'sample_iou': {},
         'sample_hull': {},
         'sample_std': 0,
@@ -152,27 +156,31 @@ def main():
         # save_dir = f"./test_output/fm_pose/{object_id}"
         save_dir = os.path.join(out_dir, "vis", object_id)
         os.makedirs(save_dir, exist_ok=True)
-        shutil.copy(f"/data/XXX/data/mgg_pc/objects/obj/{object_id}.obj", os.path.join(save_dir, f"{object_id}.obj"))
+        # shutil.copy(f"/data/jbuch/data/mgg_pc/objects/obj/{object_id}.obj", os.path.join(save_dir, f"{object_id}.obj"))
 
         hand_object_param = hand2_param[i*N:(i+1)*N, :].cpu().numpy() # [B, 9 + num_joints]
+        src_object_param = hand1_param[i*N:(i+1)*N, :].cpu().numpy()
         # out_dict['sample_qpos'][object_id] = hand_object_param
         # out_dict['sample_std'][object_id] = np.mean(np.std(hand_object_param[:, 9:], axis=0))
         
 
-        obj_mesh = trimesh.load(f"/data/XXX/data/mgg_pc/objects/obj/{object_id}.obj")
+        obj_mesh = trimesh.load(f"./data/mgg_pc/objects/obj/{object_id}.obj")
         obj_mesh = simplify_mesh(obj_mesh, target_faces=5000)
 
         hulls_1 = []
         hulls_2 = []
         hand_pq = []
+        src_pq = []
+        hand1_pc = []
+        hand2_pc = []
         for j in range(N):
             sample_idx = i * N + j
             # Visualize the meshes.
             # The vis_hand function is assumed to take a numpy array of shape [B, N, 3] and an optional title.
-            recon_hand_mesh = trimesh.Trimesh(vertices=hand2_verts_np[sample_idx], faces=hand2_face.cpu().numpy())
-            gt_hand_mesh = trimesh.Trimesh(vertices=hand1_verts_np[sample_idx], faces=hand1_face.cpu().numpy())
-            recon_hand_mesh.export(os.path.join(save_dir, f"{args.hand2}_{j}.obj"))
-            gt_hand_mesh.export(os.path.join(save_dir, f"{args.hand1}_{j}.obj"))
+            # recon_hand_mesh = trimesh.Trimesh(vertices=hand2_verts_np[sample_idx], faces=hand2_face.cpu().numpy())
+            # gt_hand_mesh = trimesh.Trimesh(vertices=hand1_verts_np[sample_idx], faces=hand1_face.cpu().numpy())
+            # recon_hand_mesh.export(os.path.join(save_dir, f"{args.hand2}_{j}.obj"))
+            # gt_hand_mesh.export(os.path.join(save_dir, f"{args.hand1}_{j}.obj"))
 
             hull_1 = get_hull(hand1_verts_np[sample_idx], obj_mesh, padding=0.008, mu=2.0)
             hull_2 = get_hull(hand2_verts_np[sample_idx], obj_mesh, padding=0.008, mu=2.0)
@@ -180,10 +188,17 @@ def main():
                 hulls_1.append(hull_1)
                 hulls_2.append(hull_2)
                 hand_pq.append(hand_object_param[[j], :])
+                src_pq.append(src_object_param[[j], :])
+                hand1_pc.append(np.expand_dims(hand1_verts_np[sample_idx], axis=0))
+                hand2_pc.append(np.expand_dims(hand2_verts_np[sample_idx], axis=0))
             out_dict['sample_hull'][object_id] = (hulls_1, hulls_2)
             # obj_pc_np = obj_pc.cpu().numpy()
             # np.savetxt(f"test_output/kl/human/obj_pc_{sample_idx}.xyz", obj_pc_np[0], delimiter=" ")
         out_dict['sample_qpos'][object_id] = np.concatenate(hand_pq, axis=0)
+        out_dict['source_qpos'][object_id] = np.concatenate(src_pq, axis=0)
+        out_dict['obj_pc'][object_id] = np.asarray(obj_mesh.vertices)
+        out_dict['hand1_pc'][object_id] = np.concatenate(hand1_pc, axis=0)
+        out_dict['hand2_pc'][object_id] = np.concatenate(hand2_pc, axis=0)
         # with torch.no_grad():
         #     out_dict['sample_iou'][object_id] = monte_carlo_iou_1to1_6d(hulls_1, hulls_2, samples=500_000, device=device).cpu().numpy()
     pickle.dump(out_dict, open(os.path.join(out_dir, "samples.pkl"), 'wb'))
