@@ -43,7 +43,7 @@ Train the VAE using:
 ```
 python train_ae.py --config /path/to/vae_config
 ```
-We provide example config files under `./config/mgg`. You can also download and place the [trained checkpoints]() under `./logs`.
+We provide example config files under `./config/mgg`. You can also download and place the [trained checkpoints](https://drive.google.com/drive/folders/1gtcLW3iFDjiezBFYMq_f6Wpt1hQr6U8d?usp=drive_link) under `./logs`.
 
 ## Pre-save Features
 Precompute and save object point clouds features:
@@ -51,7 +51,7 @@ Precompute and save object point clouds features:
 cd dataset/scripts && \
 python save_mgg_pc_latent.py
 ```
-You can download the pretrained LION checkpoints [here]().
+You can download the pretrained LION checkpoints [here](https://drive.google.com/drive/folders/1pDfkBD0EFCP-L__HfxpcphdSNVf4U2pO?usp=drive_link) and place under `./logs`.
 
 Precompute and save hand point clouds features:
 ```
@@ -66,14 +66,14 @@ cd dataset/scripts && \
 python compute_gwh.py
 ```
 
-(Optional) We provided the precomputed Jacobian of each grasp [here](). We also provide the scripts `collect_jacobian.py` under `./dataset/scripts` to save the Jacobian of new grasps. Note that `collect_jacobian.py` is implemented with a customized version of [Warp](https://github.com/NVIDIA/warp). A PR of porting this to up-to-date version of Warp would be greatly appreciated.
+(Optional) We provided the precomputed Jacobian of each grasp [here](https://drive.google.com/drive/folders/1pywlCBnUkQbcb2vUbBa5Mpuozq416Jas?usp=drive_link). We also provide the scripts `collect_jacobian.py` under `./dataset/scripts` to save the Jacobian of new grasps. Note that `collect_jacobian.py` is implemented with a customized version of [Warp](https://github.com/NVIDIA/warp). A PR of porting this to up-to-date version of Warp would be greatly appreciated.
 
 ## Train SB Models
 Train the SB model using:
 ```
 python train_fm_ddp.py --config /path/to/sb_config
 ```
-We provide an example config file `sbfm_human_allegro.json` under `./config/mgg`. Due to cloud drive size limit, we release the pretrained checkpoint of the `H->A` and `H->S` settings trained with the GWH silimarity metric [here]().
+We provide an example config file `sbfm_human_allegro.json` under `./config/mgg`. Due to cloud drive size limit, we release the pretrained checkpoints of the `H->A` and `H->S` settings trained with the GWH silimarity metric [here](https://drive.google.com/drive/folders/1dVmSHcLdnyqgeqBjfQFUCIiHEg0wagFm?usp=drive_link).
 
 ## Evaluation
 After training, you can sample via:
