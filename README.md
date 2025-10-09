@@ -1,5 +1,7 @@
 # Grasp2Grasp: Vision-Based Dexterous Grasp Translation via Schrödinger Bridges (NeurIPS 2025)
 
+[arXiv](https://arxiv.org/pdf/2506.02489) / [Project Page](https://grasp2grasp.github.io/)
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Setup](#setup)
