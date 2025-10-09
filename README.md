@@ -113,6 +113,7 @@ If you find this codebase useful in your research, consider citing:
 The following repositories are used in this repository, either in close to original form or as an inspiration:
 
 * [GenDexGrasp](https://github.com/tengyu-liu/GenDexGrasp/tree/main)
+* [Fast-Grasp'D](https://github.com/dylanturpin/fast-graspd)
 * [DexDiffuser](https://github.com/YuLiHN/DexDiffuser)
 * [UGG](https://github.com/Jiaxin-Lu/ugg)
 * [LION](https://github.com/nv-tlabs/LION)
