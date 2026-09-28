@@ -54,7 +54,7 @@ class IsaacGraspTestForce_allegro(BaseTask):
         self.device_id = device_id
         self.headless = headless
         self.fix_object = fix_object
-        self.device = "cuda"
+        self.device = "cpu"
         self.robot = robot #['allegro','allegro_right']
         self.mesh_path = mesh_path
 
@@ -275,7 +275,7 @@ class IsaacGraspTestForce_allegro(BaseTask):
 
     def _push_object_with_direction(self, i_direction, pbar):
         # object_force_magnitude = self.cfg['eval_policy']['dynamic']['magnitude_per_volume'] * self.object_volume 
-        object_force_magnitude = self.cfg['eval_policy']['dynamic']['magnitude_per_volume'] * torch.tensor(self.object_volume_list, device='cuda').reshape(-1,1)
+        object_force_magnitude = self.cfg['eval_policy']['dynamic']['magnitude_per_volume'] * torch.tensor(self.object_volume_list, device=self.device).reshape(-1,1)
         object_pos_start = self.get_obj_pos()
         for i_iter in range(self.force_num_steps):
 
@@ -287,8 +287,8 @@ class IsaacGraspTestForce_allegro(BaseTask):
 
 
             force_position = self.rigid_body_tensor[:, :, :3].clone()
-            object_force = torch.zeros_like(force_position, device='cuda')
-            object_force[:, -1, :] = object_force_magnitude * torch.tensor(i_direction, device='cuda').unsqueeze(0)
+            object_force = torch.zeros_like(force_position, device=self.device)
+            object_force[:, -1, :] = object_force_magnitude * torch.tensor(i_direction, device=self.device).unsqueeze(0)
 
             self.gym.apply_rigid_body_force_at_pos_tensors(self.sim, gymtorch.unwrap_tensor(object_force),
                                                            gymtorch.unwrap_tensor(force_position), gymapi.ENV_SPACE)

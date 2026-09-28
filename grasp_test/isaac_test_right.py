@@ -62,7 +62,7 @@ def parse_args() -> argparse.Namespace:
 
 
 
-def get_sim_param():
+def get_sim_param(use_gpu_pipeline=True):
     # initialize sim
     sim_params = gymapi.SimParams()
     sim_params.dt = 1. / 60.
@@ -74,7 +74,7 @@ def get_sim_param():
     sim_params.physx.use_gpu = True
     sim_params.physx.num_subscenes = 0
     sim_params.physx.max_gpu_contact_pairs = 8 * 1024 * 1024
-    sim_params.use_gpu_pipeline = True
+    sim_params.use_gpu_pipeline = use_gpu_pipeline
     sim_params.physx.num_threads = 0
     return sim_params
 
@@ -82,7 +82,7 @@ def get_sim_param():
 def stability_tester(args: argparse.Namespace) -> dict:
     with open(args.stability_config) as f:
         stability_config = yaml.safe_load(f)
-    sim_params = get_sim_param()
+    sim_params = get_sim_param(use_gpu_pipeline=args.device != "cpu")
     sim_headless = not args.onscreen
 
     if args.robot_name.lower() == 'allegro_right':
