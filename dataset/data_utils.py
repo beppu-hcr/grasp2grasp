@@ -1,4 +1,5 @@
 import os
+import re
 import pandas as pd
 import numpy as np
 import torch
@@ -12,10 +13,19 @@ def process_metadata_file(obj_path):
     df = pd.read_parquet(meta_file)
     # Convert entire DataFrame to a list of dicts in one go
     samples = df.to_dict(orient='records')
+    # Per-grasp files are named by the original grasp index, which skips grasps dropped during
+    # preprocessing; the k-th metadata row corresponds to the k-th file in sorted order.
+    file_indices = list(range(len(samples)))
+    hand_pc_dir = os.path.join(obj_path, 'hand_pc')
+    if os.path.isdir(hand_pc_dir):
+        found = sorted(int(m.group(1)) for m in (re.search(r'_pc_+(\d+)\.npy$', f) for f in os.listdir(hand_pc_dir)) if m)
+        if len(found) == len(samples):
+            file_indices = found
     # Add additional fields to each sample
     for idx, sample in enumerate(samples):
         sample['base_dir'] = obj_path
         sample['grasp_idx'] = idx
+        sample['file_idx'] = file_indices[idx]
     return obj_path, samples
 
 def extract_posetheta_from_metadata(obj_path):

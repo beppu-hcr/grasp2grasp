@@ -1,0 +1,15 @@
+{
+    "file_name": "sbfm_human_allegro_gwh",
+    "data_dir": "./data/grasp_data",
+    "hand1": "HumanHand",
+    "hand2": "Allegro",
+    "seed": 42,
+    "sigma": 0.1,
+    "use_cuda": 1,
+    "hand_encoder": "PVCNN",
+    "obj_inchannel": 3,
+    "encoder_layer_sizes": [1472, 2048, 1024, 768],
+    "decoder_layer_sizes": [2048, 1024, 256, 25],
+    "vae_checkpoint": "./logs/pretrained_ae/ae_allegro_pvcnn_kl/model_best_test.pth",
+    "fm_checkpoint": "./logs/mgg/mgg/sbfm_human_allegro_gwh/checkpoints/model_epochepoch=00999.ckpt"
+}

@@ -151,22 +151,23 @@ class GraspDataset(Dataset):
         base_dir = sample_meta['base_dir']
         hand_name = sample_meta['hand']
         grasp_idx = sample_meta['grasp_idx']
+        file_idx = sample_meta.get('file_idx', grasp_idx)
 
         # Load object point cloud (assumed to be stored as 'obj_pc.npy' in the object directory)
         object_pc = self.preloaded_object_point_clouds[base_dir]
 
         # Load hand point cloud using the file name from metadata (assumed to be in the 'hand_pc' folder)
-        hand_pc_path = os.path.join(base_dir, "hand_pc", f"{hand_name}_pc_{grasp_idx}.npy")
+        hand_pc_path = os.path.join(base_dir, "hand_pc", f"{hand_name}_pc_{file_idx}.npy")
         if not os.path.exists(hand_pc_path):
-            hand_pc_path = os.path.join(base_dir, "hand_pc", f"{hand_name}_pc__{grasp_idx}.npy")
+            hand_pc_path = os.path.join(base_dir, "hand_pc", f"{hand_name}_pc__{file_idx}.npy")
         hand_pc = np.load(hand_pc_path, mmap_mode='r').copy()
         hand_pc = hand_pc[:, :3]
 
         # TODO: Fix empty contact point cloud
         if self.return_contact:
-            contact_pc_path = os.path.join(base_dir, "contact_pc", f"{hand_name}_contact_pc{grasp_idx}.npy")
+            contact_pc_path = os.path.join(base_dir, "contact_pc", f"{hand_name}_contact_pc{file_idx}.npy")
             if not os.path.exists(contact_pc_path):
-                contact_pc_path = os.path.join(base_dir, "contact_pc", f"{hand_name}_contact_pc_{grasp_idx}.npy")
+                contact_pc_path = os.path.join(base_dir, "contact_pc", f"{hand_name}_contact_pc_{file_idx}.npy")
             contact_pc = np.load(contact_pc_path, mmap_mode='r').copy()
             if contact_pc.shape[0] == 0:
                 # print(f"Empty contact point cloud for {hand_name}_contact_pc{grasp_idx}.npy")

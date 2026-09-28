@@ -1,5 +1,5 @@
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = "1"
+os.environ.setdefault('CUDA_VISIBLE_DEVICES', "1")
 import torch
 torch.set_num_threads(20)
 import numpy as np
@@ -79,6 +79,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--config', type=str, help='Path to the JSON config file')
+    parser.add_argument('--root_dir', type=str, default='../../data/grasp_data',
+                        help='must match the path prefix stored in split.json')
+    parser.add_argument('--splits', type=str, nargs='+', default=['train', 'val', 'test', 'reserved'])
     args = parser.parse_args()
 
     with open(args.config, 'r') as configfile:
@@ -88,11 +91,10 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    splits = ['train', 'val', 'test', 'reserved']
-    for split in splits:
+    for split in args.splits:
         save_latent_features_by_object(
             args,
-            root_dir='../../data/grasp_data',
+            root_dir=args.root_dir,
             hand=args.hand,
             split=split,
             batch_size=496,
