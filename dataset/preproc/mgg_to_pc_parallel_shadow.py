@@ -23,7 +23,7 @@ TODO
 NUM_WORKERS = mp.cpu_count()
 
 
-def main():
+def main(objects=None):
     hands = {
                 "shadow_hand": ["shadow_hand"]
                 # "Allegro": ["allegro_hand_description_right"], 
@@ -69,6 +69,8 @@ def main():
             }
 
             graspit_paths = glob(f'{graspit_base_path}/{hand}/*.json')
+            if objects is not None:
+                graspit_paths = [p for p in graspit_paths if Path(p).stem.split('-', 1)[1] in objects]
             args_list = [(graspit_path, shared_dict) for graspit_path in graspit_paths]
             with mp.Pool(processes=NUM_WORKERS) as pool:
                 pool.starmap(process_graspit_data, args_list)
@@ -208,4 +210,13 @@ def process_graspit_data(graspit_path, shared_dict):
             
 
 if __name__ == '__main__':
-    main()
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--objects_file', type=str, default=None,
+                        help='text file with one object id per line; process only these objects')
+    cli_args = parser.parse_args()
+    objects = None
+    if cli_args.objects_file is not None:
+        with open(cli_args.objects_file) as f:
+            objects = set(line.strip() for line in f if line.strip())
+    main(objects)

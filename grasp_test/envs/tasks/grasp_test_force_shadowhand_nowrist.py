@@ -48,7 +48,7 @@ class IsaacGraspTestForce_shadowhand_nowrist(BaseTask):
         self.device_id = device_id
         self.headless = headless
         self.fix_object = fix_object
-        self.device = "cuda"
+        self.device = "cpu"
         if self.device_type == "cuda" or self.device_type == "GPU":
             self.device = "cuda" + ":" + str(self.device_id)
 
@@ -302,8 +302,8 @@ class IsaacGraspTestForce_shadowhand_nowrist(BaseTask):
             self.gym.refresh_dof_state_tensor(self.sim)
             self.gym.refresh_rigid_body_state_tensor(self.sim)
             force_position = self.rigid_body_tensor[:, :, :3].clone()
-            object_force = torch.zeros_like(force_position, device='cuda')
-            object_force[:, -1, :] = object_force_magnitude * torch.tensor(i_direction, device='cuda')
+            object_force = torch.zeros_like(force_position, device=self.device)
+            object_force[:, -1, :] = object_force_magnitude * torch.tensor(i_direction, device=self.device)
             self.gym.apply_rigid_body_force_at_pos_tensors(self.sim, gymtorch.unwrap_tensor(object_force),
                                                            gymtorch.unwrap_tensor(force_position), gymapi.ENV_SPACE)
             self.gym.simulate(self.sim)

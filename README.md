@@ -31,7 +31,7 @@ If you encounter any issue, you might have to build [pytorch3d==0.7.2](https://g
 
 The environment above (PyTorch 1.12 + CUDA 11.3) does not run on sm_120 GPUs such as the RTX 5090.
 The steps below were used on an RTX 5090 (driver 595, Ubuntu 24.04) for **inference with the pretrained
-checkpoints** (Human→Allegro) and the Isaac Gym evaluation. Training was not tested.
+checkpoints** (Human→Allegro and Human→Shadow) and the Isaac Gym evaluation. Training was not tested.
 
 Two conda environments are needed, because Isaac Gym only supports Python ≤ 3.8 and no PyTorch build for
 Python 3.8 supports sm_120:
@@ -112,7 +112,10 @@ To check the simulation alone, without running the model, `grasp_test/make_gt_sa
 python grasp_test/make_gt_samples.py --hand Allegro --out_dir logs/isaac_gt_test
 cd grasp_test && python isaac_test_right.py --robot_name allegro_right --eval_dir ../logs/isaac_gt_test --device cpu
 ```
-Only `allegro_right` supports `--device cpu`; the ShadowHand task still hardcodes CUDA.
+Both `allegro_right` and `shadowhand_nowrist` support `--device cpu`. For the Shadow hand, use
+`--hand shadow_hand` and `--robot_name shadowhand_nowrist`. The Shadow task convex-decomposes each object
+with VHACD the first time it loads it (about a minute per object, cached in `~/.isaacgym/vhacd`), while the
+Allegro task uses a single convex hull of the object.
 
 ### 3. Inference with the pretrained Human→Allegro checkpoints
 Run these from the repository root in the `g2g` env with the CUDA variables above exported.
@@ -193,6 +196,50 @@ pickle.dump({'method': d['method'], 'sample_qpos': {k: np.asarray(v) for k, v in
 conda activate grasp2grasp
 cd grasp_test && python isaac_test_right.py --robot_name allegro_right --eval_dir ../logs/isaac_h2a --device cpu
 ```
+
+### 4. Inference with the pretrained Human→Shadow checkpoints
+This reuses the human-hand data, the object latents and `test_objs.txt` from step 3; only the Shadow side is
+new. `config/mgg/sample_human_shadow_gwh.json` expects:
+```
+logs/pretrained_ae/ae_shadow_pvcnn_kl/model_best_test.pth
+logs/mgg/mgg/sbfm_human_shadow_gwh/checkpoints/model_epochepoch=00999.ckpt
+```
+Link the Shadow VAE checkpoint for `preprocess_latent.py`, and derive the Shadow split from the human one:
+```
+mkdir -p dataset/logs/autoencoder/mgg/ae_shadow_pvcnn_kl
+ln -sfn $PWD/logs/pretrained_ae/ae_shadow_pvcnn_kl/model_best_test.pth dataset/logs/autoencoder/mgg/ae_shadow_pvcnn_kl/
+mkdir -p data/grasp_data/shadow_hand
+python -c "
+import json
+s = json.load(open('data/grasp_data/HumanHand/split.json'))
+json.dump({k: [p.replace('/HumanHand/', '/shadow_hand/') for p in v] for k, v in s.items()},
+          open('data/grasp_data/shadow_hand/split.json', 'w'), indent=4)"
+```
+Preprocess the Shadow hand for the test objects (32 objects took about 12 minutes on 20 cores), consolidate
+contact points and save the VAE features:
+```
+(cd dataset/preproc && python mgg_to_pc_parallel_shadow.py --objects_file ../../test_objs.txt)
+(cd dataset/preproc && python -c "
+from multiprocessing import Pool
+from process_contact import process_object_dir
+objs = open('../../test_objs.txt').read().split()
+with Pool(8) as p:
+    p.map(process_object_dir, [(f'../../data/grasp_data/shadow_hand/{o}', 'shadow_hand') for o in objs])")
+CUDA_VISIBLE_DEVICES=0 PYTHONPATH=. python dataset/scripts/preprocess_latent.py \
+    --config config/mgg/ae_shadow_pvcnn.json --root_dir ./data/grasp_data --splits test
+```
+Sample and evaluate. `eval_samples.py` evaluates every `samples.pkl` under `logs/diffusion_ddp/mgg/` and
+skips the ones that already have IoU values:
+```
+python sample.py --config config/mgg/sample_human_shadow_gwh.json
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True python eval_samples.py
+```
+Make the small `samples.pkl` as in step 3, but from `sbfm_human_shadow_gwh` into `logs/isaac_h2s`, then:
+```
+conda activate grasp2grasp
+cd grasp_test && python isaac_test_right.py --robot_name shadowhand_nowrist --eval_dir ../logs/isaac_h2s --device cpu
+```
+The results of both directions are summarized in [`results/results.md`](results/results.md).
 
 ### Troubleshooting
 - **`nvidia-smi` fails after a kernel update.** With Ubuntu's prebuilt driver modules, the module package
