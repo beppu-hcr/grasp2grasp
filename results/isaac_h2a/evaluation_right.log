@@ -1,4 +1,4 @@
-2026-09-28 18:12:53.360 | INFO     | __main__:main:157 - Evaluation directory: /home/beppu/grasp2grasp/logs/isaac_h2a
+2026-09-28 18:12:53.360 | INFO     | __main__:main:157 - Evaluation directory: logs/isaac_h2a
 2026-09-28 18:12:53.360 | INFO     | __main__:main:159 - Start evaluating..
 2026-09-28 18:12:53.738 | INFO     | __main__:stability_tester:109 - Stability test for [3D_Dollhouse_Happy_Brother]
 2026-09-28 18:13:17.580 | INFO     | __main__:stability_tester:133 - Success rate of [3D_Dollhouse_Happy_Brother]: 28 / 32

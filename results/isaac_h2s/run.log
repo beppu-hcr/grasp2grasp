@@ -1,15 +1,15 @@
-Importing module 'gym_38' (/home/beppu/grasp2grasp/IsaacGym_Preview_4_Package/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
-Setting GYM_USD_PLUG_INFO_PATH to /home/beppu/grasp2grasp/IsaacGym_Preview_4_Package/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+Importing module 'gym_38' (IsaacGym_Preview_4_Package/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to IsaacGym_Preview_4_Package/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
 PyTorch version 2.4.1+cu118
 Device count 1
-/home/beppu/grasp2grasp/IsaacGym_Preview_4_Package/isaacgym/python/isaacgym/_bindings/src/gymtorch
-Using /home/beppu/.cache/torch_extensions/py38_cu118 as PyTorch extensions root...
-Emitting ninja build file /home/beppu/.cache/torch_extensions/py38_cu118/gymtorch/build.ninja...
+IsaacGym_Preview_4_Package/isaacgym/python/isaacgym/_bindings/src/gymtorch
+Using ~/.cache/torch_extensions/py38_cu118 as PyTorch extensions root...
+Emitting ninja build file ~/.cache/torch_extensions/py38_cu118/gymtorch/build.ninja...
 Building extension module gymtorch...
 Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
 ninja: no work to do.
 Loading extension module gymtorch...
-2026-09-28 19:54:34.532 | INFO     | __main__:main:157 - Evaluation directory: /home/beppu/grasp2grasp/logs/isaac_h2s
+2026-09-28 19:54:34.532 | INFO     | __main__:main:157 - Evaluation directory: logs/isaac_h2s
 2026-09-28 19:54:34.532 | INFO     | __main__:main:159 - Start evaluating..
   0%|          | 0/32 [00:00<?, ?it/s]2026-09-28 19:54:34.784 | INFO     | __main__:stability_tester:109 - Stability test for [3D_Dollhouse_Happy_Brother]
 Not connected to PVD
@@ -184,7 +184,7 @@ load object asset into IsaacGym: 3D_Dollhouse_Happy_Brother
 Test Push Object:: 100%|█████████▉| 299/300 [00:25<00:00,  9.99it/s][ATest Push Object:: 100%|██████████| 300/300 [00:25<00:00, 11.94it/s]
 2026-09-28 19:55:15.218 | INFO     | __main__:stability_tester:133 - Success rate of [3D_Dollhouse_Happy_Brother]: 12 / 32
   3%|▎         | 1/32 [00:40<20:59, 40.62s/it]2026-09-28 19:55:15.400 | INFO     | __main__:stability_tester:109 - Stability test for [3D_Dollhouse_Lamp]
-Using VHACD cache directory '/home/beppu/.isaacgym/vhacd'
+Using VHACD cache directory '~/.isaacgym/vhacd'
 Found existing convex decomposition for mesh 'envs/assets/movable_hand_urdf/shadowhand/meshes/F1.obj'
 Started convex decomposition for mesh './data/mgg_pc/objects/obj/3D_Dollhouse_Happy_Brother.obj'
 Finished convex decomposition for mesh './data/mgg_pc/objects/obj/3D_Dollhouse_Happy_Brother.obj': 14 hulls
