@@ -4,6 +4,7 @@ import scipy.io as sio
 from tqdm import tqdm
 import trimesh
 from urdfpy import URDF
+from lxml import etree
 
 
 def main():
@@ -52,7 +53,14 @@ def get_ids(file_path):
     return set(ids)
 
 def load_urdf(urdf_path, urdf_name):    
-    robot = URDF.load(f'{urdf_path}/{urdf_name}')
+    # The GoogleScannedObjects URDFs comment out <mass>, which urdfpy requires in <inertial>.
+    # Only the visual meshes are used here, so drop inertial blocks without a mass.
+    parser = etree.XMLParser(remove_comments=True, remove_blank_text=True)
+    root = etree.parse(f'{urdf_path}/{urdf_name}', parser=parser).getroot()
+    for inertial in list(root.iter('inertial')):
+        if inertial.find('mass') is None:
+            inertial.getparent().remove(inertial)
+    robot = URDF._from_xml(root, urdf_path)
 
     scene = []
     link_poses = robot.link_fk()

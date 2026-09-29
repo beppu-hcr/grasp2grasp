@@ -25,9 +25,10 @@ conda activate grasp2grasp
 If you encounter any issue, you might have to build [pytorch3d==0.7.2](https://github.com/facebookresearch/pytorch3d/tree/v0.7.2) and [xformers==0.0.21](https://github.com/facebookresearch/xformers/tree/v0.0.21) from source.
 
 ## Setup on RTX 50-series (Blackwell) GPUs
-> **Note:** These steps were reconstructed from the actual setup work and have not been verified by running
-> them from start to finish. Some commands were run in a different form (e.g. as one-off Python snippets),
-> and the `grasp2grasp` (Isaac Gym) environment already existed and was only extended.
+> **Note:** These steps were verified by following them from start to finish in a fresh clone with newly
+> created conda environments (Human→Allegro and Human→Shadow on the 32 test objects). The dataset,
+> the Isaac Gym archive and the checkpoints were taken from an existing local copy rather than downloaded,
+> so the download steps themselves were not tested.
 
 The environment above (PyTorch 1.12 + CUDA 11.3) does not run on sm_120 GPUs such as the RTX 5090.
 The steps below were used on an RTX 5090 (driver 595, Ubuntu 24.04) for **inference with the pretrained
@@ -85,15 +86,21 @@ xformers' `memory_efficient_attention` fails on sm_120 with fp16 inputs (it disp
 FlashAttention-3 kernel), but works with fp32, which is what this code uses.
 
 ### 2. `grasp2grasp` environment (Isaac Gym)
-A Python 3.8 env with PyTorch (2.4.1+cu118 was used). PyTorch cannot run on the GPU here, so the torch side
-runs on CPU (`--device cpu`), while PhysX still simulates on the GPU.
+PyTorch cannot run on the GPU in this env, so the torch side runs on CPU (`--device cpu`), while PhysX still
+simulates on the GPU. Create the env with PyTorch 2.4.1+cu118:
 ```
+conda create -y -n grasp2grasp python=3.8
 conda activate grasp2grasp
-# Isaac Gym Preview 4, extracted to ./IsaacGym_Preview_4_Package
-echo "$PWD/IsaacGym_Preview_4_Package/isaacgym/python" > $(python -c "import site;print(site.getsitepackages()[0])")/isaacgym_local.pth
-pip install urdf-parser-py plotly transformations transforms3d ninja ipdb pyarrow loguru trimesh "pytorch-kinematics==0.5.6"
+pip install torch==2.4.1 --index-url https://download.pytorch.org/whl/cu118
 ```
-Isaac Gym uses `np.float` too. Patch it:
+Download [Isaac Gym Preview 4](https://developer.nvidia.com/isaac-gym). The archive unpacks to `isaacgym/`;
+put it under `IsaacGym_Preview_4_Package/` in the repository root, then register it and install the rest:
+```
+mkdir IsaacGym_Preview_4_Package && tar xf IsaacGym_Preview_4_Package.tar.gz -C IsaacGym_Preview_4_Package
+echo "$PWD/IsaacGym_Preview_4_Package/isaacgym/python" > $(python -c "import site;print(site.getsitepackages()[0])")/isaacgym_local.pth
+pip install urdf-parser-py plotly transformations transforms3d ninja ipdb pyarrow loguru trimesh pillow "pytorch-kinematics==0.5.6"
+```
+`pillow` is needed because trimesh loads the textured object meshes. Isaac Gym uses `np.float` too. Patch it:
 ```
 sed -i 's/dtype=np\.float,/dtype=float,/' IsaacGym_Preview_4_Package/isaacgym/python/isaacgym/torch_utils.py
 ```
@@ -102,14 +109,102 @@ sed -i 's/dtype=np\.float,/dtype=float,/' IsaacGym_Preview_4_Package/isaacgym/py
 ```
 export PATH=$CONDA_PREFIX/bin:$PATH LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
 ```
-The repository does not ship object URDFs. Generate a minimal URDF (plus a symlink to the `.obj`) for each object:
+
+### 3. Data preparation (shared by Human→Allegro and Human→Shadow)
+Run these from the repository root in the `g2g` env with the CUDA variables from step 1 exported.
+Times are for 20 CPU cores and an RTX 5090.
+
+**Dataset.** Download the [MultiGripperGrasp dataset](https://utdallas.app.box.com/v/multi-gripper-grasp-data/)
+and extract it so that these paths exist (extract `GoogleScannedObjects.zip` and `YCB.zip` inside `Object_Models` too):
+```
+data/multigripper_grasp_data/Dataset/Object_Models/GoogleScannedObjects/<object>/<object>.urdf
+data/multigripper_grasp_data/Dataset/Object_Models/YCB/<object>/{textured.obj,points.xyz}
+data/multigripper_grasp_data/Dataset/Object_Models/{mgg_models_ids.txt,GoogleScannedObjects_model_ids.txt,ycb_object_ids.txt}
+data/multigripper_grasp_data/Dataset/graspit_grasps/{Allegro,HumanHand,shadow_hand}/<hand>-<object>.json
+```
+
+**Object meshes** (about 2 minutes). Writes `data/mgg_pc/objects/{obj,npy,mat}` for all 345 objects.
+The output directory must exist first:
+```
+mkdir -p data/mgg_pc/objects
+(cd dataset/preproc && python mgg_parse_objects.py)
+```
+
+**Split.** `dataset/splits/mgg_split.json` lists the objects of each split (147 train / 32 val / 32 test /
+134 reserved). It is the split used for [`results/results.md`](results/results.md). The data loaders read a
+`split.json` per hand, so write those, and the list of test objects:
+```
+python -c "
+import json, os
+s = json.load(open('dataset/splits/mgg_split.json'))
+for hand in ['Allegro', 'HumanHand', 'shadow_hand']:
+    os.makedirs(f'data/grasp_data/{hand}', exist_ok=True)
+    json.dump({k: [f'./data/grasp_data/{hand}/{o}' for o in v] for k, v in s.items()},
+              open(f'data/grasp_data/{hand}/split.json', 'w'), indent=4)
+open('test_objs.txt', 'w').write('\n'.join(s['test']) + '\n')"
+```
+This split was generated locally and may not match the one the checkpoints were trained with, so "test"
+objects may have been seen during training.
+
+**Hand point clouds (test objects only).** `--objects_file` restricts preprocessing to the listed objects.
+For the 32 test objects this took about 20 minutes for Allegro and 11 minutes each for the human and Shadow
+hands, instead of days for the full dataset. Then consolidate the contact points:
+```
+for s in mgg_to_pc_parallel mgg_to_pc_parallel_human mgg_to_pc_parallel_shadow; do
+  (cd dataset/preproc && python $s.py --objects_file ../../test_objs.txt)
+done
+(cd dataset/preproc && python -c "
+from multiprocessing import Pool
+from process_contact import process_object_dir
+objs = open('../../test_objs.txt').read().split()
+with Pool(8) as p:
+    p.map(process_object_dir, [(f'../../data/grasp_data/{h}/{o}', h) for h in ['Allegro', 'HumanHand', 'shadow_hand'] for o in objs])")
+```
+The object point clouds are sampled at random, so re-running this can change the number of grasps kept per
+object by a few (a grasp is dropped when it has no contact points).
+
+**Checkpoints.** Download the [VAE checkpoints](https://drive.google.com/drive/folders/1gtcLW3iFDjiezBFYMq_f6Wpt1hQr6U8d?usp=drive_link),
+the [SB checkpoints](https://drive.google.com/drive/folders/1dVmSHcLdnyqgeqBjfQFUCIiHEg0wagFm?usp=drive_link) and the
+[LION checkpoint](https://drive.google.com/drive/folders/1pDfkBD0EFCP-L__HfxpcphdSNVf4U2pO?usp=drive_link) (e.g. with `gdown --folder <url>`)
+and place them as follows (`config/mgg/sample_human_{allegro,shadow}_gwh.json` and `dataset/scripts/save_mgg_pc_latent.py` use these paths):
+```
+logs/pretrained_ae/ae_{allegro,human,shadow}_pvcnn_kl/model_best_test.pth
+logs/mgg/mgg/sbfm_human_allegro_gwh/checkpoints/model_epochepoch=00999.ckpt
+logs/mgg/mgg/sbfm_human_shadow_gwh/checkpoints/model_epochepoch=00999.ckpt
+logs/lion/aeb159h_hvae_lion_B32/{cfg.yml,checkpoints/epoch_5999_iters_1667999.pt}
+```
+`dataset/scripts/preprocess_latent.py` loads VAE checkpoints from `dataset/logs/autoencoder/mgg/<file_name>/model_best_test.pth`:
+```
+for h in allegro human shadow; do
+  mkdir -p dataset/logs/autoencoder/mgg/ae_${h}_pvcnn_kl
+  ln -sfn $PWD/logs/pretrained_ae/ae_${h}_pvcnn_kl/model_best_test.pth dataset/logs/autoencoder/mgg/ae_${h}_pvcnn_kl/
+done
+```
+
+**Features** (about 12 minutes). Object latents are saved to `data/mgg_pc/objects/object_pc`, but the dataset
+reads `data/grasp_data/object_pc`, so link them. `--root_dir` must match the path prefix stored in
+`split.json` (`./data/grasp_data`), and `CUDA_VISIBLE_DEVICES` overrides the script's default GPU index of 1:
+```
+ln -sfn ../mgg_pc/objects/object_pc data/grasp_data/object_pc
+(cd dataset/scripts && python save_mgg_pc_latent.py)
+for h in allegro human shadow; do
+  CUDA_VISIBLE_DEVICES=0 PYTHONPATH=. python dataset/scripts/preprocess_latent.py \
+      --config config/mgg/ae_${h}_pvcnn.json --root_dir ./data/grasp_data --splits test
+done
+```
+
+**Object URDFs for Isaac Gym.** The repository does not ship them. Generate a minimal URDF (plus a symlink to
+the `.obj`) for each object:
 ```
 python grasp_test/make_object_urdfs.py --mesh_dir data/mgg_pc/objects/obj --out_dir grasp_test/data/mgg_pc/objects/obj
 ```
+
 To check the simulation alone, without running the model, `grasp_test/make_gt_samples.py` builds a
-`samples.pkl` from ground-truth dataset grasps:
+`samples.pkl` from ground-truth dataset grasps. It needs pandas and pytorch3d, so run it in the `g2g` env,
+then run the simulation in the `grasp2grasp` env:
 ```
 python grasp_test/make_gt_samples.py --hand Allegro --out_dir logs/isaac_gt_test
+conda activate grasp2grasp
 cd grasp_test && python isaac_test_right.py --robot_name allegro_right --eval_dir ../logs/isaac_gt_test --device cpu
 ```
 Both `allegro_right` and `shadowhand_nowrist` support `--device cpu`. For the Shadow hand, use
@@ -117,127 +212,37 @@ Both `allegro_right` and `shadowhand_nowrist` support `--device cpu`. For the Sh
 with VHACD the first time it loads it (about a minute per object, cached in `~/.isaacgym/vhacd`), while the
 Allegro task uses a single convex hull of the object.
 
-### 3. Inference with the pretrained Human→Allegro checkpoints
-Run these from the repository root in the `g2g` env with the CUDA variables above exported.
-
-**Checkpoints.** Download the [VAE checkpoints](https://drive.google.com/drive/folders/1gtcLW3iFDjiezBFYMq_f6Wpt1hQr6U8d?usp=drive_link),
-the [SB checkpoints](https://drive.google.com/drive/folders/1dVmSHcLdnyqgeqBjfQFUCIiHEg0wagFm?usp=drive_link) and the
-[LION checkpoint](https://drive.google.com/drive/folders/1pDfkBD0EFCP-L__HfxpcphdSNVf4U2pO?usp=drive_link) (e.g. with `gdown --folder <url>`).
-`config/mgg/sample_human_allegro_gwh.json` expects:
-```
-logs/pretrained_ae/ae_allegro_pvcnn_kl/model_best_test.pth
-logs/mgg/mgg/sbfm_human_allegro_gwh/checkpoints/model_epochepoch=00999.ckpt
-logs/lion/aeb159h_hvae_lion_B32/{cfg.yml,checkpoints/epoch_5999_iters_1667999.pt}
-```
-`dataset/scripts/preprocess_latent.py` loads VAE checkpoints from `dataset/logs/autoencoder/mgg/<file_name>/model_best_test.pth`:
-```
-for h in allegro human; do
-  mkdir -p dataset/logs/autoencoder/mgg/ae_${h}_pvcnn_kl
-  ln -sfn $PWD/logs/pretrained_ae/ae_${h}_pvcnn_kl/model_best_test.pth dataset/logs/autoencoder/mgg/ae_${h}_pvcnn_kl/
-done
-```
-
-**Split.** The test dataset reads `data/grasp_data/HumanHand/split.json`. If only the Allegro split exists,
-derive it from that one so both hands use the same objects:
-```
-python -c "
-import json
-s = json.load(open('data/grasp_data/Allegro/split.json'))
-json.dump({k: [p.replace('/Allegro/', '/HumanHand/') for p in v] for k, v in s.items()},
-          open('data/grasp_data/HumanHand/split.json', 'w'), indent=4)"
-python -c "import json; print('\n'.join(p.split('/')[-1] for p in json.load(open('data/grasp_data/Allegro/split.json'))['test']))" > test_objs.txt
-```
-A split generated locally may not match the one the checkpoints were trained with, so "test" objects may
-have been seen during training.
-
-**Preprocessing (test objects only).** `--objects_file` restricts the human-hand preprocessing to the listed
-objects (32 test objects took under an hour on 20 cores, instead of days for the full dataset). Then consolidate the contact
-points for both hands:
-```
-(cd dataset/preproc && python mgg_to_pc_parallel_human.py --objects_file ../../test_objs.txt)
-(cd dataset/preproc && python -c "
-from multiprocessing import Pool
-from process_contact import process_object_dir
-objs = open('../../test_objs.txt').read().split()
-with Pool(8) as p:
-    p.map(process_object_dir, [(f'../../data/grasp_data/{h}/{o}', h) for h in ['Allegro', 'HumanHand'] for o in objs])")
-```
-
-**Features.** Object latents are saved to `data/mgg_pc/objects/object_pc`, but the dataset reads
-`data/grasp_data/object_pc`, so link them. `--root_dir` must match the path prefix stored in `split.json`
-(`./data/grasp_data`), and `CUDA_VISIBLE_DEVICES` overrides the script's default GPU index of 1:
-```
-ln -sfn ../mgg_pc/objects/object_pc data/grasp_data/object_pc
-(cd dataset/scripts && python save_mgg_pc_latent.py)
-for h in allegro human; do
-  CUDA_VISIBLE_DEVICES=0 PYTHONPATH=. python dataset/scripts/preprocess_latent.py \
-      --config config/mgg/ae_${h}_pvcnn.json --root_dir ./data/grasp_data --splits test
-done
-```
-
-**Sample and evaluate.** `sample.py` writes `logs/diffusion_ddp/mgg/sbfm_human_allegro_gwh/test_output/samples.pkl`
-(about 10 GB for 32 objects × 32 samples). On a 32 GB GPU, `eval_samples.py` needs `expandable_segments`
-to avoid running out of memory:
+### 4. Inference with the pretrained checkpoints
+In the `g2g` env. `sample.py` writes `logs/diffusion_ddp/mgg/<method>/test_output/samples.pkl` (about 10 GB
+for H→A and 8 GB for H→S; about 16 minutes each). `eval_samples.py` evaluates every `samples.pkl` under
+`logs/diffusion_ddp/mgg/` and skips the ones that already have IoU values; on a 32 GB GPU it needs
+`expandable_segments` to avoid running out of memory:
 ```
 python sample.py --config config/mgg/sample_human_allegro_gwh.json
-PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True python eval_samples.py
-```
-
-**Isaac Gym.** Copy only the grasp poses into a small `samples.pkl` (the full file is too large to load in
-the Isaac env), then switch to the `grasp2grasp` env:
-```
-mkdir -p logs/isaac_h2a
-python -c "
-import pickle, numpy as np
-d = pickle.load(open('logs/diffusion_ddp/mgg/sbfm_human_allegro_gwh/test_output/samples.pkl', 'rb'))
-pickle.dump({'method': d['method'], 'sample_qpos': {k: np.asarray(v) for k, v in d['sample_qpos'].items()},
-             'sample_iou': {'mean': float(d['sample_iou']['mean'])}, 'sample_std': float(d['sample_std'])},
-            open('logs/isaac_h2a/samples.pkl', 'wb'))"
-conda activate grasp2grasp
-cd grasp_test && python isaac_test_right.py --robot_name allegro_right --eval_dir ../logs/isaac_h2a --device cpu
-```
-
-### 4. Inference with the pretrained Human→Shadow checkpoints
-This reuses the human-hand data, the object latents and `test_objs.txt` from step 3; only the Shadow side is
-new. `config/mgg/sample_human_shadow_gwh.json` expects:
-```
-logs/pretrained_ae/ae_shadow_pvcnn_kl/model_best_test.pth
-logs/mgg/mgg/sbfm_human_shadow_gwh/checkpoints/model_epochepoch=00999.ckpt
-```
-Link the Shadow VAE checkpoint for `preprocess_latent.py`, and derive the Shadow split from the human one:
-```
-mkdir -p dataset/logs/autoencoder/mgg/ae_shadow_pvcnn_kl
-ln -sfn $PWD/logs/pretrained_ae/ae_shadow_pvcnn_kl/model_best_test.pth dataset/logs/autoencoder/mgg/ae_shadow_pvcnn_kl/
-mkdir -p data/grasp_data/shadow_hand
-python -c "
-import json
-s = json.load(open('data/grasp_data/HumanHand/split.json'))
-json.dump({k: [p.replace('/HumanHand/', '/shadow_hand/') for p in v] for k, v in s.items()},
-          open('data/grasp_data/shadow_hand/split.json', 'w'), indent=4)"
-```
-Preprocess the Shadow hand for the test objects (32 objects took about 12 minutes on 20 cores), consolidate
-contact points and save the VAE features:
-```
-(cd dataset/preproc && python mgg_to_pc_parallel_shadow.py --objects_file ../../test_objs.txt)
-(cd dataset/preproc && python -c "
-from multiprocessing import Pool
-from process_contact import process_object_dir
-objs = open('../../test_objs.txt').read().split()
-with Pool(8) as p:
-    p.map(process_object_dir, [(f'../../data/grasp_data/shadow_hand/{o}', 'shadow_hand') for o in objs])")
-CUDA_VISIBLE_DEVICES=0 PYTHONPATH=. python dataset/scripts/preprocess_latent.py \
-    --config config/mgg/ae_shadow_pvcnn.json --root_dir ./data/grasp_data --splits test
-```
-Sample and evaluate. `eval_samples.py` evaluates every `samples.pkl` under `logs/diffusion_ddp/mgg/` and
-skips the ones that already have IoU values:
-```
 python sample.py --config config/mgg/sample_human_shadow_gwh.json
 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True python eval_samples.py
 ```
-Make the small `samples.pkl` as in step 3, but from `sbfm_human_shadow_gwh` into `logs/isaac_h2s`, then:
+
+### 5. Isaac Gym evaluation
+Copy only the grasp poses into a small `samples.pkl` per direction (the full files are too large to load in
+the Isaac env). In the `g2g` env:
+```
+for m in allegro:h2a shadow:h2s; do
+  src=${m%%:*}; dst=${m##*:}; mkdir -p logs/isaac_$dst
+  python -c "
+import pickle, numpy as np
+d = pickle.load(open('logs/diffusion_ddp/mgg/sbfm_human_${src}_gwh/test_output/samples.pkl', 'rb'))
+pickle.dump({'method': d['method'], 'sample_qpos': {k: np.asarray(v) for k, v in d['sample_qpos'].items()},
+             'sample_iou': {'mean': float(d['sample_iou']['mean'])}, 'sample_std': float(d['sample_std'])},
+            open('logs/isaac_$dst/samples.pkl', 'wb'))"
+done
+```
+Then in the `grasp2grasp` env (about 5 minutes for H→A and 20 minutes for H→S):
 ```
 conda activate grasp2grasp
-cd grasp_test && python isaac_test_right.py --robot_name shadowhand_nowrist --eval_dir ../logs/isaac_h2s --device cpu
+cd grasp_test
+python isaac_test_right.py --robot_name allegro_right --eval_dir ../logs/isaac_h2a --device cpu
+python isaac_test_right.py --robot_name shadowhand_nowrist --eval_dir ../logs/isaac_h2s --device cpu
 ```
 The results of both directions are summarized in [`results/results.md`](results/results.md).
 
