@@ -593,6 +593,10 @@ class IsaacGraspTestForce_allegro(BaseTask):
                 object_asset_options.fix_base_link = self.fix_object
                 object_asset_options.use_mesh_materials = True
                 object_asset_options.disable_gravity = True
+                if self.cfg['object'].get('collision', 'convex') == 'vhacd':
+                    object_asset_options.vhacd_enabled = True
+                    object_asset_options.vhacd_params = gymapi.VhacdParams()
+                    object_asset_options.vhacd_params.resolution = 1000000
 
 
                 # dataset_name = self.object_name.split('+')[0]

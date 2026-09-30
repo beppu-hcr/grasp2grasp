@@ -564,15 +564,16 @@ class IsaacGraspTestForce_shadowhand_nowrist(BaseTask):
                 object_asset_options.mesh_normal_mode = gymapi.COMPUTE_PER_VERTEX
                 object_asset_options.override_com = True  # recompute center of mesh
                 object_asset_options.override_inertia = True  # recompute inertia
-                object_asset_options.vhacd_enabled = True
-                object_asset_options.vhacd_params = gymapi.VhacdParams()
-                # object_asset_options.vhacd_params.resolution = 3000000
-                object_asset_options.vhacd_params.resolution = 1000000
+                if self.cfg['object'].get('collision', 'vhacd') == 'vhacd':
+                    object_asset_options.vhacd_enabled = True
+                    object_asset_options.vhacd_params = gymapi.VhacdParams()
+                    # object_asset_options.vhacd_params.resolution = 3000000
+                    object_asset_options.vhacd_params.resolution = 1000000
 
                 # dataset_name = self.object_name.split('+')[0]
                 # object_name = self.object_name.split('+')[1]
-                object_urdf_path = f'./data/mgg_pc/objects/obj'
-                object_mesh_path = f'./data/mgg_pc/objects/obj/{self.object_name}.obj'
+                object_urdf_path = self.cfg['object'].get('urdf_dir', './data/mgg_pc/objects/obj')
+                object_mesh_path = f'{object_urdf_path}/{self.object_name}.obj'
                 self.object_mesh = tm.load(object_mesh_path)
 
                 obj_asset = self.gym.load_asset(

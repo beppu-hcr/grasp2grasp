@@ -57,6 +57,8 @@ def parse_args() -> argparse.Namespace:
                         help='run all on cuda')
     parser.add_argument('--onscreen', action='store_true', default=False,
                         help='run simulator onscreen')
+    parser.add_argument('--hold', action='store_true', default=False,
+                        help='with --onscreen, keep the viewer open on the final state until the window is closed')
 
     return parser.parse_args()
 
@@ -84,6 +86,8 @@ def stability_tester(args: argparse.Namespace) -> dict:
         stability_config = yaml.safe_load(f)
     sim_params = get_sim_param(use_gpu_pipeline=args.device != "cpu")
     sim_headless = not args.onscreen
+    # directory with <object>.urdf / <object>.obj; configs without the key keep the original location
+    object_dir = stability_config['object'].get('urdf_dir', './data/mgg_pc/objects/obj')
 
     if args.robot_name.lower() == 'allegro_right':
         from envs.tasks.grasp_test_force_allegro import IsaacGraspTestForce_allegro as IsaacGraspTestForce
@@ -119,9 +123,9 @@ def stability_tester(args: argparse.Namespace) -> dict:
             isaac_env = IsaacGraspTestForce(stability_config, sim_params, gymapi.SIM_PHYSX,
                                             args.device, 0, headless=sim_headless, init_opt_q=q_generated,
                                             object_name=object_code, object_scales=object_scales, fix_object=False,robot=args.robot_name.lower(),
-                                            mesh_path='./data/mgg_pc/objects/obj')
+                                            mesh_path=object_dir)
         elif "shadow" in args.robot_name.lower() or "human" in args.robot_name.lower():
-            object_volume = tm.load(os.path.join('./data/mgg_pc/objects/obj', f'{object_code}.obj')).volume
+            object_volume = tm.load(os.path.join(object_dir, f'{object_code}.obj')).volume
             isaac_env = IsaacGraspTestForce(stability_config, sim_params, gymapi.SIM_PHYSX,
                                             args.device, 0, headless=sim_headless, init_opt_q=q_generated,
                                             object_name=object_code, object_volume=object_volume, fix_object=False)
@@ -129,6 +133,12 @@ def stability_tester(args: argparse.Namespace) -> dict:
             raise ValueError(f'Robot {args.robot_name} is not supported!')
         
         succ_grasp_object = isaac_env.push_object().detach().cpu().numpy()
+        if args.onscreen and args.hold:
+            logger.info(f'Simulation of [{object_code}] finished; close the viewer window to continue')
+            while not isaac_env.gym.query_viewer_has_closed(isaac_env.viewer):
+                isaac_env.gym.step_graphics(isaac_env.sim)
+                isaac_env.gym.draw_viewer(isaac_env.viewer, isaac_env.sim, True)
+                isaac_env.gym.sync_frame_time(isaac_env.sim)
         results[object_code] = succ_grasp_object.tolist()
         logger.info(
             f'Success rate of [{object_code}]: {int(succ_grasp_object.sum())} / {int(succ_grasp_object.shape[0])}')

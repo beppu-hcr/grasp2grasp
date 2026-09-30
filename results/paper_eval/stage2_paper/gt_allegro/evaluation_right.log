@@ -1,0 +1,70 @@
+2026-09-29 16:17:35.560 | INFO     | __main__:main:167 - Evaluation directory: ../logs/eval_paper/stage2_paper/gt_allegro
+2026-09-29 16:17:35.560 | INFO     | __main__:main:169 - Start evaluating..
+2026-09-29 16:17:35.821 | INFO     | __main__:stability_tester:113 - Stability test for [3D_Dollhouse_Lamp]
+2026-09-29 16:17:46.565 | INFO     | __main__:stability_tester:143 - Success rate of [3D_Dollhouse_Lamp]: 5 / 8
+2026-09-29 16:17:46.724 | INFO     | __main__:stability_tester:113 - Stability test for [Ecoforms_Garden_Pot_GP16ATurquois]
+2026-09-29 16:17:57.583 | INFO     | __main__:stability_tester:143 - Success rate of [Ecoforms_Garden_Pot_GP16ATurquois]: 6 / 8
+2026-09-29 16:17:57.743 | INFO     | __main__:stability_tester:113 - Stability test for [Razer_Blackwidow_Tournament_Edition_Keyboard]
+2026-09-29 16:18:07.926 | INFO     | __main__:stability_tester:143 - Success rate of [Razer_Blackwidow_Tournament_Edition_Keyboard]: 4 / 8
+2026-09-29 16:18:08.085 | INFO     | __main__:stability_tester:113 - Stability test for [Cole_Hardware_Deep_Bowl_Good_Earth_1075]
+2026-09-29 16:18:18.632 | INFO     | __main__:stability_tester:143 - Success rate of [Cole_Hardware_Deep_Bowl_Good_Earth_1075]: 6 / 8
+2026-09-29 16:18:18.802 | INFO     | __main__:stability_tester:113 - Stability test for [Cole_Hardware_Mini_Honey_Dipper]
+2026-09-29 16:18:28.869 | INFO     | __main__:stability_tester:143 - Success rate of [Cole_Hardware_Mini_Honey_Dipper]: 7 / 8
+2026-09-29 16:18:29.029 | INFO     | __main__:stability_tester:113 - Stability test for [Logitech_Ultimate_Ears_Boom_Wireless_Speaker_Night_Black]
+2026-09-29 16:18:39.041 | INFO     | __main__:stability_tester:143 - Success rate of [Logitech_Ultimate_Ears_Boom_Wireless_Speaker_Night_Black]: 5 / 8
+2026-09-29 16:18:39.201 | INFO     | __main__:stability_tester:113 - Stability test for [YumYum_D3_Liquid]
+2026-09-29 16:18:49.055 | INFO     | __main__:stability_tester:143 - Success rate of [YumYum_D3_Liquid]: 6 / 8
+2026-09-29 16:18:49.215 | INFO     | __main__:stability_tester:113 - Stability test for [Threshold_Porcelain_Pitcher_White]
+2026-09-29 16:18:59.172 | INFO     | __main__:stability_tester:143 - Success rate of [Threshold_Porcelain_Pitcher_White]: 1 / 8
+2026-09-29 16:18:59.345 | INFO     | __main__:stability_tester:113 - Stability test for [Nikon_1_AW1_w11275mm_Lens_Silver]
+2026-09-29 16:19:09.596 | INFO     | __main__:stability_tester:143 - Success rate of [Nikon_1_AW1_w11275mm_Lens_Silver]: 7 / 8
+2026-09-29 16:19:09.759 | INFO     | __main__:stability_tester:113 - Stability test for [Timberland_Mens_Earthkeepers_Stormbuck_Lite_Plain_Toe_Oxford]
+2026-09-29 16:19:20.269 | INFO     | __main__:stability_tester:143 - Success rate of [Timberland_Mens_Earthkeepers_Stormbuck_Lite_Plain_Toe_Oxford]: 2 / 8
+2026-09-29 16:19:20.435 | INFO     | __main__:stability_tester:113 - Stability test for [Black_Forest_Fruit_Snacks_28_Pack_Grape]
+2026-09-29 16:19:30.356 | INFO     | __main__:stability_tester:143 - Success rate of [Black_Forest_Fruit_Snacks_28_Pack_Grape]: 1 / 8
+2026-09-29 16:19:30.520 | INFO     | __main__:stability_tester:113 - Stability test for [Razer_Abyssus_Ambidextrous_Gaming_Mouse]
+2026-09-29 16:19:40.959 | INFO     | __main__:stability_tester:143 - Success rate of [Razer_Abyssus_Ambidextrous_Gaming_Mouse]: 2 / 8
+2026-09-29 16:19:41.118 | INFO     | __main__:stability_tester:113 - Stability test for [ACE_Coffee_Mug_Kristen_16_oz_cup]
+2026-09-29 16:19:51.944 | INFO     | __main__:stability_tester:143 - Success rate of [ACE_Coffee_Mug_Kristen_16_oz_cup]: 7 / 8
+2026-09-29 16:19:52.105 | INFO     | __main__:stability_tester:113 - Stability test for [Ecoforms_Pot_Nova_6_Turquoise]
+2026-09-29 16:20:02.214 | INFO     | __main__:stability_tester:143 - Success rate of [Ecoforms_Pot_Nova_6_Turquoise]: 7 / 8
+2026-09-29 16:20:02.373 | INFO     | __main__:stability_tester:113 - Stability test for [Remington_TStudio_Hair_Dryer]
+2026-09-29 16:20:13.287 | INFO     | __main__:stability_tester:143 - Success rate of [Remington_TStudio_Hair_Dryer]: 5 / 8
+2026-09-29 16:20:13.449 | INFO     | __main__:stability_tester:113 - Stability test for [3D_Dollhouse_Happy_Brother]
+2026-09-29 16:20:23.515 | INFO     | __main__:stability_tester:143 - Success rate of [3D_Dollhouse_Happy_Brother]: 3 / 8
+2026-09-29 16:20:23.684 | INFO     | __main__:stability_tester:113 - Stability test for [W_Lou_z0dkC78niiZ]
+2026-09-29 16:20:33.867 | INFO     | __main__:stability_tester:143 - Success rate of [W_Lou_z0dkC78niiZ]: 4 / 8
+2026-09-29 16:20:34.029 | INFO     | __main__:stability_tester:113 - Stability test for [Grreat_Choice_Dog_Double_Dish_Plastic_Blue]
+2026-09-29 16:20:44.099 | INFO     | __main__:stability_tester:143 - Success rate of [Grreat_Choice_Dog_Double_Dish_Plastic_Blue]: 5 / 8
+2026-09-29 16:20:44.278 | INFO     | __main__:stability_tester:113 - Stability test for [Asus_80211ac_DualBand_Gigabit_Wireless_Router_RTAC68R]
+2026-09-29 16:20:54.611 | INFO     | __main__:stability_tester:143 - Success rate of [Asus_80211ac_DualBand_Gigabit_Wireless_Router_RTAC68R]: 0 / 8
+2026-09-29 16:20:54.773 | INFO     | __main__:stability_tester:113 - Stability test for [BIA_Cordon_Bleu_White_Porcelain_Utensil_Holder_900028]
+2026-09-29 16:21:05.367 | INFO     | __main__:stability_tester:143 - Success rate of [BIA_Cordon_Bleu_White_Porcelain_Utensil_Holder_900028]: 5 / 8
+2026-09-29 16:21:05.535 | INFO     | __main__:stability_tester:113 - Stability test for [Corningware_CW_by_Corningware_3qt_Oblong_Casserole_Dish_Blue]
+2026-09-29 16:21:15.979 | INFO     | __main__:stability_tester:143 - Success rate of [Corningware_CW_by_Corningware_3qt_Oblong_Casserole_Dish_Blue]: 6 / 8
+2026-09-29 16:21:16.139 | INFO     | __main__:stability_tester:113 - Stability test for [Nintendo_2DS_Crimson_Red]
+2026-09-29 16:21:26.362 | INFO     | __main__:stability_tester:143 - Success rate of [Nintendo_2DS_Crimson_Red]: 4 / 8
+2026-09-29 16:21:26.524 | INFO     | __main__:stability_tester:113 - Stability test for [Threshold_Salad_Plate_Square_Rim_Porcelain]
+2026-09-29 16:21:36.577 | INFO     | __main__:stability_tester:143 - Success rate of [Threshold_Salad_Plate_Square_Rim_Porcelain]: 5 / 8
+2026-09-29 16:21:36.738 | INFO     | __main__:stability_tester:113 - Stability test for [Razer_Goliathus_Control_Edition_Small_Soft_Gaming_Mouse_Mat]
+2026-09-29 16:21:46.993 | INFO     | __main__:stability_tester:143 - Success rate of [Razer_Goliathus_Control_Edition_Small_Soft_Gaming_Mouse_Mat]: 7 / 8
+2026-09-29 16:21:47.158 | INFO     | __main__:stability_tester:113 - Stability test for [Ortho_Forward_Facing_CkAW6rL25xH]
+2026-09-29 16:21:57.546 | INFO     | __main__:stability_tester:143 - Success rate of [Ortho_Forward_Facing_CkAW6rL25xH]: 1 / 8
+2026-09-29 16:21:57.715 | INFO     | __main__:stability_tester:113 - Stability test for [Android_Figure_Panda]
+2026-09-29 16:22:08.062 | INFO     | __main__:stability_tester:143 - Success rate of [Android_Figure_Panda]: 6 / 8
+2026-09-29 16:22:08.224 | INFO     | __main__:stability_tester:113 - Stability test for [Sushi_Mat]
+2026-09-29 16:22:18.596 | INFO     | __main__:stability_tester:143 - Success rate of [Sushi_Mat]: 4 / 8
+2026-09-29 16:22:18.765 | INFO     | __main__:stability_tester:113 - Stability test for [TERREX_FAST_X_GTX]
+2026-09-29 16:22:29.008 | INFO     | __main__:stability_tester:143 - Success rate of [TERREX_FAST_X_GTX]: 2 / 8
+2026-09-29 16:22:29.180 | INFO     | __main__:stability_tester:113 - Stability test for [Nordic_Ware_Original_Bundt_Pan]
+2026-09-29 16:22:39.253 | INFO     | __main__:stability_tester:143 - Success rate of [Nordic_Ware_Original_Bundt_Pan]: 6 / 8
+2026-09-29 16:22:39.418 | INFO     | __main__:stability_tester:113 - Stability test for [Threshold_Hand_Towel_Blue_Medallion_16_x_27]
+2026-09-29 16:22:49.693 | INFO     | __main__:stability_tester:143 - Success rate of [Threshold_Hand_Towel_Blue_Medallion_16_x_27]: 0 / 8
+2026-09-29 16:22:49.868 | INFO     | __main__:stability_tester:113 - Stability test for [Design_Ideas_Drawer_Store_Organizer]
+2026-09-29 16:23:00.224 | INFO     | __main__:stability_tester:143 - Success rate of [Design_Ideas_Drawer_Store_Organizer]: 5 / 8
+2026-09-29 16:23:00.385 | INFO     | __main__:stability_tester:113 - Stability test for [Clue_Board_Game_Classic_Edition]
+2026-09-29 16:23:10.532 | INFO     | __main__:stability_tester:143 - Success rate of [Clue_Board_Game_Classic_Edition]: 0 / 8
+2026-09-29 16:23:10.694 | INFO     | __main__:stability_tester:152 - **Success Rate** across all objects: 134 / 256, succ rate: 0.5234375
+2026-09-29 16:23:10.694 | INFO     | __main__:stability_tester:153 - **GWH_IOU** across all objects: nan
+2026-09-29 16:23:10.694 | INFO     | __main__:stability_tester:154 - **STD** across all objects: 0.2966833685507456
+2026-09-29 16:23:10.694 | INFO     | __main__:main:173 - End evaluating..
