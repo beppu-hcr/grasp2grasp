@@ -195,8 +195,8 @@ done
 
 **Object URDFs for Isaac Gym.** The repository does not ship them. Generate a minimal URDF (plus a symlink to
 the `.obj`) for each object. The first command writes URDFs with `mass=0.1`, used by the original settings;
-the second writes URDFs without mass, so Isaac Gym computes the mass from density 10000, used by the paper
-settings (step 5):
+the second writes URDFs without mass, so Isaac Gym computes the mass from density 10,000, used by the
+recommended settings (step 5):
 ```
 python grasp_test/make_object_urdfs.py --mesh_dir data/mgg_pc/objects/obj --out_dir grasp_test/data/mgg_pc/objects/obj
 python grasp_test/make_object_urdfs.py --mesh_dir data/mgg_pc/objects/obj --out_dir grasp_test/data/mgg_pc/objects/obj_density --no_mass
@@ -208,7 +208,8 @@ then run the simulation in the `grasp2grasp` env:
 ```
 python grasp_test/make_gt_samples.py --hand Allegro --out_dir logs/isaac_gt_test
 conda activate grasp2grasp
-cd grasp_test && python isaac_test_right.py --robot_name allegro_right --eval_dir ../logs/isaac_gt_test --device cpu
+cd grasp_test && python isaac_test_right.py --robot_name allegro_right --eval_dir ../logs/isaac_gt_test --device cpu \
+    --stability_config envs/tasks/grasp_test_force_paper.yaml
 ```
 Both `allegro_right` and `shadowhand_nowrist` support `--device cpu`. For the Shadow hand, use
 `--hand shadow_hand` and `--robot_name shadowhand_nowrist`. The Shadow task convex-decomposes each object
@@ -240,28 +241,32 @@ pickle.dump({'method': d['method'], 'sample_qpos': {k: np.asarray(v) for k, v in
             open('logs/isaac_$dst/samples.pkl', 'wb'))"
 done
 ```
-Then in the `grasp2grasp` env (about 5 minutes for H→A and 20 minutes for H→S):
+Then evaluate in the `grasp2grasp` env. The recommended settings, `envs/tasks/grasp_test_force_paper.yaml`,
+follow the paper where it is explicit (6 directions × 60 steps, success if the object moves < 2 cm in all six,
+friction 10, object density 10,000) and keep the authors' code elsewhere, including their push force
+(`5000 × mesh volume`, i.e. density 10,000 × 0.5 m/s²). They need the URDFs without mass (`obj_density`, see
+step 3) and use VHACD collision for both hands. This takes about 7 minutes for H→A and 35 minutes for H→S:
 ```
 conda activate grasp2grasp
 cd grasp_test
-python isaac_test_right.py --robot_name allegro_right --eval_dir ../logs/isaac_h2a --device cpu
-python isaac_test_right.py --robot_name shadowhand_nowrist --eval_dir ../logs/isaac_h2s --device cpu
-```
-These use the original `grasp_test` settings (`envs/tasks/grasp_test_force.yaml`), which differ from the
-paper: the objects have `mass=0.1` instead of density 10000 (so the push reaches up to about 350 m/s² instead
-of 0.5 m/s²), each direction is pushed for 50 steps instead of 60, and the Allegro task collides with a single
-convex hull of the object. To evaluate with the paper's settings, pass `envs/tasks/grasp_test_force_paper.yaml`,
-which uses the URDFs without mass (`obj_density`, see step 3), 60 steps and VHACD collision for both hands
-(about 7 minutes for H→A and 35 minutes for H→S):
-```
-python isaac_test_right.py --robot_name allegro_right --eval_dir ../logs/isaac_h2a_paper --device cpu \
+python isaac_test_right.py --robot_name allegro_right --eval_dir ../logs/isaac_h2a --device cpu \
     --stability_config envs/tasks/grasp_test_force_paper.yaml
-python isaac_test_right.py --robot_name shadowhand_nowrist --eval_dir ../logs/isaac_h2s_paper --device cpu \
+python isaac_test_right.py --robot_name shadowhand_nowrist --eval_dir ../logs/isaac_h2s --device cpu \
     --stability_config envs/tasks/grasp_test_force_paper.yaml
 ```
-Copy `samples.pkl` into the new `--eval_dir` first (the script reads it from there). The two configs differ
-only in the keys `object.urdf_dir`, `object.collision` and `eval_policy.dynamic.num_steps`; without the first
-two keys, both tasks behave as before.
+The script reads `samples.pkl` from `--eval_dir` and writes `succ.pickle` and `evaluation_right.log` there.
+
+Other settings, as options (pass them with `--stability_config` instead):
+- `envs/tasks/grasp_test_force.yaml`, the default when `--stability_config` is omitted: the original
+  `grasp_test` settings. The objects keep `mass=0.1` from the default URDFs, so the push reaches up to about
+  350 m/s² instead of 0.5 m/s²; 50 steps per direction; the Allegro task collides with a single convex hull.
+- `envs/tasks/grasp_test_force_paper_accel.yaml`: the recommended settings with the push applied as
+  `mass × 0.5`, i.e. a uniform 0.5 m/s² for every object as the paper's text states. With the authors'
+  force, hollow objects get less (0.14–0.5 m/s²).
+
+The configs differ only in the optional keys `object.urdf_dir`, `object.collision` and
+`eval_policy.dynamic.acceleration` (without them, both tasks behave as in the original code) and in the
+value of `eval_policy.dynamic.num_steps`.
 
 The results of both directions are summarized in [`results/results.md`](results/results.md).
 

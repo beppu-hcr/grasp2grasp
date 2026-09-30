@@ -292,8 +292,21 @@ class IsaacGraspTestForce_shadowhand_nowrist(BaseTask):
                 achieve_6dir *= i_achieve
         return achieve_6dir
 
+    def _object_masses(self):
+        # object is the second actor in every env (the hand is the first); mass as computed by the simulator
+        masses = []
+        for i in range(self.num_envs):
+            env_ptr = self.gym.get_env(self.sim, i)
+            props = self.gym.get_actor_rigid_body_properties(env_ptr, self.gym.get_actor_handle(env_ptr, 1))
+            masses.append(sum(p.mass for p in props))
+        return torch.tensor(masses, device=self.device, dtype=torch.float).reshape(-1, 1)
+
     def _push_object_with_direction(self, i_direction, pbar):
-        object_force_magnitude = self.cfg['eval_policy']['dynamic']['magnitude_per_volume'] * self.object_volume
+        if 'acceleration' in self.cfg['eval_policy']['dynamic']:
+            # uniform acceleration: force = object mass x acceleration
+            object_force_magnitude = self.cfg['eval_policy']['dynamic']['acceleration'] * self._object_masses()
+        else:
+            object_force_magnitude = self.cfg['eval_policy']['dynamic']['magnitude_per_volume'] * self.object_volume
         # print(f'force: {object_force_magnitude}')
         object_pos_start = self.get_obj_pos()
         for i_iter in range(self.force_num_steps):

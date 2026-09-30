@@ -1,0 +1,2738 @@
+Importing module 'gym_38' (IsaacGym_Preview_4_Package/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to IsaacGym_Preview_4_Package/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+PyTorch version 2.4.1+cu118
+Device count 1
+IsaacGym_Preview_4_Package/isaacgym/python/isaacgym/_bindings/src/gymtorch
+Using ~/.cache/torch_extensions/py38_cu118 as PyTorch extensions root...
+Emitting ninja build file ~/.cache/torch_extensions/py38_cu118/gymtorch/build.ninja...
+Building extension module gymtorch...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module gymtorch...
+2026-09-30 09:43:28.861 | INFO     | __main__:main:167 - Evaluation directory: ../logs/eval_paper/stage3_accel/isaac_h2a
+2026-09-30 09:43:28.861 | INFO     | __main__:main:169 - Start evaluating..
+  0%|          | 0/32 [00:00<?, ?it/s]2026-09-30 09:43:29.111 | INFO     | __main__:stability_tester:113 - Stability test for [3D_Dollhouse_Happy_Brother]
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:06,  5.06it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 158.25it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   1%|▏         | 5/360 [00:00<00:07, 47.01it/s][A
+Test Push Object::   3%|▎         | 10/360 [00:00<00:07, 46.96it/s][A
+Test Push Object::   4%|▍         | 15/360 [00:00<00:07, 46.57it/s][A
+Test Push Object::   6%|▌         | 20/360 [00:00<00:07, 46.66it/s][A
+Test Push Object::   7%|▋         | 25/360 [00:00<00:07, 46.57it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:07, 46.76it/s][A
+Test Push Object::  10%|▉         | 35/360 [00:00<00:06, 46.57it/s][A
+Test Push Object::  11%|█         | 40/360 [00:00<00:06, 46.59it/s][A
+Test Push Object::  12%|█▎        | 45/360 [00:00<00:06, 46.87it/s][A
+Test Push Object::  14%|█▍        | 50/360 [00:01<00:06, 46.62it/s][A
+Test Push Object::  15%|█▌        | 55/360 [00:01<00:06, 46.97it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:06, 46.96it/s][A
+Test Push Object::  18%|█▊        | 65/360 [00:01<00:06, 47.09it/s][A
+Test Push Object::  19%|█▉        | 70/360 [00:01<00:06, 47.00it/s][A
+Test Push Object::  21%|██        | 75/360 [00:01<00:06, 46.76it/s][A
+Test Push Object::  22%|██▏       | 80/360 [00:01<00:05, 47.23it/s][A
+Test Push Object::  24%|██▎       | 85/360 [00:01<00:05, 47.53it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:01<00:05, 47.65it/s][A
+Test Push Object::  26%|██▋       | 95/360 [00:02<00:05, 47.93it/s][A
+Test Push Object::  28%|██▊       | 100/360 [00:02<00:05, 48.35it/s][A
+Test Push Object::  29%|██▉       | 105/360 [00:02<00:05, 48.40it/s][A
+Test Push Object::  31%|███       | 111/360 [00:02<00:05, 49.20it/s][A
+Test Push Object::  32%|███▎      | 117/360 [00:02<00:04, 50.07it/s][A
+Test Push Object::  34%|███▍      | 122/360 [00:02<00:04, 50.03it/s][A
+Test Push Object::  35%|███▌      | 127/360 [00:02<00:04, 49.38it/s][A
+Test Push Object::  37%|███▋      | 133/360 [00:02<00:04, 50.05it/s][A
+Test Push Object::  39%|███▊      | 139/360 [00:02<00:04, 50.31it/s][A
+Test Push Object::  40%|████      | 145/360 [00:03<00:04, 50.36it/s][A
+Test Push Object::  42%|████▏     | 151/360 [00:03<00:04, 50.70it/s][A
+Test Push Object::  44%|████▎     | 157/360 [00:03<00:04, 50.44it/s][A
+Test Push Object::  45%|████▌     | 163/360 [00:03<00:03, 50.33it/s][A
+Test Push Object::  47%|████▋     | 169/360 [00:03<00:03, 50.73it/s][A
+Test Push Object::  49%|████▊     | 175/360 [00:03<00:03, 50.64it/s][A
+Test Push Object::  50%|█████     | 181/360 [00:03<00:03, 50.80it/s][A
+Test Push Object::  52%|█████▏    | 187/360 [00:03<00:03, 50.53it/s][A
+Test Push Object::  54%|█████▎    | 193/360 [00:03<00:03, 50.83it/s][A
+Test Push Object::  55%|█████▌    | 199/360 [00:04<00:03, 50.92it/s][A
+Test Push Object::  57%|█████▋    | 205/360 [00:04<00:03, 51.19it/s][A
+Test Push Object::  59%|█████▊    | 211/360 [00:04<00:02, 51.12it/s][A
+Test Push Object::  60%|██████    | 217/360 [00:04<00:02, 51.34it/s][A
+Test Push Object::  62%|██████▏   | 223/360 [00:04<00:02, 51.28it/s][A
+Test Push Object::  64%|██████▎   | 229/360 [00:04<00:02, 51.40it/s][A
+Test Push Object::  65%|██████▌   | 235/360 [00:04<00:02, 51.58it/s][A
+Test Push Object::  67%|██████▋   | 241/360 [00:04<00:02, 51.18it/s][A
+Test Push Object::  69%|██████▊   | 247/360 [00:05<00:02, 51.07it/s][A
+Test Push Object::  70%|███████   | 253/360 [00:05<00:02, 50.89it/s][A
+Test Push Object::  72%|███████▏  | 259/360 [00:05<00:01, 50.95it/s][A
+Test Push Object::  74%|███████▎  | 265/360 [00:05<00:01, 51.33it/s][A
+Test Push Object::  75%|███████▌  | 271/360 [00:05<00:01, 51.22it/s][A
+Test Push Object::  77%|███████▋  | 277/360 [00:05<00:01, 51.33it/s][A
+Test Push Object::  79%|███████▊  | 283/360 [00:05<00:01, 51.25it/s][A
+Test Push Object::  80%|████████  | 289/360 [00:05<00:01, 51.46it/s][A
+Test Push Object::  82%|████████▏ | 295/360 [00:05<00:01, 50.73it/s][A
+Test Push Object::  84%|████████▎ | 301/360 [00:06<00:01, 50.23it/s][A
+Test Push Object::  85%|████████▌ | 307/360 [00:06<00:01, 49.06it/s][A
+Test Push Object::  87%|████████▋ | 312/360 [00:06<00:00, 48.28it/s][A
+Test Push Object::  88%|████████▊ | 317/360 [00:06<00:00, 47.48it/s][A
+Test Push Object::  89%|████████▉ | 322/360 [00:06<00:00, 46.98it/s][A
+Test Push Object::  91%|█████████ | 327/360 [00:06<00:00, 47.38it/s][A
+Test Push Object::  92%|█████████▏| 332/360 [00:06<00:00, 47.23it/s][A
+Test Push Object::  94%|█████████▎| 337/360 [00:06<00:00, 46.56it/s][A
+Test Push Object::  95%|█████████▌| 342/360 [00:06<00:00, 46.74it/s][A
+Test Push Object::  96%|█████████▋| 347/360 [00:07<00:00, 46.81it/s][A
+Test Push Object::  98%|█████████▊| 352/360 [00:07<00:00, 47.19it/s][A
+Test Push Object::  99%|█████████▉| 357/360 [00:07<00:00, 47.16it/s][ATest Push Object:: 100%|██████████| 360/360 [00:07<00:00, 49.06it/s]
+2026-09-30 09:43:42.779 | INFO     | __main__:stability_tester:143 - Success rate of [3D_Dollhouse_Happy_Brother]: 21 / 32
+  3%|▎         | 1/32 [00:13<07:08, 13.83s/it]2026-09-30 09:43:42.943 | INFO     | __main__:stability_tester:113 - Stability test for [3D_Dollhouse_Lamp]
+Using VHACD cache directory '~/.isaacgym/vhacd'
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/3D_Dollhouse_Happy_Brother.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:04,  6.75it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 210.00it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   2%|▏         | 6/360 [00:00<00:05, 59.34it/s][A
+Test Push Object::   3%|▎         | 12/360 [00:00<00:05, 59.63it/s][A
+Test Push Object::   5%|▌         | 18/360 [00:00<00:05, 59.55it/s][A
+Test Push Object::   7%|▋         | 24/360 [00:00<00:05, 59.34it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:05, 59.45it/s][A
+Test Push Object::  10%|█         | 36/360 [00:00<00:05, 59.29it/s][A
+Test Push Object::  12%|█▏        | 42/360 [00:00<00:05, 58.86it/s][A
+Test Push Object::  13%|█▎        | 48/360 [00:00<00:05, 58.55it/s][A
+Test Push Object::  15%|█▌        | 54/360 [00:00<00:05, 57.99it/s][A
+Test Push Object::  17%|█▋        | 61/360 [00:01<00:05, 58.79it/s][A
+Test Push Object::  19%|█▊        | 67/360 [00:01<00:04, 58.73it/s][A
+Test Push Object::  20%|██        | 73/360 [00:01<00:04, 57.63it/s][A
+Test Push Object::  22%|██▏       | 79/360 [00:01<00:04, 57.53it/s][A
+Test Push Object::  24%|██▎       | 85/360 [00:01<00:04, 57.17it/s][A
+Test Push Object::  25%|██▌       | 91/360 [00:01<00:04, 56.55it/s][A
+Test Push Object::  27%|██▋       | 97/360 [00:01<00:04, 56.51it/s][A
+Test Push Object::  29%|██▊       | 103/360 [00:01<00:04, 56.81it/s][A
+Test Push Object::  30%|███       | 109/360 [00:01<00:04, 56.44it/s][A
+Test Push Object::  32%|███▏      | 115/360 [00:01<00:04, 56.48it/s][A
+Test Push Object::  34%|███▎      | 121/360 [00:02<00:04, 57.07it/s][A
+Test Push Object::  35%|███▌      | 127/360 [00:02<00:04, 57.75it/s][A
+Test Push Object::  37%|███▋      | 133/360 [00:02<00:03, 57.11it/s][A
+Test Push Object::  39%|███▊      | 139/360 [00:02<00:03, 56.80it/s][A
+Test Push Object::  40%|████      | 145/360 [00:02<00:03, 56.46it/s][A
+Test Push Object::  42%|████▏     | 151/360 [00:02<00:03, 56.45it/s][A
+Test Push Object::  44%|████▎     | 157/360 [00:02<00:03, 56.86it/s][A
+Test Push Object::  45%|████▌     | 163/360 [00:02<00:03, 56.99it/s][A
+Test Push Object::  47%|████▋     | 169/360 [00:02<00:03, 57.15it/s][A
+Test Push Object::  49%|████▊     | 175/360 [00:03<00:03, 57.09it/s][A
+Test Push Object::  50%|█████     | 181/360 [00:03<00:03, 56.96it/s][A
+Test Push Object::  52%|█████▏    | 187/360 [00:03<00:03, 56.46it/s][A
+Test Push Object::  54%|█████▎    | 193/360 [00:03<00:02, 56.32it/s][A
+Test Push Object::  55%|█████▌    | 199/360 [00:03<00:02, 55.37it/s][A
+Test Push Object::  57%|█████▋    | 205/360 [00:03<00:02, 55.13it/s][A
+Test Push Object::  59%|█████▊    | 211/360 [00:03<00:02, 54.93it/s][A
+Test Push Object::  60%|██████    | 217/360 [00:03<00:02, 55.24it/s][A
+Test Push Object::  62%|██████▏   | 223/360 [00:03<00:02, 55.22it/s][A
+Test Push Object::  64%|██████▎   | 229/360 [00:04<00:02, 55.62it/s][A
+Test Push Object::  65%|██████▌   | 235/360 [00:04<00:02, 56.19it/s][A
+Test Push Object::  67%|██████▋   | 241/360 [00:04<00:02, 56.27it/s][A
+Test Push Object::  69%|██████▊   | 247/360 [00:04<00:02, 56.17it/s][A
+Test Push Object::  70%|███████   | 253/360 [00:04<00:01, 56.14it/s][A
+Test Push Object::  72%|███████▏  | 259/360 [00:04<00:01, 56.14it/s][A
+Test Push Object::  74%|███████▎  | 265/360 [00:04<00:01, 56.23it/s][A
+Test Push Object::  75%|███████▌  | 271/360 [00:04<00:01, 55.57it/s][A
+Test Push Object::  77%|███████▋  | 277/360 [00:04<00:01, 55.61it/s][A
+Test Push Object::  79%|███████▊  | 283/360 [00:04<00:01, 55.44it/s][A
+Test Push Object::  80%|████████  | 289/360 [00:05<00:01, 55.38it/s][A
+Test Push Object::  82%|████████▏ | 295/360 [00:05<00:01, 55.33it/s][A
+Test Push Object::  84%|████████▎ | 301/360 [00:05<00:01, 55.42it/s][A
+Test Push Object::  85%|████████▌ | 307/360 [00:05<00:00, 55.38it/s][A
+Test Push Object::  87%|████████▋ | 313/360 [00:05<00:00, 55.18it/s][A
+Test Push Object::  89%|████████▊ | 319/360 [00:05<00:00, 55.64it/s][A
+Test Push Object::  90%|█████████ | 325/360 [00:05<00:00, 56.08it/s][A
+Test Push Object::  92%|█████████▏| 331/360 [00:05<00:00, 57.10it/s][A
+Test Push Object::  94%|█████████▎| 337/360 [00:05<00:00, 57.44it/s][A
+Test Push Object::  95%|█████████▌| 343/360 [00:06<00:00, 57.42it/s][A
+Test Push Object::  97%|█████████▋| 349/360 [00:06<00:00, 57.18it/s][A
+Test Push Object::  99%|█████████▊| 355/360 [00:06<00:00, 57.57it/s][ATest Push Object:: 100%|██████████| 360/360 [00:06<00:00, 56.78it/s]
+2026-09-30 09:43:54.506 | INFO     | __main__:stability_tester:143 - Success rate of [3D_Dollhouse_Lamp]: 25 / 32
+  6%|▋         | 2/32 [00:25<06:17, 12.59s/it]2026-09-30 09:43:54.670 | INFO     | __main__:stability_tester:113 - Stability test for [ACE_Coffee_Mug_Kristen_16_oz_cup]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/3D_Dollhouse_Lamp.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:04,  6.63it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 204.08it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   1%|▏         | 5/360 [00:00<00:08, 43.96it/s][A
+Test Push Object::   3%|▎         | 10/360 [00:00<00:07, 45.24it/s][A
+Test Push Object::   4%|▍         | 15/360 [00:00<00:07, 44.97it/s][A
+Test Push Object::   6%|▌         | 20/360 [00:00<00:07, 44.38it/s][A
+Test Push Object::   7%|▋         | 25/360 [00:00<00:07, 44.05it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:07, 44.03it/s][A
+Test Push Object::  10%|▉         | 35/360 [00:00<00:07, 44.16it/s][A
+Test Push Object::  11%|█         | 40/360 [00:00<00:07, 44.17it/s][A
+Test Push Object::  12%|█▎        | 45/360 [00:01<00:07, 43.81it/s][A
+Test Push Object::  14%|█▍        | 50/360 [00:01<00:07, 44.22it/s][A
+Test Push Object::  15%|█▌        | 55/360 [00:01<00:06, 44.15it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:06, 43.99it/s][A
+Test Push Object::  18%|█▊        | 65/360 [00:01<00:06, 44.50it/s][A
+Test Push Object::  19%|█▉        | 70/360 [00:01<00:06, 44.77it/s][A
+Test Push Object::  21%|██        | 75/360 [00:01<00:06, 44.11it/s][A
+Test Push Object::  22%|██▏       | 80/360 [00:01<00:06, 44.19it/s][A
+Test Push Object::  24%|██▎       | 85/360 [00:01<00:06, 44.20it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:02<00:06, 44.40it/s][A
+Test Push Object::  26%|██▋       | 95/360 [00:02<00:05, 44.27it/s][A
+Test Push Object::  28%|██▊       | 100/360 [00:02<00:05, 44.55it/s][A
+Test Push Object::  29%|██▉       | 105/360 [00:02<00:05, 44.64it/s][A
+Test Push Object::  31%|███       | 110/360 [00:02<00:05, 44.53it/s][A
+Test Push Object::  32%|███▏      | 115/360 [00:02<00:05, 44.40it/s][A
+Test Push Object::  33%|███▎      | 120/360 [00:02<00:05, 44.24it/s][A
+Test Push Object::  35%|███▍      | 125/360 [00:02<00:05, 43.81it/s][A
+Test Push Object::  36%|███▌      | 130/360 [00:02<00:05, 43.78it/s][A
+Test Push Object::  38%|███▊      | 135/360 [00:03<00:05, 43.77it/s][A
+Test Push Object::  39%|███▉      | 140/360 [00:03<00:04, 44.69it/s][A
+Test Push Object::  40%|████      | 145/360 [00:03<00:04, 44.88it/s][A
+Test Push Object::  42%|████▏     | 150/360 [00:03<00:04, 44.97it/s][A
+Test Push Object::  43%|████▎     | 155/360 [00:03<00:04, 44.85it/s][A
+Test Push Object::  44%|████▍     | 160/360 [00:03<00:04, 44.53it/s][A
+Test Push Object::  46%|████▌     | 165/360 [00:03<00:04, 44.40it/s][A
+Test Push Object::  47%|████▋     | 170/360 [00:03<00:04, 44.73it/s][A
+Test Push Object::  49%|████▊     | 175/360 [00:03<00:04, 44.72it/s][A
+Test Push Object::  50%|█████     | 180/360 [00:04<00:03, 45.06it/s][A
+Test Push Object::  51%|█████▏    | 185/360 [00:04<00:03, 44.50it/s][A
+Test Push Object::  53%|█████▎    | 190/360 [00:04<00:03, 44.25it/s][A
+Test Push Object::  54%|█████▍    | 195/360 [00:04<00:03, 44.93it/s][A
+Test Push Object::  56%|█████▌    | 200/360 [00:04<00:03, 44.63it/s][A
+Test Push Object::  57%|█████▋    | 205/360 [00:04<00:03, 45.36it/s][A
+Test Push Object::  58%|█████▊    | 210/360 [00:04<00:03, 45.99it/s][A
+Test Push Object::  60%|█████▉    | 215/360 [00:04<00:03, 46.45it/s][A
+Test Push Object::  61%|██████    | 220/360 [00:04<00:03, 45.53it/s][A
+Test Push Object::  62%|██████▎   | 225/360 [00:05<00:02, 45.27it/s][A
+Test Push Object::  64%|██████▍   | 230/360 [00:05<00:02, 44.96it/s][A
+Test Push Object::  65%|██████▌   | 235/360 [00:05<00:02, 44.78it/s][A
+Test Push Object::  67%|██████▋   | 240/360 [00:05<00:02, 45.09it/s][A
+Test Push Object::  68%|██████▊   | 245/360 [00:05<00:02, 45.05it/s][A
+Test Push Object::  69%|██████▉   | 250/360 [00:05<00:02, 44.50it/s][A
+Test Push Object::  71%|███████   | 255/360 [00:05<00:02, 44.49it/s][A
+Test Push Object::  72%|███████▏  | 260/360 [00:05<00:02, 45.19it/s][A
+Test Push Object::  74%|███████▎  | 265/360 [00:05<00:02, 45.04it/s][A
+Test Push Object::  75%|███████▌  | 270/360 [00:06<00:02, 44.67it/s][A
+Test Push Object::  76%|███████▋  | 275/360 [00:06<00:01, 44.28it/s][A
+Test Push Object::  78%|███████▊  | 280/360 [00:06<00:01, 44.24it/s][A
+Test Push Object::  79%|███████▉  | 285/360 [00:06<00:01, 44.28it/s][A
+Test Push Object::  81%|████████  | 290/360 [00:06<00:01, 44.48it/s][A
+Test Push Object::  82%|████████▏ | 295/360 [00:06<00:01, 44.79it/s][A
+Test Push Object::  83%|████████▎ | 300/360 [00:06<00:01, 45.14it/s][A
+Test Push Object::  85%|████████▍ | 305/360 [00:06<00:01, 44.34it/s][A
+Test Push Object::  86%|████████▌ | 310/360 [00:06<00:01, 44.51it/s][A
+Test Push Object::  88%|████████▊ | 315/360 [00:07<00:01, 44.59it/s][A
+Test Push Object::  89%|████████▉ | 320/360 [00:07<00:00, 44.11it/s][A
+Test Push Object::  90%|█████████ | 325/360 [00:07<00:00, 44.47it/s][A
+Test Push Object::  92%|█████████▏| 330/360 [00:07<00:00, 44.50it/s][A
+Test Push Object::  93%|█████████▎| 335/360 [00:07<00:00, 44.64it/s][A
+Test Push Object::  94%|█████████▍| 340/360 [00:07<00:00, 44.82it/s][A
+Test Push Object::  96%|█████████▌| 345/360 [00:07<00:00, 45.03it/s][A
+Test Push Object::  97%|█████████▋| 350/360 [00:07<00:00, 44.89it/s][A
+Test Push Object::  99%|█████████▊| 355/360 [00:07<00:00, 44.93it/s][A
+Test Push Object:: 100%|██████████| 360/360 [00:08<00:00, 44.99it/s][ATest Push Object:: 100%|██████████| 360/360 [00:08<00:00, 44.62it/s]
+2026-09-30 09:44:09.057 | INFO     | __main__:stability_tester:143 - Success rate of [ACE_Coffee_Mug_Kristen_16_oz_cup]: 24 / 32
+  9%|▉         | 3/32 [00:40<06:31, 13.49s/it]2026-09-30 09:44:09.226 | INFO     | __main__:stability_tester:113 - Stability test for [Android_Figure_Panda]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/ACE_Coffee_Mug_Kristen_16_oz_cup.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:04,  6.75it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 209.79it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   2%|▏         | 6/360 [00:00<00:06, 53.77it/s][A
+Test Push Object::   3%|▎         | 12/360 [00:00<00:06, 56.26it/s][A
+Test Push Object::   5%|▌         | 18/360 [00:00<00:05, 57.52it/s][A
+Test Push Object::   7%|▋         | 24/360 [00:00<00:05, 58.02it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:05, 56.98it/s][A
+Test Push Object::  10%|█         | 36/360 [00:00<00:05, 57.31it/s][A
+Test Push Object::  12%|█▏        | 42/360 [00:00<00:05, 57.28it/s][A
+Test Push Object::  13%|█▎        | 48/360 [00:00<00:05, 56.16it/s][A
+Test Push Object::  15%|█▌        | 54/360 [00:00<00:05, 54.52it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:05, 53.48it/s][A
+Test Push Object::  18%|█▊        | 66/360 [00:01<00:05, 52.58it/s][A
+Test Push Object::  20%|██        | 72/360 [00:01<00:05, 51.99it/s][A
+Test Push Object::  22%|██▏       | 78/360 [00:01<00:05, 52.00it/s][A
+Test Push Object::  23%|██▎       | 84/360 [00:01<00:05, 51.98it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:01<00:05, 53.48it/s][A
+Test Push Object::  27%|██▋       | 96/360 [00:01<00:04, 54.58it/s][A
+Test Push Object::  28%|██▊       | 102/360 [00:01<00:04, 55.57it/s][A
+Test Push Object::  30%|███       | 108/360 [00:01<00:04, 56.18it/s][A
+Test Push Object::  32%|███▏      | 114/360 [00:02<00:04, 56.59it/s][A
+Test Push Object::  33%|███▎      | 120/360 [00:02<00:04, 56.44it/s][A
+Test Push Object::  35%|███▌      | 126/360 [00:02<00:04, 56.24it/s][A
+Test Push Object::  37%|███▋      | 132/360 [00:02<00:04, 56.05it/s][A
+Test Push Object::  38%|███▊      | 138/360 [00:02<00:03, 56.43it/s][A
+Test Push Object::  40%|████      | 144/360 [00:02<00:03, 56.92it/s][A
+Test Push Object::  42%|████▏     | 150/360 [00:02<00:03, 56.48it/s][A
+Test Push Object::  43%|████▎     | 156/360 [00:02<00:03, 57.35it/s][A
+Test Push Object::  45%|████▌     | 162/360 [00:02<00:03, 57.91it/s][A
+Test Push Object::  47%|████▋     | 168/360 [00:03<00:03, 57.81it/s][A
+Test Push Object::  48%|████▊     | 174/360 [00:03<00:03, 57.81it/s][A
+Test Push Object::  50%|█████     | 180/360 [00:03<00:03, 57.33it/s][A
+Test Push Object::  52%|█████▏    | 186/360 [00:03<00:03, 57.76it/s][A
+Test Push Object::  53%|█████▎    | 192/360 [00:03<00:02, 57.81it/s][A
+Test Push Object::  55%|█████▌    | 198/360 [00:03<00:02, 58.03it/s][A
+Test Push Object::  57%|█████▋    | 204/360 [00:03<00:02, 58.23it/s][A
+Test Push Object::  58%|█████▊    | 210/360 [00:03<00:02, 58.13it/s][A
+Test Push Object::  60%|██████    | 216/360 [00:03<00:02, 58.08it/s][A
+Test Push Object::  62%|██████▏   | 222/360 [00:03<00:02, 57.59it/s][A
+Test Push Object::  63%|██████▎   | 228/360 [00:04<00:02, 57.93it/s][A
+Test Push Object::  65%|██████▌   | 234/360 [00:04<00:02, 57.67it/s][A
+Test Push Object::  67%|██████▋   | 240/360 [00:04<00:02, 57.54it/s][A
+Test Push Object::  68%|██████▊   | 246/360 [00:04<00:01, 57.54it/s][A
+Test Push Object::  70%|███████   | 252/360 [00:04<00:01, 57.99it/s][A
+Test Push Object::  72%|███████▏  | 258/360 [00:04<00:01, 58.14it/s][A
+Test Push Object::  73%|███████▎  | 264/360 [00:04<00:01, 57.99it/s][A
+Test Push Object::  75%|███████▌  | 270/360 [00:04<00:01, 57.96it/s][A
+Test Push Object::  77%|███████▋  | 276/360 [00:04<00:01, 58.03it/s][A
+Test Push Object::  78%|███████▊  | 282/360 [00:04<00:01, 58.24it/s][A
+Test Push Object::  80%|████████  | 288/360 [00:05<00:01, 58.34it/s][A
+Test Push Object::  82%|████████▏ | 294/360 [00:05<00:01, 58.18it/s][A
+Test Push Object::  83%|████████▎ | 300/360 [00:05<00:01, 58.46it/s][A
+Test Push Object::  85%|████████▌ | 306/360 [00:05<00:00, 58.17it/s][A
+Test Push Object::  87%|████████▋ | 312/360 [00:05<00:00, 58.43it/s][A
+Test Push Object::  88%|████████▊ | 318/360 [00:05<00:00, 58.36it/s][A
+Test Push Object::  90%|█████████ | 324/360 [00:05<00:00, 58.30it/s][A
+Test Push Object::  92%|█████████▏| 330/360 [00:05<00:00, 56.89it/s][A
+Test Push Object::  93%|█████████▎| 336/360 [00:05<00:00, 55.77it/s][A
+Test Push Object::  95%|█████████▌| 342/360 [00:06<00:00, 54.38it/s][A
+Test Push Object::  97%|█████████▋| 348/360 [00:06<00:00, 53.79it/s][A
+Test Push Object::  98%|█████████▊| 354/360 [00:06<00:00, 54.18it/s][A
+Test Push Object:: 100%|██████████| 360/360 [00:06<00:00, 53.83it/s][ATest Push Object:: 100%|██████████| 360/360 [00:06<00:00, 56.43it/s]
+2026-09-30 09:44:20.699 | INFO     | __main__:stability_tester:143 - Success rate of [Android_Figure_Panda]: 28 / 32
+ 12%|█▎        | 4/32 [00:51<05:57, 12.76s/it]2026-09-30 09:44:20.868 | INFO     | __main__:stability_tester:113 - Stability test for [Asus_80211ac_DualBand_Gigabit_Wireless_Router_RTAC68R]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Android_Figure_Panda.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:06,  4.79it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 150.22it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   2%|▏         | 6/360 [00:00<00:06, 56.88it/s][A
+Test Push Object::   3%|▎         | 12/360 [00:00<00:06, 57.24it/s][A
+Test Push Object::   5%|▌         | 18/360 [00:00<00:05, 58.22it/s][A
+Test Push Object::   7%|▋         | 25/360 [00:00<00:05, 58.81it/s][A
+Test Push Object::   9%|▉         | 32/360 [00:00<00:05, 59.74it/s][A
+Test Push Object::  11%|█         | 39/360 [00:00<00:05, 60.06it/s][A
+Test Push Object::  13%|█▎        | 46/360 [00:00<00:05, 59.43it/s][A
+Test Push Object::  14%|█▍        | 52/360 [00:00<00:05, 58.42it/s][A
+Test Push Object::  16%|█▌        | 58/360 [00:00<00:05, 57.40it/s][A
+Test Push Object::  18%|█▊        | 64/360 [00:01<00:05, 56.92it/s][A
+Test Push Object::  19%|█▉        | 70/360 [00:01<00:05, 57.27it/s][A
+Test Push Object::  21%|██        | 76/360 [00:01<00:04, 57.13it/s][A
+Test Push Object::  23%|██▎       | 82/360 [00:01<00:04, 57.09it/s][A
+Test Push Object::  24%|██▍       | 88/360 [00:01<00:04, 56.63it/s][A
+Test Push Object::  26%|██▌       | 94/360 [00:01<00:04, 55.90it/s][A
+Test Push Object::  28%|██▊       | 100/360 [00:01<00:04, 56.15it/s][A
+Test Push Object::  29%|██▉       | 106/360 [00:01<00:04, 56.07it/s][A
+Test Push Object::  31%|███       | 112/360 [00:01<00:04, 55.93it/s][A
+Test Push Object::  33%|███▎      | 118/360 [00:02<00:04, 56.11it/s][A
+Test Push Object::  34%|███▍      | 124/360 [00:02<00:04, 56.91it/s][A
+Test Push Object::  36%|███▌      | 130/360 [00:02<00:04, 56.94it/s][A
+Test Push Object::  38%|███▊      | 136/360 [00:02<00:03, 57.68it/s][A
+Test Push Object::  39%|███▉      | 142/360 [00:02<00:03, 56.95it/s][A
+Test Push Object::  41%|████      | 148/360 [00:02<00:03, 56.77it/s][A
+Test Push Object::  43%|████▎     | 154/360 [00:02<00:03, 56.87it/s][A
+Test Push Object::  44%|████▍     | 160/360 [00:02<00:03, 57.25it/s][A
+Test Push Object::  46%|████▌     | 166/360 [00:02<00:03, 57.27it/s][A
+Test Push Object::  48%|████▊     | 172/360 [00:03<00:03, 57.09it/s][A
+Test Push Object::  49%|████▉     | 178/360 [00:03<00:03, 57.61it/s][A
+Test Push Object::  51%|█████▏    | 185/360 [00:03<00:02, 58.66it/s][A
+Test Push Object::  53%|█████▎    | 192/360 [00:03<00:02, 59.52it/s][A
+Test Push Object::  55%|█████▌    | 199/360 [00:03<00:02, 59.98it/s][A
+Test Push Object::  57%|█████▋    | 205/360 [00:03<00:02, 59.57it/s][A
+Test Push Object::  59%|█████▊    | 211/360 [00:03<00:02, 59.09it/s][A
+Test Push Object::  60%|██████    | 217/360 [00:03<00:02, 58.54it/s][A
+Test Push Object::  62%|██████▏   | 223/360 [00:03<00:02, 58.10it/s][A
+Test Push Object::  64%|██████▎   | 229/360 [00:03<00:02, 57.51it/s][A
+Test Push Object::  65%|██████▌   | 235/360 [00:04<00:02, 56.95it/s][A
+Test Push Object::  67%|██████▋   | 241/360 [00:04<00:02, 57.05it/s][A
+Test Push Object::  69%|██████▊   | 247/360 [00:04<00:02, 56.41it/s][A
+Test Push Object::  70%|███████   | 253/360 [00:04<00:01, 56.74it/s][A
+Test Push Object::  72%|███████▏  | 259/360 [00:04<00:01, 56.61it/s][A
+Test Push Object::  74%|███████▎  | 265/360 [00:04<00:01, 57.08it/s][A
+Test Push Object::  75%|███████▌  | 271/360 [00:04<00:01, 56.38it/s][A
+Test Push Object::  77%|███████▋  | 277/360 [00:04<00:01, 57.19it/s][A
+Test Push Object::  79%|███████▊  | 283/360 [00:04<00:01, 57.24it/s][A
+Test Push Object::  80%|████████  | 289/360 [00:05<00:01, 57.00it/s][A
+Test Push Object::  82%|████████▏ | 295/360 [00:05<00:01, 56.92it/s][A
+Test Push Object::  84%|████████▎ | 301/360 [00:05<00:01, 56.85it/s][A
+Test Push Object::  85%|████████▌ | 307/360 [00:05<00:00, 57.56it/s][A
+Test Push Object::  87%|████████▋ | 313/360 [00:05<00:00, 56.81it/s][A
+Test Push Object::  89%|████████▊ | 319/360 [00:05<00:00, 56.61it/s][A
+Test Push Object::  90%|█████████ | 325/360 [00:05<00:00, 56.41it/s][A
+Test Push Object::  92%|█████████▏| 331/360 [00:05<00:00, 56.28it/s][A
+Test Push Object::  94%|█████████▎| 337/360 [00:05<00:00, 55.94it/s][A
+Test Push Object::  95%|█████████▌| 343/360 [00:05<00:00, 56.50it/s][A
+Test Push Object::  97%|█████████▋| 350/360 [00:06<00:00, 57.85it/s][A
+Test Push Object::  99%|█████████▉| 357/360 [00:06<00:00, 58.78it/s][ATest Push Object:: 100%|██████████| 360/360 [00:06<00:00, 57.47it/s]
+2026-09-30 09:44:32.141 | INFO     | __main__:stability_tester:143 - Success rate of [Asus_80211ac_DualBand_Gigabit_Wireless_Router_RTAC68R]: 1 / 32
+ 16%|█▌        | 5/32 [01:03<05:31, 12.28s/it]2026-09-30 09:44:32.310 | INFO     | __main__:stability_tester:113 - Stability test for [BIA_Cordon_Bleu_White_Porcelain_Utensil_Holder_900028]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Asus_80211ac_DualBand_Gigabit_Wireless_Router_RTAC68R.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:05,  5.50it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 170.11it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   1%|▏         | 5/360 [00:00<00:07, 46.80it/s][A
+Test Push Object::   3%|▎         | 10/360 [00:00<00:07, 45.94it/s][A
+Test Push Object::   4%|▍         | 15/360 [00:00<00:07, 46.11it/s][A
+Test Push Object::   6%|▌         | 20/360 [00:00<00:07, 46.37it/s][A
+Test Push Object::   7%|▋         | 25/360 [00:00<00:07, 46.66it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:07, 46.73it/s][A
+Test Push Object::  10%|▉         | 35/360 [00:00<00:06, 46.43it/s][A
+Test Push Object::  11%|█         | 40/360 [00:00<00:06, 46.24it/s][A
+Test Push Object::  12%|█▎        | 45/360 [00:00<00:06, 46.18it/s][A
+Test Push Object::  14%|█▍        | 50/360 [00:01<00:06, 46.96it/s][A
+Test Push Object::  15%|█▌        | 55/360 [00:01<00:06, 47.34it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:06, 47.60it/s][A
+Test Push Object::  18%|█▊        | 65/360 [00:01<00:06, 47.28it/s][A
+Test Push Object::  19%|█▉        | 70/360 [00:01<00:06, 46.36it/s][A
+Test Push Object::  21%|██        | 75/360 [00:01<00:06, 46.73it/s][A
+Test Push Object::  22%|██▏       | 80/360 [00:01<00:05, 46.68it/s][A
+Test Push Object::  24%|██▎       | 85/360 [00:01<00:05, 46.03it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:01<00:05, 46.02it/s][A
+Test Push Object::  26%|██▋       | 95/360 [00:02<00:05, 45.77it/s][A
+Test Push Object::  28%|██▊       | 100/360 [00:02<00:05, 45.70it/s][A
+Test Push Object::  29%|██▉       | 105/360 [00:02<00:05, 45.97it/s][A
+Test Push Object::  31%|███       | 111/360 [00:02<00:05, 47.49it/s][A
+Test Push Object::  32%|███▎      | 117/360 [00:02<00:05, 48.46it/s][A
+Test Push Object::  34%|███▍      | 122/360 [00:02<00:04, 47.84it/s][A
+Test Push Object::  35%|███▌      | 127/360 [00:02<00:04, 48.36it/s][A
+Test Push Object::  37%|███▋      | 132/360 [00:02<00:04, 48.62it/s][A
+Test Push Object::  38%|███▊      | 137/360 [00:02<00:04, 48.66it/s][A
+Test Push Object::  40%|███▉      | 143/360 [00:03<00:04, 49.33it/s][A
+Test Push Object::  41%|████▏     | 149/360 [00:03<00:04, 49.67it/s][A
+Test Push Object::  43%|████▎     | 154/360 [00:03<00:04, 49.74it/s][A
+Test Push Object::  44%|████▍     | 160/360 [00:03<00:03, 50.14it/s][A
+Test Push Object::  46%|████▌     | 166/360 [00:03<00:03, 50.57it/s][A
+Test Push Object::  48%|████▊     | 172/360 [00:03<00:03, 50.28it/s][A
+Test Push Object::  49%|████▉     | 178/360 [00:03<00:03, 48.77it/s][A
+Test Push Object::  51%|█████     | 183/360 [00:03<00:03, 48.04it/s][A
+Test Push Object::  52%|█████▏    | 188/360 [00:03<00:03, 47.77it/s][A
+Test Push Object::  54%|█████▎    | 193/360 [00:04<00:03, 47.42it/s][A
+Test Push Object::  55%|█████▌    | 198/360 [00:04<00:03, 47.41it/s][A
+Test Push Object::  56%|█████▋    | 203/360 [00:04<00:03, 47.16it/s][A
+Test Push Object::  58%|█████▊    | 208/360 [00:04<00:03, 47.27it/s][A
+Test Push Object::  59%|█████▉    | 213/360 [00:04<00:03, 47.15it/s][A
+Test Push Object::  61%|██████    | 218/360 [00:04<00:03, 47.26it/s][A
+Test Push Object::  62%|██████▏   | 223/360 [00:04<00:02, 46.98it/s][A
+Test Push Object::  63%|██████▎   | 228/360 [00:04<00:02, 47.47it/s][A
+Test Push Object::  65%|██████▍   | 233/360 [00:04<00:02, 47.33it/s][A
+Test Push Object::  66%|██████▌   | 238/360 [00:05<00:02, 47.37it/s][A
+Test Push Object::  68%|██████▊   | 244/360 [00:05<00:02, 48.34it/s][A
+Test Push Object::  69%|██████▉   | 250/360 [00:05<00:02, 49.03it/s][A
+Test Push Object::  71%|███████   | 256/360 [00:05<00:02, 49.56it/s][A
+Test Push Object::  72%|███████▎  | 261/360 [00:05<00:02, 49.24it/s][A
+Test Push Object::  74%|███████▍  | 266/360 [00:05<00:01, 49.43it/s][A
+Test Push Object::  76%|███████▌  | 272/360 [00:05<00:01, 49.74it/s][A
+Test Push Object::  77%|███████▋  | 278/360 [00:05<00:01, 49.87it/s][A
+Test Push Object::  79%|███████▉  | 284/360 [00:05<00:01, 50.03it/s][A
+Test Push Object::  81%|████████  | 290/360 [00:06<00:01, 50.19it/s][A
+Test Push Object::  82%|████████▏ | 296/360 [00:06<00:01, 50.44it/s][A
+Test Push Object::  84%|████████▍ | 302/360 [00:06<00:01, 50.63it/s][A
+Test Push Object::  86%|████████▌ | 308/360 [00:06<00:01, 50.60it/s][A
+Test Push Object::  87%|████████▋ | 314/360 [00:06<00:00, 50.17it/s][A
+Test Push Object::  89%|████████▉ | 320/360 [00:06<00:00, 50.35it/s][A
+Test Push Object::  91%|█████████ | 326/360 [00:06<00:00, 50.03it/s][A
+Test Push Object::  92%|█████████▏| 332/360 [00:06<00:00, 49.86it/s][A
+Test Push Object::  94%|█████████▍| 338/360 [00:07<00:00, 49.93it/s][A
+Test Push Object::  95%|█████████▌| 343/360 [00:07<00:00, 49.59it/s][A
+Test Push Object::  97%|█████████▋| 348/360 [00:07<00:00, 49.43it/s][A
+Test Push Object::  98%|█████████▊| 353/360 [00:07<00:00, 49.50it/s][A
+Test Push Object::  99%|█████████▉| 358/360 [00:07<00:00, 48.94it/s][ATest Push Object:: 100%|██████████| 360/360 [00:07<00:00, 48.30it/s]
+2026-09-30 09:44:45.736 | INFO     | __main__:stability_tester:143 - Success rate of [BIA_Cordon_Bleu_White_Porcelain_Utensil_Holder_900028]: 23 / 32
+ 19%|█▉        | 6/32 [01:16<05:30, 12.73s/it]2026-09-30 09:44:45.904 | INFO     | __main__:stability_tester:113 - Stability test for [Black_Forest_Fruit_Snacks_28_Pack_Grape]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/BIA_Cordon_Bleu_White_Porcelain_Utensil_Holder_900028.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 31
+Simulator: creating agents
+
+  0%|          | 0/31 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/31 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+Enumerating envs:: 100%|██████████| 31/31 [00:00<00:00, 378.22it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   2%|▏         | 6/360 [00:00<00:06, 57.71it/s][A
+Test Push Object::   3%|▎         | 12/360 [00:00<00:05, 58.25it/s][A
+Test Push Object::   5%|▌         | 18/360 [00:00<00:05, 57.94it/s][A
+Test Push Object::   7%|▋         | 24/360 [00:00<00:05, 57.42it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:05, 57.44it/s][A
+Test Push Object::  10%|█         | 36/360 [00:00<00:05, 57.43it/s][A
+Test Push Object::  12%|█▏        | 42/360 [00:00<00:05, 57.74it/s][A
+Test Push Object::  13%|█▎        | 48/360 [00:00<00:05, 58.14it/s][A
+Test Push Object::  15%|█▌        | 54/360 [00:00<00:05, 57.79it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:05, 57.73it/s][A
+Test Push Object::  18%|█▊        | 66/360 [00:01<00:05, 57.66it/s][A
+Test Push Object::  20%|██        | 72/360 [00:01<00:04, 57.72it/s][A
+Test Push Object::  22%|██▏       | 78/360 [00:01<00:04, 56.98it/s][A
+Test Push Object::  23%|██▎       | 84/360 [00:01<00:04, 56.15it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:01<00:04, 56.20it/s][A
+Test Push Object::  27%|██▋       | 96/360 [00:01<00:04, 56.12it/s][A
+Test Push Object::  28%|██▊       | 102/360 [00:01<00:04, 56.41it/s][A
+Test Push Object::  30%|███       | 108/360 [00:01<00:04, 56.59it/s][A
+Test Push Object::  32%|███▏      | 114/360 [00:01<00:04, 57.23it/s][A
+Test Push Object::  33%|███▎      | 120/360 [00:02<00:04, 57.01it/s][A
+Test Push Object::  35%|███▌      | 126/360 [00:02<00:04, 56.84it/s][A
+Test Push Object::  37%|███▋      | 132/360 [00:02<00:03, 57.62it/s][A
+Test Push Object::  38%|███▊      | 138/360 [00:02<00:03, 57.71it/s][A
+Test Push Object::  40%|████      | 144/360 [00:02<00:03, 57.69it/s][A
+Test Push Object::  42%|████▏     | 150/360 [00:02<00:03, 57.29it/s][A
+Test Push Object::  43%|████▎     | 156/360 [00:02<00:03, 58.07it/s][A
+Test Push Object::  45%|████▌     | 162/360 [00:02<00:03, 58.02it/s][A
+Test Push Object::  47%|████▋     | 168/360 [00:02<00:03, 58.14it/s][A
+Test Push Object::  48%|████▊     | 174/360 [00:03<00:03, 58.41it/s][A
+Test Push Object::  50%|█████     | 180/360 [00:03<00:03, 57.94it/s][A
+Test Push Object::  52%|█████▏    | 186/360 [00:03<00:03, 57.70it/s][A
+Test Push Object::  53%|█████▎    | 192/360 [00:03<00:02, 57.15it/s][A
+Test Push Object::  55%|█████▌    | 198/360 [00:03<00:02, 56.66it/s][A
+Test Push Object::  57%|█████▋    | 204/360 [00:03<00:02, 56.57it/s][A
+Test Push Object::  58%|█████▊    | 210/360 [00:03<00:02, 57.02it/s][A
+Test Push Object::  60%|██████    | 216/360 [00:03<00:02, 56.62it/s][A
+Test Push Object::  62%|██████▏   | 222/360 [00:03<00:02, 56.23it/s][A
+Test Push Object::  63%|██████▎   | 228/360 [00:03<00:02, 56.48it/s][A
+Test Push Object::  65%|██████▌   | 234/360 [00:04<00:02, 56.56it/s][A
+Test Push Object::  67%|██████▋   | 240/360 [00:04<00:02, 56.06it/s][A
+Test Push Object::  68%|██████▊   | 246/360 [00:04<00:02, 55.78it/s][A
+Test Push Object::  70%|███████   | 252/360 [00:04<00:01, 55.91it/s][A
+Test Push Object::  72%|███████▏  | 258/360 [00:04<00:01, 55.86it/s][A
+Test Push Object::  73%|███████▎  | 264/360 [00:04<00:01, 56.25it/s][A
+Test Push Object::  75%|███████▌  | 270/360 [00:04<00:01, 55.96it/s][A
+Test Push Object::  77%|███████▋  | 276/360 [00:04<00:01, 55.81it/s][A
+Test Push Object::  78%|███████▊  | 282/360 [00:04<00:01, 56.64it/s][A
+Test Push Object::  80%|████████  | 288/360 [00:05<00:01, 56.33it/s][A
+Test Push Object::  82%|████████▏ | 295/360 [00:05<00:01, 57.59it/s][A
+Test Push Object::  84%|████████▎ | 301/360 [00:05<00:01, 57.50it/s][A
+Test Push Object::  85%|████████▌ | 307/360 [00:05<00:00, 57.39it/s][A
+Test Push Object::  87%|████████▋ | 313/360 [00:05<00:00, 56.48it/s][A
+Test Push Object::  89%|████████▊ | 319/360 [00:05<00:00, 56.55it/s][A
+Test Push Object::  90%|█████████ | 325/360 [00:05<00:00, 56.29it/s][A
+Test Push Object::  92%|█████████▏| 331/360 [00:05<00:00, 55.98it/s][A
+Test Push Object::  94%|█████████▎| 337/360 [00:05<00:00, 55.70it/s][A
+Test Push Object::  95%|█████████▌| 343/360 [00:06<00:00, 54.91it/s][A
+Test Push Object::  97%|█████████▋| 349/360 [00:06<00:00, 54.88it/s][A
+Test Push Object::  99%|█████████▊| 355/360 [00:06<00:00, 55.34it/s][ATest Push Object:: 100%|██████████| 360/360 [00:06<00:00, 56.79it/s]
+2026-09-30 09:44:57.180 | INFO     | __main__:stability_tester:143 - Success rate of [Black_Forest_Fruit_Snacks_28_Pack_Grape]: 5 / 31
+ 22%|██▏       | 7/32 [01:28<05:07, 12.31s/it]2026-09-30 09:44:57.348 | INFO     | __main__:stability_tester:113 - Stability test for [Clue_Board_Game_Classic_Edition]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Black_Forest_Fruit_Snacks_28_Pack_Grape.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 31
+Simulator: creating agents
+
+  0%|          | 0/31 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/31 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::  61%|██████▏   | 19/31 [00:00<00:00, 189.95it/s][AEnumerating envs:: 100%|██████████| 31/31 [00:00<00:00, 305.31it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   2%|▏         | 6/360 [00:00<00:06, 58.71it/s][A
+Test Push Object::   4%|▎         | 13/360 [00:00<00:05, 59.77it/s][A
+Test Push Object::   6%|▌         | 20/360 [00:00<00:05, 59.91it/s][A
+Test Push Object::   8%|▊         | 27/360 [00:00<00:05, 60.26it/s][A
+Test Push Object::   9%|▉         | 34/360 [00:00<00:05, 60.67it/s][A
+Test Push Object::  11%|█▏        | 41/360 [00:00<00:05, 60.67it/s][A
+Test Push Object::  13%|█▎        | 48/360 [00:00<00:05, 60.77it/s][A
+Test Push Object::  15%|█▌        | 55/360 [00:00<00:05, 60.77it/s][A
+Test Push Object::  17%|█▋        | 62/360 [00:01<00:04, 60.78it/s][A
+Test Push Object::  19%|█▉        | 69/360 [00:01<00:04, 60.93it/s][A
+Test Push Object::  21%|██        | 76/360 [00:01<00:04, 59.89it/s][A
+Test Push Object::  23%|██▎       | 83/360 [00:01<00:04, 59.92it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:01<00:04, 60.13it/s][A
+Test Push Object::  27%|██▋       | 97/360 [00:01<00:04, 59.99it/s][A
+Test Push Object::  29%|██▉       | 104/360 [00:01<00:04, 60.16it/s][A
+Test Push Object::  31%|███       | 111/360 [00:01<00:04, 60.16it/s][A
+Test Push Object::  33%|███▎      | 118/360 [00:01<00:04, 59.72it/s][A
+Test Push Object::  34%|███▍      | 124/360 [00:02<00:03, 59.64it/s][A
+Test Push Object::  36%|███▋      | 131/360 [00:02<00:03, 59.90it/s][A
+Test Push Object::  38%|███▊      | 138/360 [00:02<00:03, 60.08it/s][A
+Test Push Object::  40%|████      | 145/360 [00:02<00:03, 59.90it/s][A
+Test Push Object::  42%|████▏     | 151/360 [00:02<00:03, 58.74it/s][A
+Test Push Object::  44%|████▎     | 157/360 [00:02<00:03, 58.25it/s][A
+Test Push Object::  45%|████▌     | 163/360 [00:02<00:03, 57.33it/s][A
+Test Push Object::  47%|████▋     | 169/360 [00:02<00:03, 56.79it/s][A
+Test Push Object::  49%|████▊     | 175/360 [00:02<00:03, 56.59it/s][A
+Test Push Object::  50%|█████     | 181/360 [00:03<00:03, 56.53it/s][A
+Test Push Object::  52%|█████▏    | 187/360 [00:03<00:03, 56.61it/s][A
+Test Push Object::  54%|█████▎    | 193/360 [00:03<00:02, 56.12it/s][A
+Test Push Object::  55%|█████▌    | 199/360 [00:03<00:02, 55.87it/s][A
+Test Push Object::  57%|█████▋    | 205/360 [00:03<00:02, 56.06it/s][A
+Test Push Object::  59%|█████▊    | 211/360 [00:03<00:02, 56.49it/s][A
+Test Push Object::  60%|██████    | 217/360 [00:03<00:02, 56.44it/s][A
+Test Push Object::  62%|██████▏   | 223/360 [00:03<00:02, 56.48it/s][A
+Test Push Object::  64%|██████▎   | 229/360 [00:03<00:02, 56.45it/s][A
+Test Push Object::  65%|██████▌   | 235/360 [00:04<00:02, 56.15it/s][A
+Test Push Object::  67%|██████▋   | 241/360 [00:04<00:02, 56.44it/s][A
+Test Push Object::  69%|██████▊   | 247/360 [00:04<00:01, 57.36it/s][A
+Test Push Object::  70%|███████   | 253/360 [00:04<00:01, 57.05it/s][A
+Test Push Object::  72%|███████▏  | 259/360 [00:04<00:01, 57.56it/s][A
+Test Push Object::  74%|███████▎  | 265/360 [00:04<00:01, 57.63it/s][A
+Test Push Object::  75%|███████▌  | 271/360 [00:04<00:01, 57.60it/s][A
+Test Push Object::  77%|███████▋  | 277/360 [00:04<00:01, 57.67it/s][A
+Test Push Object::  79%|███████▊  | 283/360 [00:04<00:01, 57.99it/s][A
+Test Push Object::  81%|████████  | 290/360 [00:04<00:01, 58.73it/s][A
+Test Push Object::  82%|████████▏ | 296/360 [00:05<00:01, 58.15it/s][A
+Test Push Object::  84%|████████▍ | 302/360 [00:05<00:01, 57.33it/s][A
+Test Push Object::  86%|████████▌ | 308/360 [00:05<00:00, 56.85it/s][A
+Test Push Object::  87%|████████▋ | 314/360 [00:05<00:00, 56.32it/s][A
+Test Push Object::  89%|████████▉ | 320/360 [00:05<00:00, 55.60it/s][A
+Test Push Object::  91%|█████████ | 326/360 [00:05<00:00, 55.25it/s][A
+Test Push Object::  92%|█████████▏| 332/360 [00:05<00:00, 55.30it/s][A
+Test Push Object::  94%|█████████▍| 338/360 [00:05<00:00, 55.25it/s][A
+Test Push Object::  96%|█████████▌| 344/360 [00:05<00:00, 55.77it/s][A
+Test Push Object::  97%|█████████▋| 350/360 [00:06<00:00, 56.73it/s][A
+Test Push Object::  99%|█████████▉| 356/360 [00:06<00:00, 56.24it/s][ATest Push Object:: 100%|██████████| 360/360 [00:06<00:00, 57.94it/s]
+2026-09-30 09:45:08.286 | INFO     | __main__:stability_tester:143 - Success rate of [Clue_Board_Game_Classic_Edition]: 1 / 31
+ 25%|██▌       | 8/32 [01:39<04:46, 11.93s/it]2026-09-30 09:45:08.451 | INFO     | __main__:stability_tester:113 - Stability test for [Cole_Hardware_Deep_Bowl_Good_Earth_1075]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Clue_Board_Game_Classic_Edition.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 30
+Simulator: creating agents
+
+  0%|          | 0/30 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/30 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/30 [00:00<00:04,  6.76it/s][AEnumerating envs:: 100%|██████████| 30/30 [00:00<00:00, 193.84it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   1%|▏         | 5/360 [00:00<00:07, 47.00it/s][A
+Test Push Object::   3%|▎         | 10/360 [00:00<00:07, 47.26it/s][A
+Test Push Object::   4%|▍         | 15/360 [00:00<00:07, 47.27it/s][A
+Test Push Object::   6%|▌         | 20/360 [00:00<00:07, 47.43it/s][A
+Test Push Object::   7%|▋         | 25/360 [00:00<00:07, 47.62it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:06, 47.52it/s][A
+Test Push Object::  10%|▉         | 35/360 [00:00<00:06, 47.17it/s][A
+Test Push Object::  11%|█         | 40/360 [00:00<00:06, 47.32it/s][A
+Test Push Object::  12%|█▎        | 45/360 [00:00<00:06, 47.44it/s][A
+Test Push Object::  14%|█▍        | 50/360 [00:01<00:06, 47.37it/s][A
+Test Push Object::  15%|█▌        | 55/360 [00:01<00:06, 47.21it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:06, 47.27it/s][A
+Test Push Object::  18%|█▊        | 65/360 [00:01<00:06, 47.14it/s][A
+Test Push Object::  19%|█▉        | 70/360 [00:01<00:06, 47.75it/s][A
+Test Push Object::  21%|██        | 75/360 [00:01<00:05, 48.04it/s][A
+Test Push Object::  22%|██▏       | 80/360 [00:01<00:05, 47.57it/s][A
+Test Push Object::  24%|██▎       | 85/360 [00:01<00:05, 47.25it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:01<00:05, 47.78it/s][A
+Test Push Object::  27%|██▋       | 96/360 [00:02<00:05, 48.81it/s][A
+Test Push Object::  28%|██▊       | 102/360 [00:02<00:05, 49.36it/s][A
+Test Push Object::  30%|███       | 108/360 [00:02<00:05, 49.96it/s][A
+Test Push Object::  31%|███▏      | 113/360 [00:02<00:05, 49.13it/s][A
+Test Push Object::  33%|███▎      | 118/360 [00:02<00:05, 48.00it/s][A
+Test Push Object::  34%|███▍      | 123/360 [00:02<00:04, 47.45it/s][A
+Test Push Object::  36%|███▌      | 128/360 [00:02<00:04, 47.03it/s][A
+Test Push Object::  37%|███▋      | 133/360 [00:02<00:04, 46.43it/s][A
+Test Push Object::  38%|███▊      | 138/360 [00:02<00:04, 46.32it/s][A
+Test Push Object::  40%|███▉      | 143/360 [00:03<00:04, 46.21it/s][A
+Test Push Object::  41%|████      | 148/360 [00:03<00:04, 46.19it/s][A
+Test Push Object::  42%|████▎     | 153/360 [00:03<00:04, 46.41it/s][A
+Test Push Object::  44%|████▍     | 158/360 [00:03<00:04, 46.57it/s][A
+Test Push Object::  45%|████▌     | 163/360 [00:03<00:04, 46.20it/s][A
+Test Push Object::  47%|████▋     | 168/360 [00:03<00:04, 46.13it/s][A
+Test Push Object::  48%|████▊     | 173/360 [00:03<00:04, 46.21it/s][A
+Test Push Object::  49%|████▉     | 178/360 [00:03<00:03, 46.26it/s][A
+Test Push Object::  51%|█████     | 183/360 [00:03<00:03, 46.97it/s][A
+Test Push Object::  52%|█████▏    | 188/360 [00:03<00:03, 46.99it/s][A
+Test Push Object::  54%|█████▎    | 193/360 [00:04<00:03, 46.95it/s][A
+Test Push Object::  55%|█████▌    | 199/360 [00:04<00:03, 48.57it/s][A
+Test Push Object::  57%|█████▋    | 204/360 [00:04<00:03, 48.78it/s][A
+Test Push Object::  58%|█████▊    | 210/360 [00:04<00:03, 49.51it/s][A
+Test Push Object::  60%|█████▉    | 215/360 [00:04<00:02, 49.16it/s][A
+Test Push Object::  61%|██████    | 220/360 [00:04<00:02, 48.93it/s][A
+Test Push Object::  62%|██████▎   | 225/360 [00:04<00:02, 49.14it/s][A
+Test Push Object::  64%|██████▍   | 230/360 [00:04<00:02, 48.91it/s][A
+Test Push Object::  65%|██████▌   | 235/360 [00:04<00:02, 48.93it/s][A
+Test Push Object::  67%|██████▋   | 241/360 [00:05<00:02, 49.63it/s][A
+Test Push Object::  69%|██████▊   | 247/360 [00:05<00:02, 50.22it/s][A
+Test Push Object::  70%|███████   | 253/360 [00:05<00:02, 49.81it/s][A
+Test Push Object::  72%|███████▏  | 258/360 [00:05<00:02, 49.69it/s][A
+Test Push Object::  73%|███████▎  | 264/360 [00:05<00:01, 49.91it/s][A
+Test Push Object::  75%|███████▍  | 269/360 [00:05<00:01, 49.91it/s][A
+Test Push Object::  76%|███████▌  | 274/360 [00:05<00:01, 49.45it/s][A
+Test Push Object::  78%|███████▊  | 280/360 [00:05<00:01, 49.67it/s][A
+Test Push Object::  79%|███████▉  | 286/360 [00:05<00:01, 49.93it/s][A
+Test Push Object::  81%|████████  | 292/360 [00:06<00:01, 50.01it/s][A
+Test Push Object::  83%|████████▎ | 298/360 [00:06<00:01, 49.99it/s][A
+Test Push Object::  84%|████████▍ | 304/360 [00:06<00:01, 50.26it/s][A
+Test Push Object::  86%|████████▌ | 310/360 [00:06<00:00, 51.36it/s][A
+Test Push Object::  88%|████████▊ | 316/360 [00:06<00:00, 50.73it/s][A
+Test Push Object::  89%|████████▉ | 322/360 [00:06<00:00, 49.59it/s][A
+Test Push Object::  91%|█████████ | 327/360 [00:06<00:00, 49.51it/s][A
+Test Push Object::  92%|█████████▏| 332/360 [00:06<00:00, 48.44it/s][A
+Test Push Object::  94%|█████████▎| 337/360 [00:06<00:00, 47.61it/s][A
+Test Push Object::  95%|█████████▌| 342/360 [00:07<00:00, 47.28it/s][A
+Test Push Object::  96%|█████████▋| 347/360 [00:07<00:00, 47.29it/s][A
+Test Push Object::  98%|█████████▊| 352/360 [00:07<00:00, 47.28it/s][A
+Test Push Object::  99%|█████████▉| 357/360 [00:07<00:00, 47.00it/s][ATest Push Object:: 100%|██████████| 360/360 [00:07<00:00, 48.14it/s]
+2026-09-30 09:45:21.969 | INFO     | __main__:stability_tester:143 - Success rate of [Cole_Hardware_Deep_Bowl_Good_Earth_1075]: 20 / 30
+ 28%|██▊       | 9/32 [01:53<04:46, 12.47s/it]2026-09-30 09:45:22.134 | INFO     | __main__:stability_tester:113 - Stability test for [Cole_Hardware_Mini_Honey_Dipper]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Cole_Hardware_Deep_Bowl_Good_Earth_1075.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 31
+Simulator: creating agents
+
+  0%|          | 0/31 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/31 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/31 [00:00<00:03,  8.59it/s][AEnumerating envs:: 100%|██████████| 31/31 [00:00<00:00, 256.59it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   2%|▏         | 6/360 [00:00<00:06, 51.31it/s][A
+Test Push Object::   3%|▎         | 12/360 [00:00<00:06, 49.86it/s][A
+Test Push Object::   5%|▍         | 17/360 [00:00<00:06, 49.21it/s][A
+Test Push Object::   6%|▌         | 22/360 [00:00<00:06, 48.93it/s][A
+Test Push Object::   8%|▊         | 27/360 [00:00<00:06, 48.96it/s][A
+Test Push Object::   9%|▉         | 33/360 [00:00<00:06, 49.50it/s][A
+Test Push Object::  11%|█         | 38/360 [00:00<00:06, 49.34it/s][A
+Test Push Object::  12%|█▏        | 43/360 [00:00<00:06, 49.39it/s][A
+Test Push Object::  13%|█▎        | 48/360 [00:00<00:06, 49.11it/s][A
+Test Push Object::  15%|█▌        | 54/360 [00:01<00:06, 50.59it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:05, 52.12it/s][A
+Test Push Object::  18%|█▊        | 66/360 [00:01<00:05, 52.39it/s][A
+Test Push Object::  20%|██        | 72/360 [00:01<00:05, 52.29it/s][A
+Test Push Object::  22%|██▏       | 78/360 [00:01<00:05, 52.02it/s][A
+Test Push Object::  23%|██▎       | 84/360 [00:01<00:05, 51.77it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:01<00:05, 51.65it/s][A
+Test Push Object::  27%|██▋       | 96/360 [00:01<00:05, 52.50it/s][A
+Test Push Object::  28%|██▊       | 102/360 [00:01<00:04, 52.33it/s][A
+Test Push Object::  30%|███       | 108/360 [00:02<00:04, 52.44it/s][A
+Test Push Object::  32%|███▏      | 114/360 [00:02<00:04, 52.81it/s][A
+Test Push Object::  33%|███▎      | 120/360 [00:02<00:04, 53.16it/s][A
+Test Push Object::  35%|███▌      | 126/360 [00:02<00:04, 52.78it/s][A
+Test Push Object::  37%|███▋      | 132/360 [00:02<00:04, 51.68it/s][A
+Test Push Object::  38%|███▊      | 138/360 [00:02<00:04, 51.29it/s][A
+Test Push Object::  40%|████      | 144/360 [00:02<00:04, 51.19it/s][A
+Test Push Object::  42%|████▏     | 150/360 [00:02<00:03, 52.72it/s][A
+Test Push Object::  43%|████▎     | 156/360 [00:03<00:03, 51.45it/s][A
+Test Push Object::  45%|████▌     | 162/360 [00:03<00:03, 50.73it/s][A
+Test Push Object::  47%|████▋     | 168/360 [00:03<00:03, 51.12it/s][A
+Test Push Object::  48%|████▊     | 174/360 [00:03<00:03, 50.69it/s][A
+Test Push Object::  50%|█████     | 180/360 [00:03<00:03, 50.11it/s][A
+Test Push Object::  52%|█████▏    | 186/360 [00:03<00:03, 50.01it/s][A
+Test Push Object::  53%|█████▎    | 192/360 [00:03<00:03, 49.55it/s][A
+Test Push Object::  55%|█████▌    | 198/360 [00:03<00:03, 50.93it/s][A
+Test Push Object::  57%|█████▋    | 204/360 [00:03<00:03, 50.65it/s][A
+Test Push Object::  58%|█████▊    | 210/360 [00:04<00:02, 51.04it/s][A
+Test Push Object::  60%|██████    | 216/360 [00:04<00:02, 51.81it/s][A
+Test Push Object::  62%|██████▏   | 222/360 [00:04<00:02, 52.93it/s][A
+Test Push Object::  63%|██████▎   | 228/360 [00:04<00:02, 53.32it/s][A
+Test Push Object::  65%|██████▌   | 234/360 [00:04<00:02, 54.17it/s][A
+Test Push Object::  67%|██████▋   | 240/360 [00:04<00:02, 54.71it/s][A
+Test Push Object::  68%|██████▊   | 246/360 [00:04<00:02, 54.89it/s][A
+Test Push Object::  70%|███████   | 252/360 [00:04<00:01, 55.11it/s][A
+Test Push Object::  72%|███████▏  | 258/360 [00:04<00:01, 55.05it/s][A
+Test Push Object::  73%|███████▎  | 264/360 [00:05<00:01, 54.54it/s][A
+Test Push Object::  75%|███████▌  | 270/360 [00:05<00:01, 54.33it/s][A
+Test Push Object::  77%|███████▋  | 276/360 [00:05<00:01, 55.42it/s][A
+Test Push Object::  78%|███████▊  | 282/360 [00:05<00:01, 55.57it/s][A
+Test Push Object::  80%|████████  | 288/360 [00:05<00:01, 56.17it/s][A
+Test Push Object::  82%|████████▏ | 294/360 [00:05<00:01, 56.55it/s][A
+Test Push Object::  83%|████████▎ | 300/360 [00:05<00:01, 57.00it/s][A
+Test Push Object::  85%|████████▌ | 306/360 [00:05<00:00, 57.14it/s][A
+Test Push Object::  87%|████████▋ | 312/360 [00:05<00:00, 57.00it/s][A
+Test Push Object::  88%|████████▊ | 318/360 [00:06<00:00, 56.47it/s][A
+Test Push Object::  90%|█████████ | 324/360 [00:06<00:00, 56.59it/s][A
+Test Push Object::  92%|█████████▏| 330/360 [00:06<00:00, 56.07it/s][A
+Test Push Object::  93%|█████████▎| 336/360 [00:06<00:00, 55.91it/s][A
+Test Push Object::  95%|█████████▌| 342/360 [00:06<00:00, 55.97it/s][A
+Test Push Object::  97%|█████████▋| 348/360 [00:06<00:00, 56.42it/s][A
+Test Push Object::  98%|█████████▊| 354/360 [00:06<00:00, 56.34it/s][A
+Test Push Object:: 100%|██████████| 360/360 [00:06<00:00, 56.31it/s][ATest Push Object:: 100%|██████████| 360/360 [00:06<00:00, 53.01it/s]
+2026-09-30 09:45:34.083 | INFO     | __main__:stability_tester:143 - Success rate of [Cole_Hardware_Mini_Honey_Dipper]: 18 / 31
+ 31%|███▏      | 10/32 [02:05<04:32, 12.37s/it]2026-09-30 09:45:34.256 | INFO     | __main__:stability_tester:113 - Stability test for [Corningware_CW_by_Corningware_3qt_Oblong_Casserole_Dish_Blue]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Cole_Hardware_Mini_Honey_Dipper.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:03,  9.88it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 296.48it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   1%|▏         | 5/360 [00:00<00:07, 49.90it/s][A
+Test Push Object::   3%|▎         | 11/360 [00:00<00:06, 50.08it/s][A
+Test Push Object::   5%|▍         | 17/360 [00:00<00:06, 50.30it/s][A
+Test Push Object::   6%|▋         | 23/360 [00:00<00:06, 48.70it/s][A
+Test Push Object::   8%|▊         | 28/360 [00:00<00:06, 47.58it/s][A
+Test Push Object::   9%|▉         | 33/360 [00:00<00:06, 46.77it/s][A
+Test Push Object::  11%|█         | 38/360 [00:00<00:06, 46.26it/s][A
+Test Push Object::  12%|█▏        | 43/360 [00:00<00:06, 46.37it/s][A
+Test Push Object::  13%|█▎        | 48/360 [00:01<00:06, 47.19it/s][A
+Test Push Object::  15%|█▍        | 53/360 [00:01<00:06, 47.47it/s][A
+Test Push Object::  16%|█▌        | 58/360 [00:01<00:06, 47.21it/s][A
+Test Push Object::  18%|█▊        | 64/360 [00:01<00:06, 48.91it/s][A
+Test Push Object::  19%|█▉        | 70/360 [00:01<00:05, 49.47it/s][A
+Test Push Object::  21%|██        | 76/360 [00:01<00:05, 49.86it/s][A
+Test Push Object::  22%|██▎       | 81/360 [00:01<00:05, 49.55it/s][A
+Test Push Object::  24%|██▍       | 86/360 [00:01<00:05, 48.66it/s][A
+Test Push Object::  26%|██▌       | 92/360 [00:01<00:05, 49.32it/s][A
+Test Push Object::  27%|██▋       | 97/360 [00:02<00:05, 49.22it/s][A
+Test Push Object::  28%|██▊       | 102/360 [00:02<00:05, 49.33it/s][A
+Test Push Object::  30%|██▉       | 107/360 [00:02<00:05, 49.42it/s][A
+Test Push Object::  31%|███       | 112/360 [00:02<00:05, 48.99it/s][A
+Test Push Object::  33%|███▎      | 118/360 [00:02<00:04, 49.26it/s][A
+Test Push Object::  34%|███▍      | 123/360 [00:02<00:04, 49.03it/s][A
+Test Push Object::  36%|███▌      | 128/360 [00:02<00:04, 48.68it/s][A
+Test Push Object::  37%|███▋      | 133/360 [00:02<00:04, 48.40it/s][A
+Test Push Object::  38%|███▊      | 138/360 [00:02<00:04, 48.42it/s][A
+Test Push Object::  40%|███▉      | 143/360 [00:02<00:04, 47.93it/s][A
+Test Push Object::  41%|████      | 148/360 [00:03<00:04, 48.24it/s][A
+Test Push Object::  42%|████▎     | 153/360 [00:03<00:04, 48.50it/s][A
+Test Push Object::  44%|████▍     | 158/360 [00:03<00:04, 48.71it/s][A
+Test Push Object::  45%|████▌     | 163/360 [00:03<00:04, 48.63it/s][A
+Test Push Object::  47%|████▋     | 168/360 [00:03<00:03, 48.77it/s][A
+Test Push Object::  48%|████▊     | 174/360 [00:03<00:03, 49.34it/s][A
+Test Push Object::  50%|████▉     | 179/360 [00:03<00:03, 49.13it/s][A
+Test Push Object::  51%|█████     | 184/360 [00:03<00:03, 48.89it/s][A
+Test Push Object::  52%|█████▎    | 189/360 [00:03<00:03, 48.81it/s][A
+Test Push Object::  54%|█████▍    | 194/360 [00:03<00:03, 48.81it/s][A
+Test Push Object::  55%|█████▌    | 199/360 [00:04<00:03, 49.06it/s][A
+Test Push Object::  57%|█████▋    | 205/360 [00:04<00:03, 49.34it/s][A
+Test Push Object::  58%|█████▊    | 210/360 [00:04<00:03, 49.50it/s][A
+Test Push Object::  60%|█████▉    | 215/360 [00:04<00:02, 49.45it/s][A
+Test Push Object::  61%|██████    | 220/360 [00:04<00:02, 49.52it/s][A
+Test Push Object::  63%|██████▎   | 226/360 [00:04<00:02, 49.67it/s][A
+Test Push Object::  64%|██████▍   | 231/360 [00:04<00:02, 49.68it/s][A
+Test Push Object::  66%|██████▌   | 237/360 [00:04<00:02, 49.93it/s][A
+Test Push Object::  67%|██████▋   | 242/360 [00:04<00:02, 49.75it/s][A
+Test Push Object::  69%|██████▉   | 248/360 [00:05<00:02, 49.88it/s][A
+Test Push Object::  70%|███████   | 253/360 [00:05<00:02, 49.50it/s][A
+Test Push Object::  72%|███████▏  | 258/360 [00:05<00:02, 48.84it/s][A
+Test Push Object::  73%|███████▎  | 263/360 [00:05<00:02, 48.10it/s][A
+Test Push Object::  74%|███████▍  | 268/360 [00:05<00:01, 47.54it/s][A
+Test Push Object::  76%|███████▌  | 273/360 [00:05<00:01, 47.09it/s][A
+Test Push Object::  77%|███████▋  | 278/360 [00:05<00:01, 46.97it/s][A
+Test Push Object::  79%|███████▊  | 283/360 [00:05<00:01, 47.70it/s][A
+Test Push Object::  80%|████████  | 288/360 [00:05<00:01, 47.66it/s][A
+Test Push Object::  81%|████████▏ | 293/360 [00:06<00:01, 47.65it/s][A
+Test Push Object::  83%|████████▎ | 298/360 [00:06<00:01, 47.23it/s][A
+Test Push Object::  84%|████████▍ | 303/360 [00:06<00:01, 47.62it/s][A
+Test Push Object::  86%|████████▌ | 308/360 [00:06<00:01, 48.09it/s][A
+Test Push Object::  87%|████████▋ | 314/360 [00:06<00:00, 49.20it/s][A
+Test Push Object::  89%|████████▉ | 320/360 [00:06<00:00, 49.68it/s][A
+Test Push Object::  90%|█████████ | 325/360 [00:06<00:00, 48.93it/s][A
+Test Push Object::  92%|█████████▏| 330/360 [00:06<00:00, 48.24it/s][A
+Test Push Object::  93%|█████████▎| 335/360 [00:06<00:00, 47.57it/s][A
+Test Push Object::  94%|█████████▍| 340/360 [00:07<00:00, 47.16it/s][A
+Test Push Object::  96%|█████████▌| 345/360 [00:07<00:00, 46.70it/s][A
+Test Push Object::  97%|█████████▋| 350/360 [00:07<00:00, 46.38it/s][A
+Test Push Object::  99%|█████████▊| 355/360 [00:07<00:00, 46.18it/s][A
+Test Push Object:: 100%|██████████| 360/360 [00:07<00:00, 46.31it/s][ATest Push Object:: 100%|██████████| 360/360 [00:07<00:00, 48.39it/s]
+2026-09-30 09:45:47.385 | INFO     | __main__:stability_tester:143 - Success rate of [Corningware_CW_by_Corningware_3qt_Oblong_Casserole_Dish_Blue]: 24 / 32
+ 34%|███▍      | 11/32 [02:18<04:25, 12.65s/it]2026-09-30 09:45:47.549 | INFO     | __main__:stability_tester:113 - Stability test for [Design_Ideas_Drawer_Store_Organizer]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Corningware_CW_by_Corningware_3qt_Oblong_Casserole_Dish_Blue.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 31
+Simulator: creating agents
+
+  0%|          | 0/31 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/31 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+Enumerating envs:: 100%|██████████| 31/31 [00:00<00:00, 376.65it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   1%|▏         | 5/360 [00:00<00:07, 49.35it/s][A
+Test Push Object::   3%|▎         | 11/360 [00:00<00:06, 52.22it/s][A
+Test Push Object::   5%|▍         | 17/360 [00:00<00:06, 51.83it/s][A
+Test Push Object::   6%|▋         | 23/360 [00:00<00:06, 52.17it/s][A
+Test Push Object::   8%|▊         | 29/360 [00:00<00:06, 52.16it/s][A
+Test Push Object::  10%|▉         | 35/360 [00:00<00:06, 52.03it/s][A
+Test Push Object::  11%|█▏        | 41/360 [00:00<00:06, 51.73it/s][A
+Test Push Object::  13%|█▎        | 47/360 [00:00<00:06, 51.81it/s][A
+Test Push Object::  15%|█▍        | 53/360 [00:01<00:05, 51.92it/s][A
+Test Push Object::  16%|█▋        | 59/360 [00:01<00:05, 52.14it/s][A
+Test Push Object::  18%|█▊        | 65/360 [00:01<00:05, 51.76it/s][A
+Test Push Object::  20%|█▉        | 71/360 [00:01<00:05, 51.59it/s][A
+Test Push Object::  21%|██▏       | 77/360 [00:01<00:05, 51.71it/s][A
+Test Push Object::  23%|██▎       | 83/360 [00:01<00:05, 52.07it/s][A
+Test Push Object::  25%|██▍       | 89/360 [00:01<00:05, 52.35it/s][A
+Test Push Object::  26%|██▋       | 95/360 [00:01<00:05, 52.65it/s][A
+Test Push Object::  28%|██▊       | 101/360 [00:01<00:04, 53.14it/s][A
+Test Push Object::  30%|██▉       | 107/360 [00:02<00:04, 52.67it/s][A
+Test Push Object::  31%|███▏      | 113/360 [00:02<00:04, 52.84it/s][A
+Test Push Object::  33%|███▎      | 119/360 [00:02<00:04, 52.59it/s][A
+Test Push Object::  35%|███▍      | 125/360 [00:02<00:04, 52.68it/s][A
+Test Push Object::  36%|███▋      | 131/360 [00:02<00:04, 52.49it/s][A
+Test Push Object::  38%|███▊      | 137/360 [00:02<00:04, 52.43it/s][A
+Test Push Object::  40%|███▉      | 143/360 [00:02<00:04, 52.94it/s][A
+Test Push Object::  41%|████▏     | 149/360 [00:02<00:04, 52.07it/s][A
+Test Push Object::  43%|████▎     | 155/360 [00:02<00:04, 51.06it/s][A
+Test Push Object::  45%|████▍     | 161/360 [00:03<00:04, 49.70it/s][A
+Test Push Object::  46%|████▌     | 166/360 [00:03<00:03, 49.01it/s][A
+Test Push Object::  48%|████▊     | 171/360 [00:03<00:03, 48.26it/s][A
+Test Push Object::  49%|████▉     | 176/360 [00:03<00:03, 47.81it/s][A
+Test Push Object::  50%|█████     | 181/360 [00:03<00:03, 47.64it/s][A
+Test Push Object::  52%|█████▏    | 187/360 [00:03<00:03, 48.63it/s][A
+Test Push Object::  53%|█████▎    | 192/360 [00:03<00:03, 48.58it/s][A
+Test Push Object::  55%|█████▍    | 197/360 [00:03<00:03, 47.97it/s][A
+Test Push Object::  56%|█████▋    | 203/360 [00:03<00:03, 49.44it/s][A
+Test Push Object::  58%|█████▊    | 209/360 [00:04<00:03, 50.14it/s][A
+Test Push Object::  60%|█████▉    | 215/360 [00:04<00:02, 49.16it/s][A
+Test Push Object::  61%|██████    | 220/360 [00:04<00:02, 49.19it/s][A
+Test Push Object::  63%|██████▎   | 226/360 [00:04<00:02, 50.05it/s][A
+Test Push Object::  64%|██████▍   | 232/360 [00:04<00:02, 51.16it/s][A
+Test Push Object::  66%|██████▌   | 238/360 [00:04<00:02, 51.30it/s][A
+Test Push Object::  68%|██████▊   | 244/360 [00:04<00:02, 51.75it/s][A
+Test Push Object::  69%|██████▉   | 250/360 [00:04<00:02, 51.25it/s][A
+Test Push Object::  71%|███████   | 256/360 [00:05<00:02, 51.52it/s][A
+Test Push Object::  73%|███████▎  | 262/360 [00:05<00:01, 51.24it/s][A
+Test Push Object::  74%|███████▍  | 268/360 [00:05<00:01, 51.79it/s][A
+Test Push Object::  76%|███████▌  | 274/360 [00:05<00:01, 51.27it/s][A
+Test Push Object::  78%|███████▊  | 280/360 [00:05<00:01, 51.44it/s][A
+Test Push Object::  79%|███████▉  | 286/360 [00:05<00:01, 51.38it/s][A
+Test Push Object::  81%|████████  | 292/360 [00:05<00:01, 51.59it/s][A
+Test Push Object::  83%|████████▎ | 298/360 [00:05<00:01, 51.40it/s][A
+Test Push Object::  84%|████████▍ | 304/360 [00:05<00:01, 51.71it/s][A
+Test Push Object::  86%|████████▌ | 310/360 [00:06<00:00, 51.54it/s][A
+Test Push Object::  88%|████████▊ | 316/360 [00:06<00:00, 51.85it/s][A
+Test Push Object::  89%|████████▉ | 322/360 [00:06<00:00, 50.14it/s][A
+Test Push Object::  91%|█████████ | 328/360 [00:06<00:00, 49.01it/s][A
+Test Push Object::  92%|█████████▎| 333/360 [00:06<00:00, 48.43it/s][A
+Test Push Object::  94%|█████████▍| 338/360 [00:06<00:00, 48.06it/s][A
+Test Push Object::  95%|█████████▌| 343/360 [00:06<00:00, 48.02it/s][A
+Test Push Object::  97%|█████████▋| 348/360 [00:06<00:00, 47.83it/s][A
+Test Push Object::  98%|█████████▊| 353/360 [00:06<00:00, 47.86it/s][A
+Test Push Object::  99%|█████████▉| 358/360 [00:07<00:00, 48.16it/s][ATest Push Object:: 100%|██████████| 360/360 [00:07<00:00, 50.72it/s]
+2026-09-30 09:46:00.178 | INFO     | __main__:stability_tester:143 - Success rate of [Design_Ideas_Drawer_Store_Organizer]: 25 / 31
+ 38%|███▊      | 12/32 [02:31<04:13, 12.69s/it]2026-09-30 09:46:00.346 | INFO     | __main__:stability_tester:113 - Stability test for [Ecoforms_Garden_Pot_GP16ATurquois]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Design_Ideas_Drawer_Store_Organizer.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:04,  7.29it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 221.74it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   1%|▏         | 5/360 [00:00<00:08, 44.27it/s][A
+Test Push Object::   3%|▎         | 10/360 [00:00<00:08, 43.42it/s][A
+Test Push Object::   4%|▍         | 15/360 [00:00<00:07, 43.39it/s][A
+Test Push Object::   6%|▌         | 20/360 [00:00<00:07, 43.40it/s][A
+Test Push Object::   7%|▋         | 25/360 [00:00<00:07, 43.42it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:07, 43.46it/s][A
+Test Push Object::  10%|▉         | 35/360 [00:00<00:07, 43.43it/s][A
+Test Push Object::  11%|█         | 40/360 [00:00<00:07, 43.58it/s][A
+Test Push Object::  12%|█▎        | 45/360 [00:01<00:07, 43.42it/s][A
+Test Push Object::  14%|█▍        | 50/360 [00:01<00:07, 43.02it/s][A
+Test Push Object::  15%|█▌        | 55/360 [00:01<00:07, 43.04it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:06, 43.14it/s][A
+Test Push Object::  18%|█▊        | 65/360 [00:01<00:06, 43.25it/s][A
+Test Push Object::  19%|█▉        | 70/360 [00:01<00:06, 43.82it/s][A
+Test Push Object::  21%|██        | 75/360 [00:01<00:06, 43.80it/s][A
+Test Push Object::  22%|██▏       | 80/360 [00:01<00:06, 44.09it/s][A
+Test Push Object::  24%|██▎       | 85/360 [00:01<00:06, 44.71it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:02<00:05, 45.50it/s][A
+Test Push Object::  26%|██▋       | 95/360 [00:02<00:05, 44.85it/s][A
+Test Push Object::  28%|██▊       | 100/360 [00:02<00:05, 45.00it/s][A
+Test Push Object::  29%|██▉       | 105/360 [00:02<00:05, 45.18it/s][A
+Test Push Object::  31%|███       | 110/360 [00:02<00:05, 45.80it/s][A
+Test Push Object::  32%|███▏      | 115/360 [00:02<00:05, 45.96it/s][A
+Test Push Object::  33%|███▎      | 120/360 [00:02<00:05, 46.09it/s][A
+Test Push Object::  35%|███▍      | 125/360 [00:02<00:05, 46.24it/s][A
+Test Push Object::  36%|███▌      | 130/360 [00:02<00:04, 46.87it/s][A
+Test Push Object::  38%|███▊      | 135/360 [00:03<00:04, 47.19it/s][A
+Test Push Object::  39%|███▉      | 140/360 [00:03<00:04, 46.99it/s][A
+Test Push Object::  40%|████      | 145/360 [00:03<00:04, 46.77it/s][A
+Test Push Object::  42%|████▏     | 150/360 [00:03<00:04, 46.66it/s][A
+Test Push Object::  43%|████▎     | 155/360 [00:03<00:04, 47.36it/s][A
+Test Push Object::  44%|████▍     | 160/360 [00:03<00:04, 47.47it/s][A
+Test Push Object::  46%|████▌     | 165/360 [00:03<00:04, 46.90it/s][A
+Test Push Object::  47%|████▋     | 170/360 [00:03<00:04, 46.57it/s][A
+Test Push Object::  49%|████▊     | 175/360 [00:03<00:03, 46.90it/s][A
+Test Push Object::  50%|█████     | 180/360 [00:03<00:03, 46.68it/s][A
+Test Push Object::  51%|█████▏    | 185/360 [00:04<00:03, 46.67it/s][A
+Test Push Object::  53%|█████▎    | 190/360 [00:04<00:03, 45.98it/s][A
+Test Push Object::  54%|█████▍    | 195/360 [00:04<00:03, 45.82it/s][A
+Test Push Object::  56%|█████▌    | 200/360 [00:04<00:03, 45.89it/s][A
+Test Push Object::  57%|█████▋    | 205/360 [00:04<00:03, 46.00it/s][A
+Test Push Object::  58%|█████▊    | 210/360 [00:04<00:03, 46.08it/s][A
+Test Push Object::  60%|█████▉    | 215/360 [00:04<00:03, 45.56it/s][A
+Test Push Object::  61%|██████    | 220/360 [00:04<00:03, 45.62it/s][A
+Test Push Object::  62%|██████▎   | 225/360 [00:04<00:02, 45.62it/s][A
+Test Push Object::  64%|██████▍   | 230/360 [00:05<00:02, 45.26it/s][A
+Test Push Object::  65%|██████▌   | 235/360 [00:05<00:02, 44.98it/s][A
+Test Push Object::  67%|██████▋   | 240/360 [00:05<00:02, 45.01it/s][A
+Test Push Object::  68%|██████▊   | 245/360 [00:05<00:02, 45.07it/s][A
+Test Push Object::  69%|██████▉   | 250/360 [00:05<00:02, 44.98it/s][A
+Test Push Object::  71%|███████   | 255/360 [00:05<00:02, 44.69it/s][A
+Test Push Object::  72%|███████▏  | 260/360 [00:05<00:02, 44.68it/s][A
+Test Push Object::  74%|███████▎  | 265/360 [00:05<00:02, 44.80it/s][A
+Test Push Object::  75%|███████▌  | 270/360 [00:05<00:02, 44.75it/s][A
+Test Push Object::  76%|███████▋  | 275/360 [00:06<00:01, 44.65it/s][A
+Test Push Object::  78%|███████▊  | 280/360 [00:06<00:01, 44.71it/s][A
+Test Push Object::  79%|███████▉  | 285/360 [00:06<00:01, 44.49it/s][A
+Test Push Object::  81%|████████  | 290/360 [00:06<00:01, 44.88it/s][A
+Test Push Object::  82%|████████▏ | 295/360 [00:06<00:01, 44.93it/s][A
+Test Push Object::  83%|████████▎ | 300/360 [00:06<00:01, 45.27it/s][A
+Test Push Object::  85%|████████▍ | 305/360 [00:06<00:01, 45.33it/s][A
+Test Push Object::  86%|████████▌ | 310/360 [00:06<00:01, 44.76it/s][A
+Test Push Object::  88%|████████▊ | 315/360 [00:06<00:01, 44.69it/s][A
+Test Push Object::  89%|████████▉ | 320/360 [00:07<00:00, 45.52it/s][A
+Test Push Object::  90%|█████████ | 325/360 [00:07<00:00, 45.38it/s][A
+Test Push Object::  92%|█████████▏| 330/360 [00:07<00:00, 45.47it/s][A
+Test Push Object::  93%|█████████▎| 335/360 [00:07<00:00, 45.59it/s][A
+Test Push Object::  94%|█████████▍| 340/360 [00:07<00:00, 45.40it/s][A
+Test Push Object::  96%|█████████▌| 345/360 [00:07<00:00, 45.39it/s][A
+Test Push Object::  97%|█████████▋| 350/360 [00:07<00:00, 45.25it/s][A
+Test Push Object::  99%|█████████▊| 355/360 [00:07<00:00, 45.23it/s][A
+Test Push Object:: 100%|██████████| 360/360 [00:07<00:00, 45.21it/s][ATest Push Object:: 100%|██████████| 360/360 [00:07<00:00, 45.18it/s]
+2026-09-30 09:46:14.407 | INFO     | __main__:stability_tester:143 - Success rate of [Ecoforms_Garden_Pot_GP16ATurquois]: 21 / 32
+ 41%|████      | 13/32 [02:45<04:10, 13.16s/it]2026-09-30 09:46:14.579 | INFO     | __main__:stability_tester:113 - Stability test for [Ecoforms_Pot_Nova_6_Turquoise]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Ecoforms_Garden_Pot_GP16ATurquois.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:04,  7.62it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 230.95it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   1%|▏         | 5/360 [00:00<00:08, 42.94it/s][A
+Test Push Object::   3%|▎         | 10/360 [00:00<00:07, 43.78it/s][A
+Test Push Object::   4%|▍         | 15/360 [00:00<00:07, 43.45it/s][A
+Test Push Object::   6%|▌         | 20/360 [00:00<00:07, 43.13it/s][A
+Test Push Object::   7%|▋         | 25/360 [00:00<00:07, 43.37it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:07, 43.35it/s][A
+Test Push Object::  10%|▉         | 35/360 [00:00<00:07, 43.41it/s][A
+Test Push Object::  11%|█         | 40/360 [00:00<00:07, 42.96it/s][A
+Test Push Object::  12%|█▎        | 45/360 [00:01<00:07, 43.01it/s][A
+Test Push Object::  14%|█▍        | 50/360 [00:01<00:07, 42.97it/s][A
+Test Push Object::  15%|█▌        | 55/360 [00:01<00:07, 43.25it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:06, 43.29it/s][A
+Test Push Object::  18%|█▊        | 65/360 [00:01<00:06, 43.25it/s][A
+Test Push Object::  19%|█▉        | 70/360 [00:01<00:06, 43.27it/s][A
+Test Push Object::  21%|██        | 75/360 [00:01<00:06, 43.20it/s][A
+Test Push Object::  22%|██▏       | 80/360 [00:01<00:06, 42.82it/s][A
+Test Push Object::  24%|██▎       | 85/360 [00:01<00:06, 42.90it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:02<00:06, 42.62it/s][A
+Test Push Object::  26%|██▋       | 95/360 [00:02<00:06, 42.99it/s][A
+Test Push Object::  28%|██▊       | 100/360 [00:02<00:06, 42.77it/s][A
+Test Push Object::  29%|██▉       | 105/360 [00:02<00:05, 42.94it/s][A
+Test Push Object::  31%|███       | 110/360 [00:02<00:05, 42.98it/s][A
+Test Push Object::  32%|███▏      | 115/360 [00:02<00:05, 43.40it/s][A
+Test Push Object::  33%|███▎      | 120/360 [00:02<00:05, 43.56it/s][A
+Test Push Object::  35%|███▍      | 125/360 [00:02<00:05, 44.03it/s][A
+Test Push Object::  36%|███▌      | 130/360 [00:03<00:05, 44.18it/s][A
+Test Push Object::  38%|███▊      | 135/360 [00:03<00:05, 44.12it/s][A
+Test Push Object::  39%|███▉      | 140/360 [00:03<00:05, 43.82it/s][A
+Test Push Object::  40%|████      | 145/360 [00:03<00:04, 43.53it/s][A
+Test Push Object::  42%|████▏     | 150/360 [00:03<00:04, 43.39it/s][A
+Test Push Object::  43%|████▎     | 155/360 [00:03<00:04, 43.54it/s][A
+Test Push Object::  44%|████▍     | 160/360 [00:03<00:04, 43.81it/s][A
+Test Push Object::  46%|████▌     | 165/360 [00:03<00:04, 44.53it/s][A
+Test Push Object::  47%|████▋     | 170/360 [00:03<00:04, 44.66it/s][A
+Test Push Object::  49%|████▊     | 175/360 [00:04<00:04, 45.33it/s][A
+Test Push Object::  50%|█████     | 180/360 [00:04<00:03, 45.44it/s][A
+Test Push Object::  51%|█████▏    | 185/360 [00:04<00:03, 45.35it/s][A
+Test Push Object::  53%|█████▎    | 190/360 [00:04<00:03, 45.49it/s][A
+Test Push Object::  54%|█████▍    | 195/360 [00:04<00:03, 45.93it/s][A
+Test Push Object::  56%|█████▌    | 200/360 [00:04<00:03, 45.61it/s][A
+Test Push Object::  57%|█████▋    | 205/360 [00:04<00:03, 44.91it/s][A
+Test Push Object::  58%|█████▊    | 210/360 [00:04<00:03, 44.23it/s][A
+Test Push Object::  60%|█████▉    | 215/360 [00:04<00:03, 44.83it/s][A
+Test Push Object::  61%|██████    | 220/360 [00:05<00:03, 44.75it/s][A
+Test Push Object::  62%|██████▎   | 225/360 [00:05<00:02, 45.01it/s][A
+Test Push Object::  64%|██████▍   | 230/360 [00:05<00:02, 45.02it/s][A
+Test Push Object::  65%|██████▌   | 235/360 [00:05<00:02, 44.65it/s][A
+Test Push Object::  67%|██████▋   | 240/360 [00:05<00:02, 44.66it/s][A
+Test Push Object::  68%|██████▊   | 245/360 [00:05<00:02, 44.57it/s][A
+Test Push Object::  69%|██████▉   | 250/360 [00:05<00:02, 44.17it/s][A
+Test Push Object::  71%|███████   | 255/360 [00:05<00:02, 44.76it/s][A
+Test Push Object::  72%|███████▏  | 260/360 [00:05<00:02, 45.19it/s][A
+Test Push Object::  74%|███████▎  | 265/360 [00:06<00:02, 44.51it/s][A
+Test Push Object::  75%|███████▌  | 270/360 [00:06<00:02, 43.75it/s][A
+Test Push Object::  76%|███████▋  | 275/360 [00:06<00:01, 43.69it/s][A
+Test Push Object::  78%|███████▊  | 280/360 [00:06<00:01, 44.00it/s][A
+Test Push Object::  79%|███████▉  | 285/360 [00:06<00:01, 44.00it/s][A
+Test Push Object::  81%|████████  | 290/360 [00:06<00:01, 44.14it/s][A
+Test Push Object::  82%|████████▏ | 295/360 [00:06<00:01, 44.19it/s][A
+Test Push Object::  83%|████████▎ | 300/360 [00:06<00:01, 43.93it/s][A
+Test Push Object::  85%|████████▍ | 305/360 [00:06<00:01, 44.04it/s][A
+Test Push Object::  86%|████████▌ | 310/360 [00:07<00:01, 43.81it/s][A
+Test Push Object::  88%|████████▊ | 315/360 [00:07<00:01, 43.74it/s][A
+Test Push Object::  89%|████████▉ | 320/360 [00:07<00:00, 44.25it/s][A
+Test Push Object::  90%|█████████ | 325/360 [00:07<00:00, 44.85it/s][A
+Test Push Object::  92%|█████████▏| 330/360 [00:07<00:00, 45.24it/s][A
+Test Push Object::  93%|█████████▎| 335/360 [00:07<00:00, 45.39it/s][A
+Test Push Object::  94%|█████████▍| 340/360 [00:07<00:00, 45.80it/s][A
+Test Push Object::  96%|█████████▌| 345/360 [00:07<00:00, 45.89it/s][A
+Test Push Object::  97%|█████████▋| 350/360 [00:07<00:00, 46.12it/s][A
+Test Push Object::  99%|█████████▊| 355/360 [00:08<00:00, 46.32it/s][A
+Test Push Object:: 100%|██████████| 360/360 [00:08<00:00, 46.66it/s][ATest Push Object:: 100%|██████████| 360/360 [00:08<00:00, 44.24it/s]
+2026-09-30 09:46:29.138 | INFO     | __main__:stability_tester:143 - Success rate of [Ecoforms_Pot_Nova_6_Turquoise]: 22 / 32
+ 44%|████▍     | 14/32 [03:00<04:05, 13.64s/it]2026-09-30 09:46:29.311 | INFO     | __main__:stability_tester:113 - Stability test for [Grreat_Choice_Dog_Double_Dish_Plastic_Blue]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Ecoforms_Pot_Nova_6_Turquoise.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:04,  7.37it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 224.50it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   1%|▏         | 5/360 [00:00<00:07, 46.36it/s][A
+Test Push Object::   3%|▎         | 10/360 [00:00<00:07, 46.58it/s][A
+Test Push Object::   4%|▍         | 15/360 [00:00<00:07, 47.53it/s][A
+Test Push Object::   6%|▌         | 20/360 [00:00<00:07, 47.04it/s][A
+Test Push Object::   7%|▋         | 25/360 [00:00<00:07, 46.76it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:07, 46.86it/s][A
+Test Push Object::  10%|▉         | 35/360 [00:00<00:06, 47.05it/s][A
+Test Push Object::  11%|█         | 40/360 [00:00<00:06, 46.84it/s][A
+Test Push Object::  13%|█▎        | 46/360 [00:00<00:06, 48.65it/s][A
+Test Push Object::  14%|█▍        | 51/360 [00:01<00:06, 48.26it/s][A
+Test Push Object::  16%|█▌        | 56/360 [00:01<00:06, 48.45it/s][A
+Test Push Object::  17%|█▋        | 61/360 [00:01<00:06, 47.93it/s][A
+Test Push Object::  18%|█▊        | 66/360 [00:01<00:06, 47.70it/s][A
+Test Push Object::  20%|█▉        | 71/360 [00:01<00:06, 47.46it/s][A
+Test Push Object::  21%|██        | 76/360 [00:01<00:06, 47.21it/s][A
+Test Push Object::  22%|██▎       | 81/360 [00:01<00:05, 47.20it/s][A
+Test Push Object::  24%|██▍       | 86/360 [00:01<00:05, 47.87it/s][A
+Test Push Object::  26%|██▌       | 92/360 [00:01<00:05, 49.02it/s][A
+Test Push Object::  27%|██▋       | 97/360 [00:02<00:05, 48.41it/s][A
+Test Push Object::  28%|██▊       | 102/360 [00:02<00:05, 48.49it/s][A
+Test Push Object::  30%|██▉       | 107/360 [00:02<00:05, 48.81it/s][A
+Test Push Object::  31%|███       | 112/360 [00:02<00:05, 48.89it/s][A
+Test Push Object::  32%|███▎      | 117/360 [00:02<00:05, 48.58it/s][A
+Test Push Object::  34%|███▍      | 123/360 [00:02<00:04, 49.63it/s][A
+Test Push Object::  36%|███▌      | 128/360 [00:02<00:04, 49.11it/s][A
+Test Push Object::  37%|███▋      | 133/360 [00:02<00:04, 49.22it/s][A
+Test Push Object::  38%|███▊      | 138/360 [00:02<00:04, 49.39it/s][A
+Test Push Object::  40%|███▉      | 143/360 [00:02<00:04, 48.47it/s][A
+Test Push Object::  41%|████      | 148/360 [00:03<00:04, 48.11it/s][A
+Test Push Object::  43%|████▎     | 154/360 [00:03<00:04, 48.60it/s][A
+Test Push Object::  44%|████▍     | 159/360 [00:03<00:04, 47.94it/s][A
+Test Push Object::  46%|████▌     | 164/360 [00:03<00:04, 48.37it/s][A
+Test Push Object::  47%|████▋     | 169/360 [00:03<00:03, 48.76it/s][A
+Test Push Object::  48%|████▊     | 174/360 [00:03<00:03, 48.48it/s][A
+Test Push Object::  50%|████▉     | 179/360 [00:03<00:03, 47.81it/s][A
+Test Push Object::  51%|█████     | 184/360 [00:03<00:03, 47.37it/s][A
+Test Push Object::  52%|█████▎    | 189/360 [00:03<00:03, 46.85it/s][A
+Test Push Object::  54%|█████▍    | 194/360 [00:04<00:03, 46.59it/s][A
+Test Push Object::  55%|█████▌    | 199/360 [00:04<00:03, 46.40it/s][A
+Test Push Object::  57%|█████▋    | 204/360 [00:04<00:03, 46.76it/s][A
+Test Push Object::  58%|█████▊    | 209/360 [00:04<00:03, 47.55it/s][A
+Test Push Object::  59%|█████▉    | 214/360 [00:04<00:03, 47.41it/s][A
+Test Push Object::  61%|██████    | 219/360 [00:04<00:02, 47.12it/s][A
+Test Push Object::  62%|██████▏   | 224/360 [00:04<00:02, 46.88it/s][A
+Test Push Object::  64%|██████▎   | 229/360 [00:04<00:02, 46.64it/s][A
+Test Push Object::  65%|██████▌   | 234/360 [00:04<00:02, 46.89it/s][A
+Test Push Object::  66%|██████▋   | 239/360 [00:05<00:02, 46.70it/s][A
+Test Push Object::  68%|██████▊   | 244/360 [00:05<00:02, 46.42it/s][A
+Test Push Object::  69%|██████▉   | 249/360 [00:05<00:02, 46.24it/s][A
+Test Push Object::  71%|███████   | 254/360 [00:05<00:02, 46.33it/s][A
+Test Push Object::  72%|███████▏  | 259/360 [00:05<00:02, 46.34it/s][A
+Test Push Object::  73%|███████▎  | 264/360 [00:05<00:02, 47.05it/s][A
+Test Push Object::  75%|███████▍  | 269/360 [00:05<00:01, 47.23it/s][A
+Test Push Object::  76%|███████▌  | 274/360 [00:05<00:01, 47.03it/s][A
+Test Push Object::  78%|███████▊  | 279/360 [00:05<00:01, 46.72it/s][A
+Test Push Object::  79%|███████▉  | 284/360 [00:05<00:01, 46.55it/s][A
+Test Push Object::  80%|████████  | 289/360 [00:06<00:01, 46.40it/s][A
+Test Push Object::  82%|████████▏ | 294/360 [00:06<00:01, 46.27it/s][A
+Test Push Object::  83%|████████▎ | 299/360 [00:06<00:01, 46.24it/s][A
+Test Push Object::  84%|████████▍ | 304/360 [00:06<00:01, 46.19it/s][A
+Test Push Object::  86%|████████▌ | 309/360 [00:06<00:01, 46.74it/s][A
+Test Push Object::  87%|████████▋ | 314/360 [00:06<00:00, 46.69it/s][A
+Test Push Object::  89%|████████▊ | 319/360 [00:06<00:00, 46.58it/s][A
+Test Push Object::  90%|█████████ | 324/360 [00:06<00:00, 46.59it/s][A
+Test Push Object::  91%|█████████▏| 329/360 [00:06<00:00, 46.57it/s][A
+Test Push Object::  93%|█████████▎| 334/360 [00:07<00:00, 46.42it/s][A
+Test Push Object::  94%|█████████▍| 339/360 [00:07<00:00, 47.02it/s][A
+Test Push Object::  96%|█████████▌| 344/360 [00:07<00:00, 47.35it/s][A
+Test Push Object::  97%|█████████▋| 349/360 [00:07<00:00, 47.13it/s][A
+Test Push Object::  98%|█████████▊| 354/360 [00:07<00:00, 47.19it/s][A
+Test Push Object:: 100%|█████████▉| 359/360 [00:07<00:00, 47.10it/s][ATest Push Object:: 100%|██████████| 360/360 [00:07<00:00, 47.40it/s]
+2026-09-30 09:46:42.392 | INFO     | __main__:stability_tester:143 - Success rate of [Grreat_Choice_Dog_Double_Dish_Plastic_Blue]: 20 / 32
+ 47%|████▋     | 15/32 [03:13<03:49, 13.52s/it]2026-09-30 09:46:42.562 | INFO     | __main__:stability_tester:113 - Stability test for [Logitech_Ultimate_Ears_Boom_Wireless_Speaker_Night_Black]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Grreat_Choice_Dog_Double_Dish_Plastic_Blue.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:03,  9.85it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 302.11it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   2%|▏         | 7/360 [00:00<00:05, 60.70it/s][A
+Test Push Object::   4%|▍         | 14/360 [00:00<00:05, 60.81it/s][A
+Test Push Object::   6%|▌         | 21/360 [00:00<00:05, 61.03it/s][A
+Test Push Object::   8%|▊         | 28/360 [00:00<00:05, 60.98it/s][A
+Test Push Object::  10%|▉         | 35/360 [00:00<00:05, 60.90it/s][A
+Test Push Object::  12%|█▏        | 42/360 [00:00<00:05, 61.02it/s][A
+Test Push Object::  14%|█▎        | 49/360 [00:00<00:05, 61.09it/s][A
+Test Push Object::  16%|█▌        | 56/360 [00:00<00:04, 61.18it/s][A
+Test Push Object::  18%|█▊        | 63/360 [00:01<00:04, 61.06it/s][A
+Test Push Object::  19%|█▉        | 70/360 [00:01<00:04, 60.97it/s][A
+Test Push Object::  21%|██▏       | 77/360 [00:01<00:04, 61.01it/s][A
+Test Push Object::  23%|██▎       | 84/360 [00:01<00:04, 60.97it/s][A
+Test Push Object::  25%|██▌       | 91/360 [00:01<00:04, 60.68it/s][A
+Test Push Object::  27%|██▋       | 98/360 [00:01<00:04, 60.53it/s][A
+Test Push Object::  29%|██▉       | 105/360 [00:01<00:04, 60.70it/s][A
+Test Push Object::  31%|███       | 112/360 [00:01<00:04, 60.89it/s][A
+Test Push Object::  33%|███▎      | 119/360 [00:01<00:03, 60.85it/s][A
+Test Push Object::  35%|███▌      | 126/360 [00:02<00:03, 60.88it/s][A
+Test Push Object::  37%|███▋      | 133/360 [00:02<00:03, 60.88it/s][A
+Test Push Object::  39%|███▉      | 140/360 [00:02<00:03, 60.41it/s][A
+Test Push Object::  41%|████      | 147/360 [00:02<00:03, 60.18it/s][A
+Test Push Object::  43%|████▎     | 154/360 [00:02<00:03, 60.26it/s][A
+Test Push Object::  45%|████▍     | 161/360 [00:02<00:03, 60.50it/s][A
+Test Push Object::  47%|████▋     | 168/360 [00:02<00:03, 60.48it/s][A
+Test Push Object::  49%|████▊     | 175/360 [00:02<00:03, 60.00it/s][A
+Test Push Object::  51%|█████     | 182/360 [00:03<00:03, 59.29it/s][A
+Test Push Object::  52%|█████▏    | 188/360 [00:03<00:02, 58.91it/s][A
+Test Push Object::  54%|█████▍    | 194/360 [00:03<00:02, 58.07it/s][A
+Test Push Object::  56%|█████▌    | 200/360 [00:03<00:02, 57.75it/s][A
+Test Push Object::  57%|█████▋    | 206/360 [00:03<00:02, 57.91it/s][A
+Test Push Object::  59%|█████▉    | 212/360 [00:03<00:02, 58.39it/s][A
+Test Push Object::  61%|██████    | 219/360 [00:03<00:02, 59.26it/s][A
+Test Push Object::  63%|██████▎   | 226/360 [00:03<00:02, 59.79it/s][A
+Test Push Object::  65%|██████▍   | 233/360 [00:03<00:02, 60.16it/s][A
+Test Push Object::  67%|██████▋   | 240/360 [00:03<00:01, 60.38it/s][A
+Test Push Object::  69%|██████▊   | 247/360 [00:04<00:01, 60.25it/s][A
+Test Push Object::  71%|███████   | 254/360 [00:04<00:01, 60.31it/s][A
+Test Push Object::  72%|███████▎  | 261/360 [00:04<00:01, 60.11it/s][A
+Test Push Object::  74%|███████▍  | 268/360 [00:04<00:01, 59.85it/s][A
+Test Push Object::  76%|███████▋  | 275/360 [00:04<00:01, 59.97it/s][A
+Test Push Object::  78%|███████▊  | 281/360 [00:04<00:01, 59.95it/s][A
+Test Push Object::  80%|████████  | 288/360 [00:04<00:01, 60.28it/s][A
+Test Push Object::  82%|████████▏ | 295/360 [00:04<00:01, 60.34it/s][A
+Test Push Object::  84%|████████▍ | 302/360 [00:05<00:00, 60.16it/s][A
+Test Push Object::  86%|████████▌ | 309/360 [00:05<00:00, 60.37it/s][A
+Test Push Object::  88%|████████▊ | 316/360 [00:05<00:00, 60.60it/s][A
+Test Push Object::  90%|████████▉ | 323/360 [00:05<00:00, 60.76it/s][A
+Test Push Object::  92%|█████████▏| 330/360 [00:05<00:00, 60.84it/s][A
+Test Push Object::  94%|█████████▎| 337/360 [00:05<00:00, 60.81it/s][A
+Test Push Object::  96%|█████████▌| 344/360 [00:05<00:00, 60.87it/s][A
+Test Push Object::  98%|█████████▊| 351/360 [00:05<00:00, 60.87it/s][A
+Test Push Object::  99%|█████████▉| 358/360 [00:05<00:00, 60.71it/s][ATest Push Object:: 100%|██████████| 360/360 [00:05<00:00, 60.31it/s]
+2026-09-30 09:46:53.703 | INFO     | __main__:stability_tester:143 - Success rate of [Logitech_Ultimate_Ears_Boom_Wireless_Speaker_Night_Black]: 22 / 32
+ 50%|█████     | 16/32 [03:24<03:25, 12.86s/it]2026-09-30 09:46:53.877 | INFO     | __main__:stability_tester:113 - Stability test for [Nikon_1_AW1_w11275mm_Lens_Silver]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Logitech_Ultimate_Ears_Boom_Wireless_Speaker_Night_Black.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:04,  7.14it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 221.58it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   2%|▏         | 7/360 [00:00<00:05, 61.27it/s][A
+Test Push Object::   4%|▍         | 14/360 [00:00<00:05, 60.79it/s][A
+Test Push Object::   6%|▌         | 21/360 [00:00<00:05, 60.79it/s][A
+Test Push Object::   8%|▊         | 28/360 [00:00<00:05, 61.04it/s][A
+Test Push Object::  10%|▉         | 35/360 [00:00<00:05, 61.20it/s][A
+Test Push Object::  12%|█▏        | 42/360 [00:00<00:05, 61.08it/s][A
+Test Push Object::  14%|█▎        | 49/360 [00:00<00:05, 61.03it/s][A
+Test Push Object::  16%|█▌        | 56/360 [00:00<00:04, 60.97it/s][A
+Test Push Object::  18%|█▊        | 63/360 [00:01<00:04, 60.89it/s][A
+Test Push Object::  19%|█▉        | 70/360 [00:01<00:04, 60.91it/s][A
+Test Push Object::  21%|██▏       | 77/360 [00:01<00:04, 60.91it/s][A
+Test Push Object::  23%|██▎       | 84/360 [00:01<00:04, 60.96it/s][A
+Test Push Object::  25%|██▌       | 91/360 [00:01<00:04, 61.04it/s][A
+Test Push Object::  27%|██▋       | 98/360 [00:01<00:04, 61.09it/s][A
+Test Push Object::  29%|██▉       | 105/360 [00:01<00:04, 61.13it/s][A
+Test Push Object::  31%|███       | 112/360 [00:01<00:04, 60.99it/s][A
+Test Push Object::  33%|███▎      | 119/360 [00:01<00:03, 60.97it/s][A
+Test Push Object::  35%|███▌      | 126/360 [00:02<00:03, 60.93it/s][A
+Test Push Object::  37%|███▋      | 133/360 [00:02<00:03, 60.96it/s][A
+Test Push Object::  39%|███▉      | 140/360 [00:02<00:03, 60.95it/s][A
+Test Push Object::  41%|████      | 147/360 [00:02<00:03, 61.01it/s][A
+Test Push Object::  43%|████▎     | 154/360 [00:02<00:03, 61.05it/s][A
+Test Push Object::  45%|████▍     | 161/360 [00:02<00:03, 60.93it/s][A
+Test Push Object::  47%|████▋     | 168/360 [00:02<00:03, 61.05it/s][A
+Test Push Object::  49%|████▊     | 175/360 [00:02<00:03, 61.01it/s][A
+Test Push Object::  51%|█████     | 182/360 [00:02<00:02, 61.02it/s][A
+Test Push Object::  52%|█████▎    | 189/360 [00:03<00:02, 60.71it/s][A
+Test Push Object::  54%|█████▍    | 196/360 [00:03<00:02, 60.68it/s][A
+Test Push Object::  56%|█████▋    | 203/360 [00:03<00:02, 60.33it/s][A
+Test Push Object::  58%|█████▊    | 210/360 [00:03<00:02, 60.53it/s][A
+Test Push Object::  60%|██████    | 217/360 [00:03<00:02, 60.51it/s][A
+Test Push Object::  62%|██████▏   | 224/360 [00:03<00:02, 60.46it/s][A
+Test Push Object::  64%|██████▍   | 231/360 [00:03<00:02, 60.60it/s][A
+Test Push Object::  66%|██████▌   | 238/360 [00:03<00:02, 60.65it/s][A
+Test Push Object::  68%|██████▊   | 245/360 [00:04<00:01, 60.75it/s][A
+Test Push Object::  70%|███████   | 252/360 [00:04<00:01, 60.84it/s][A
+Test Push Object::  72%|███████▏  | 259/360 [00:04<00:01, 60.78it/s][A
+Test Push Object::  74%|███████▍  | 266/360 [00:04<00:01, 60.77it/s][A
+Test Push Object::  76%|███████▌  | 273/360 [00:04<00:01, 60.89it/s][A
+Test Push Object::  78%|███████▊  | 280/360 [00:04<00:01, 60.72it/s][A
+Test Push Object::  80%|███████▉  | 287/360 [00:04<00:01, 60.73it/s][A
+Test Push Object::  82%|████████▏ | 294/360 [00:04<00:01, 60.78it/s][A
+Test Push Object::  84%|████████▎ | 301/360 [00:04<00:00, 60.75it/s][A
+Test Push Object::  86%|████████▌ | 308/360 [00:05<00:00, 60.60it/s][A
+Test Push Object::  88%|████████▊ | 315/360 [00:05<00:00, 60.61it/s][A
+Test Push Object::  89%|████████▉ | 322/360 [00:05<00:00, 60.79it/s][A
+Test Push Object::  91%|█████████▏| 329/360 [00:05<00:00, 60.63it/s][A
+Test Push Object::  93%|█████████▎| 336/360 [00:05<00:00, 60.31it/s][A
+Test Push Object::  95%|█████████▌| 343/360 [00:05<00:00, 60.16it/s][A
+Test Push Object::  97%|█████████▋| 350/360 [00:05<00:00, 60.10it/s][A
+Test Push Object::  99%|█████████▉| 357/360 [00:05<00:00, 59.86it/s][ATest Push Object:: 100%|██████████| 360/360 [00:05<00:00, 60.73it/s]
+2026-09-30 09:47:05.064 | INFO     | __main__:stability_tester:143 - Success rate of [Nikon_1_AW1_w11275mm_Lens_Silver]: 31 / 32
+ 53%|█████▎    | 17/32 [03:36<03:06, 12.40s/it]2026-09-30 09:47:05.229 | INFO     | __main__:stability_tester:113 - Stability test for [Nintendo_2DS_Crimson_Red]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Nikon_1_AW1_w11275mm_Lens_Silver.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 31
+Simulator: creating agents
+
+  0%|          | 0/31 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/31 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/31 [00:00<00:03,  8.85it/s][AEnumerating envs:: 100%|██████████| 31/31 [00:00<00:00, 264.28it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   2%|▏         | 6/360 [00:00<00:06, 51.20it/s][A
+Test Push Object::   3%|▎         | 12/360 [00:00<00:06, 52.27it/s][A
+Test Push Object::   5%|▌         | 18/360 [00:00<00:06, 54.19it/s][A
+Test Push Object::   7%|▋         | 24/360 [00:00<00:06, 55.97it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:05, 57.23it/s][A
+Test Push Object::  10%|█         | 37/360 [00:00<00:05, 58.33it/s][A
+Test Push Object::  12%|█▏        | 43/360 [00:00<00:05, 58.74it/s][A
+Test Push Object::  14%|█▍        | 50/360 [00:00<00:05, 59.34it/s][A
+Test Push Object::  16%|█▌        | 56/360 [00:00<00:05, 58.13it/s][A
+Test Push Object::  17%|█▋        | 62/360 [00:01<00:05, 55.61it/s][A
+Test Push Object::  19%|█▉        | 68/360 [00:01<00:05, 53.81it/s][A
+Test Push Object::  21%|██        | 74/360 [00:01<00:05, 54.41it/s][A
+Test Push Object::  22%|██▏       | 80/360 [00:01<00:05, 52.87it/s][A
+Test Push Object::  24%|██▍       | 86/360 [00:01<00:05, 52.68it/s][A
+Test Push Object::  26%|██▌       | 92/360 [00:01<00:05, 53.14it/s][A
+Test Push Object::  27%|██▋       | 98/360 [00:01<00:04, 54.59it/s][A
+Test Push Object::  29%|██▉       | 104/360 [00:01<00:04, 55.40it/s][A
+Test Push Object::  31%|███       | 110/360 [00:01<00:04, 56.59it/s][A
+Test Push Object::  32%|███▎      | 117/360 [00:02<00:04, 57.62it/s][A
+Test Push Object::  34%|███▍      | 124/360 [00:02<00:04, 58.40it/s][A
+Test Push Object::  36%|███▋      | 131/360 [00:02<00:03, 58.80it/s][A
+Test Push Object::  38%|███▊      | 137/360 [00:02<00:03, 58.89it/s][A
+Test Push Object::  40%|███▉      | 143/360 [00:02<00:03, 58.57it/s][A
+Test Push Object::  41%|████▏     | 149/360 [00:02<00:03, 58.14it/s][A
+Test Push Object::  43%|████▎     | 155/360 [00:02<00:03, 57.70it/s][A
+Test Push Object::  45%|████▍     | 161/360 [00:02<00:03, 58.19it/s][A
+Test Push Object::  46%|████▋     | 167/360 [00:02<00:03, 58.41it/s][A
+Test Push Object::  48%|████▊     | 173/360 [00:03<00:03, 58.18it/s][A
+Test Push Object::  50%|████▉     | 179/360 [00:03<00:03, 58.67it/s][A
+Test Push Object::  51%|█████▏    | 185/360 [00:03<00:02, 58.60it/s][A
+Test Push Object::  53%|█████▎    | 191/360 [00:03<00:02, 58.28it/s][A
+Test Push Object::  55%|█████▍    | 197/360 [00:03<00:02, 58.44it/s][A
+Test Push Object::  56%|█████▋    | 203/360 [00:03<00:02, 58.49it/s][A
+Test Push Object::  58%|█████▊    | 209/360 [00:03<00:02, 58.54it/s][A
+Test Push Object::  60%|█████▉    | 215/360 [00:03<00:02, 58.38it/s][A
+Test Push Object::  62%|██████▏   | 222/360 [00:03<00:02, 58.98it/s][A
+Test Push Object::  63%|██████▎   | 228/360 [00:03<00:02, 59.19it/s][A
+Test Push Object::  65%|██████▌   | 234/360 [00:04<00:02, 59.38it/s][A
+Test Push Object::  67%|██████▋   | 240/360 [00:04<00:02, 59.16it/s][A
+Test Push Object::  68%|██████▊   | 246/360 [00:04<00:01, 59.32it/s][A
+Test Push Object::  70%|███████   | 252/360 [00:04<00:01, 58.58it/s][A
+Test Push Object::  72%|███████▏  | 258/360 [00:04<00:01, 58.68it/s][A
+Test Push Object::  73%|███████▎  | 264/360 [00:04<00:01, 58.03it/s][A
+Test Push Object::  75%|███████▌  | 270/360 [00:04<00:01, 57.97it/s][A
+Test Push Object::  77%|███████▋  | 276/360 [00:04<00:01, 57.83it/s][A
+Test Push Object::  78%|███████▊  | 282/360 [00:04<00:01, 58.02it/s][A
+Test Push Object::  80%|████████  | 288/360 [00:05<00:01, 56.84it/s][A
+Test Push Object::  82%|████████▏ | 294/360 [00:05<00:01, 54.80it/s][A
+Test Push Object::  83%|████████▎ | 300/360 [00:05<00:01, 53.58it/s][A
+Test Push Object::  85%|████████▌ | 306/360 [00:05<00:01, 51.81it/s][A
+Test Push Object::  87%|████████▋ | 312/360 [00:05<00:00, 50.71it/s][A
+Test Push Object::  88%|████████▊ | 318/360 [00:05<00:00, 50.02it/s][A
+Test Push Object::  90%|█████████ | 324/360 [00:05<00:00, 49.38it/s][A
+Test Push Object::  91%|█████████▏| 329/360 [00:05<00:00, 49.06it/s][A
+Test Push Object::  93%|█████████▎| 334/360 [00:05<00:00, 48.78it/s][A
+Test Push Object::  94%|█████████▍| 339/360 [00:06<00:00, 49.04it/s][A
+Test Push Object::  96%|█████████▌| 344/360 [00:06<00:00, 49.16it/s][A
+Test Push Object::  97%|█████████▋| 350/360 [00:06<00:00, 50.00it/s][A
+Test Push Object::  99%|█████████▉| 356/360 [00:06<00:00, 50.71it/s][ATest Push Object:: 100%|██████████| 360/360 [00:06<00:00, 55.57it/s]
+2026-09-30 09:47:17.291 | INFO     | __main__:stability_tester:143 - Success rate of [Nintendo_2DS_Crimson_Red]: 22 / 31
+ 56%|█████▋    | 18/32 [03:48<02:52, 12.35s/it]2026-09-30 09:47:17.464 | INFO     | __main__:stability_tester:113 - Stability test for [Nordic_Ware_Original_Bundt_Pan]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Nintendo_2DS_Crimson_Red.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:06,  4.96it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 152.97it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   1%|▏         | 5/360 [00:00<00:07, 44.93it/s][A
+Test Push Object::   3%|▎         | 10/360 [00:00<00:07, 46.24it/s][A
+Test Push Object::   4%|▍         | 15/360 [00:00<00:07, 46.29it/s][A
+Test Push Object::   6%|▌         | 20/360 [00:00<00:07, 46.02it/s][A
+Test Push Object::   7%|▋         | 25/360 [00:00<00:07, 46.10it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:07, 46.05it/s][A
+Test Push Object::  10%|▉         | 35/360 [00:00<00:07, 45.81it/s][A
+Test Push Object::  11%|█         | 40/360 [00:00<00:07, 45.35it/s][A
+Test Push Object::  12%|█▎        | 45/360 [00:00<00:06, 45.34it/s][A
+Test Push Object::  14%|█▍        | 50/360 [00:01<00:06, 45.39it/s][A
+Test Push Object::  15%|█▌        | 55/360 [00:01<00:06, 45.39it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:06, 45.20it/s][A
+Test Push Object::  18%|█▊        | 65/360 [00:01<00:06, 45.16it/s][A
+Test Push Object::  19%|█▉        | 70/360 [00:01<00:06, 45.22it/s][A
+Test Push Object::  21%|██        | 75/360 [00:01<00:06, 45.02it/s][A
+Test Push Object::  22%|██▏       | 80/360 [00:01<00:06, 44.75it/s][A
+Test Push Object::  24%|██▎       | 85/360 [00:01<00:06, 44.86it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:01<00:05, 45.02it/s][A
+Test Push Object::  26%|██▋       | 95/360 [00:02<00:05, 44.96it/s][A
+Test Push Object::  28%|██▊       | 100/360 [00:02<00:05, 45.18it/s][A
+Test Push Object::  29%|██▉       | 105/360 [00:02<00:05, 45.41it/s][A
+Test Push Object::  31%|███       | 110/360 [00:02<00:05, 45.63it/s][A
+Test Push Object::  32%|███▏      | 115/360 [00:02<00:05, 45.27it/s][A
+Test Push Object::  33%|███▎      | 120/360 [00:02<00:05, 45.09it/s][A
+Test Push Object::  35%|███▍      | 125/360 [00:02<00:05, 45.14it/s][A
+Test Push Object::  36%|███▌      | 130/360 [00:02<00:05, 45.71it/s][A
+Test Push Object::  38%|███▊      | 135/360 [00:02<00:04, 46.05it/s][A
+Test Push Object::  39%|███▉      | 140/360 [00:03<00:04, 46.18it/s][A
+Test Push Object::  40%|████      | 145/360 [00:03<00:04, 46.38it/s][A
+Test Push Object::  42%|████▏     | 150/360 [00:03<00:04, 46.57it/s][A
+Test Push Object::  43%|████▎     | 155/360 [00:03<00:04, 46.69it/s][A
+Test Push Object::  44%|████▍     | 160/360 [00:03<00:04, 46.88it/s][A
+Test Push Object::  46%|████▌     | 165/360 [00:03<00:04, 46.67it/s][A
+Test Push Object::  47%|████▋     | 170/360 [00:03<00:04, 46.81it/s][A
+Test Push Object::  49%|████▊     | 175/360 [00:03<00:03, 46.71it/s][A
+Test Push Object::  50%|█████     | 180/360 [00:03<00:03, 46.75it/s][A
+Test Push Object::  51%|█████▏    | 185/360 [00:04<00:03, 46.99it/s][A
+Test Push Object::  53%|█████▎    | 190/360 [00:04<00:03, 46.75it/s][A
+Test Push Object::  54%|█████▍    | 195/360 [00:04<00:03, 46.88it/s][A
+Test Push Object::  56%|█████▌    | 200/360 [00:04<00:03, 47.02it/s][A
+Test Push Object::  57%|█████▋    | 205/360 [00:04<00:03, 46.99it/s][A
+Test Push Object::  58%|█████▊    | 210/360 [00:04<00:03, 46.96it/s][A
+Test Push Object::  60%|█████▉    | 215/360 [00:04<00:03, 46.95it/s][A
+Test Push Object::  61%|██████    | 220/360 [00:04<00:02, 46.74it/s][A
+Test Push Object::  62%|██████▎   | 225/360 [00:04<00:02, 46.63it/s][A
+Test Push Object::  64%|██████▍   | 230/360 [00:05<00:02, 46.39it/s][A
+Test Push Object::  65%|██████▌   | 235/360 [00:05<00:02, 46.63it/s][A
+Test Push Object::  67%|██████▋   | 240/360 [00:05<00:02, 46.56it/s][A
+Test Push Object::  68%|██████▊   | 245/360 [00:05<00:02, 47.21it/s][A
+Test Push Object::  69%|██████▉   | 250/360 [00:05<00:02, 47.14it/s][A
+Test Push Object::  71%|███████   | 255/360 [00:05<00:02, 47.33it/s][A
+Test Push Object::  72%|███████▎  | 261/360 [00:05<00:02, 48.30it/s][A
+Test Push Object::  74%|███████▍  | 266/360 [00:05<00:01, 48.63it/s][A
+Test Push Object::  75%|███████▌  | 271/360 [00:05<00:01, 47.74it/s][A
+Test Push Object::  77%|███████▋  | 276/360 [00:05<00:01, 47.13it/s][A
+Test Push Object::  78%|███████▊  | 281/360 [00:06<00:01, 46.35it/s][A
+Test Push Object::  79%|███████▉  | 286/360 [00:06<00:01, 46.17it/s][A
+Test Push Object::  81%|████████  | 291/360 [00:06<00:01, 45.53it/s][A
+Test Push Object::  82%|████████▏ | 296/360 [00:06<00:01, 45.20it/s][A
+Test Push Object::  84%|████████▎ | 301/360 [00:06<00:01, 45.24it/s][A
+Test Push Object::  85%|████████▌ | 306/360 [00:06<00:01, 45.30it/s][A
+Test Push Object::  86%|████████▋ | 311/360 [00:06<00:01, 45.53it/s][A
+Test Push Object::  88%|████████▊ | 316/360 [00:06<00:00, 45.31it/s][A
+Test Push Object::  89%|████████▉ | 321/360 [00:06<00:00, 45.16it/s][A
+Test Push Object::  91%|█████████ | 326/360 [00:07<00:00, 45.15it/s][A
+Test Push Object::  92%|█████████▏| 331/360 [00:07<00:00, 45.34it/s][A
+Test Push Object::  93%|█████████▎| 336/360 [00:07<00:00, 45.42it/s][A
+Test Push Object::  95%|█████████▍| 341/360 [00:07<00:00, 45.29it/s][A
+Test Push Object::  96%|█████████▌| 346/360 [00:07<00:00, 45.23it/s][A
+Test Push Object::  98%|█████████▊| 351/360 [00:07<00:00, 45.13it/s][A
+Test Push Object::  99%|█████████▉| 356/360 [00:07<00:00, 45.06it/s][ATest Push Object:: 100%|██████████| 360/360 [00:07<00:00, 45.98it/s]
+2026-09-30 09:47:31.715 | INFO     | __main__:stability_tester:143 - Success rate of [Nordic_Ware_Original_Bundt_Pan]: 20 / 32
+ 59%|█████▉    | 19/32 [04:02<02:48, 12.97s/it]2026-09-30 09:47:31.886 | INFO     | __main__:stability_tester:113 - Stability test for [Ortho_Forward_Facing_CkAW6rL25xH]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Nordic_Ware_Original_Bundt_Pan.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:09,  3.43it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 107.53it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   2%|▏         | 6/360 [00:00<00:06, 52.76it/s][A
+Test Push Object::   3%|▎         | 12/360 [00:00<00:06, 52.57it/s][A
+Test Push Object::   5%|▌         | 18/360 [00:00<00:06, 52.92it/s][A
+Test Push Object::   7%|▋         | 24/360 [00:00<00:06, 53.43it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:06, 54.00it/s][A
+Test Push Object::  10%|█         | 36/360 [00:00<00:06, 53.67it/s][A
+Test Push Object::  12%|█▏        | 42/360 [00:00<00:05, 53.62it/s][A
+Test Push Object::  13%|█▎        | 48/360 [00:00<00:05, 53.35it/s][A
+Test Push Object::  15%|█▌        | 54/360 [00:01<00:05, 54.63it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:05, 55.99it/s][A
+Test Push Object::  18%|█▊        | 66/360 [00:01<00:05, 57.14it/s][A
+Test Push Object::  20%|██        | 72/360 [00:01<00:05, 56.84it/s][A
+Test Push Object::  22%|██▏       | 78/360 [00:01<00:04, 57.46it/s][A
+Test Push Object::  23%|██▎       | 84/360 [00:01<00:04, 57.71it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:01<00:04, 57.75it/s][A
+Test Push Object::  27%|██▋       | 96/360 [00:01<00:04, 58.20it/s][A
+Test Push Object::  28%|██▊       | 102/360 [00:01<00:04, 58.30it/s][A
+Test Push Object::  30%|███       | 108/360 [00:01<00:04, 58.62it/s][A
+Test Push Object::  32%|███▏      | 114/360 [00:02<00:04, 58.54it/s][A
+Test Push Object::  33%|███▎      | 120/360 [00:02<00:04, 58.36it/s][A
+Test Push Object::  35%|███▌      | 126/360 [00:02<00:04, 58.36it/s][A
+Test Push Object::  37%|███▋      | 132/360 [00:02<00:03, 58.51it/s][A
+Test Push Object::  38%|███▊      | 138/360 [00:02<00:03, 58.49it/s][A
+Test Push Object::  40%|████      | 144/360 [00:02<00:03, 58.80it/s][A
+Test Push Object::  42%|████▏     | 150/360 [00:02<00:03, 58.56it/s][A
+Test Push Object::  43%|████▎     | 156/360 [00:02<00:03, 57.76it/s][A
+Test Push Object::  45%|████▌     | 162/360 [00:02<00:03, 56.51it/s][A
+Test Push Object::  47%|████▋     | 168/360 [00:02<00:03, 55.36it/s][A
+Test Push Object::  48%|████▊     | 174/360 [00:03<00:03, 55.24it/s][A
+Test Push Object::  50%|█████     | 180/360 [00:03<00:03, 54.58it/s][A
+Test Push Object::  52%|█████▏    | 186/360 [00:03<00:03, 54.10it/s][A
+Test Push Object::  53%|█████▎    | 192/360 [00:03<00:03, 53.90it/s][A
+Test Push Object::  55%|█████▌    | 198/360 [00:03<00:03, 53.70it/s][A
+Test Push Object::  57%|█████▋    | 204/360 [00:03<00:02, 53.22it/s][A
+Test Push Object::  58%|█████▊    | 210/360 [00:03<00:02, 53.07it/s][A
+Test Push Object::  60%|██████    | 216/360 [00:03<00:02, 53.47it/s][A
+Test Push Object::  62%|██████▏   | 222/360 [00:03<00:02, 53.20it/s][A
+Test Push Object::  63%|██████▎   | 228/360 [00:04<00:02, 53.41it/s][A
+Test Push Object::  65%|██████▌   | 234/360 [00:04<00:02, 53.10it/s][A
+Test Push Object::  67%|██████▋   | 240/360 [00:04<00:02, 52.98it/s][A
+Test Push Object::  68%|██████▊   | 246/360 [00:04<00:02, 53.73it/s][A
+Test Push Object::  70%|███████   | 252/360 [00:04<00:01, 54.12it/s][A
+Test Push Object::  72%|███████▏  | 258/360 [00:04<00:01, 54.64it/s][A
+Test Push Object::  73%|███████▎  | 264/360 [00:04<00:01, 55.87it/s][A
+Test Push Object::  75%|███████▌  | 270/360 [00:04<00:01, 57.01it/s][A
+Test Push Object::  77%|███████▋  | 276/360 [00:04<00:01, 57.64it/s][A
+Test Push Object::  79%|███████▊  | 283/360 [00:05<00:01, 58.54it/s][A
+Test Push Object::  80%|████████  | 289/360 [00:05<00:01, 58.86it/s][A
+Test Push Object::  82%|████████▏ | 295/360 [00:05<00:01, 59.00it/s][A
+Test Push Object::  84%|████████▎ | 301/360 [00:05<00:01, 58.81it/s][A
+Test Push Object::  85%|████████▌ | 307/360 [00:05<00:00, 58.89it/s][A
+Test Push Object::  87%|████████▋ | 314/360 [00:05<00:00, 59.20it/s][A
+Test Push Object::  89%|████████▉ | 321/360 [00:05<00:00, 59.59it/s][A
+Test Push Object::  91%|█████████ | 327/360 [00:05<00:00, 59.51it/s][A
+Test Push Object::  93%|█████████▎| 334/360 [00:05<00:00, 59.83it/s][A
+Test Push Object::  94%|█████████▍| 340/360 [00:06<00:00, 59.75it/s][A
+Test Push Object::  96%|█████████▋| 347/360 [00:06<00:00, 59.97it/s][A
+Test Push Object::  98%|█████████▊| 354/360 [00:06<00:00, 59.97it/s][ATest Push Object:: 100%|██████████| 360/360 [00:06<00:00, 56.60it/s]
+2026-09-30 09:47:43.473 | INFO     | __main__:stability_tester:143 - Success rate of [Ortho_Forward_Facing_CkAW6rL25xH]: 5 / 32
+ 62%|██████▎   | 20/32 [04:14<02:31, 12.61s/it]2026-09-30 09:47:43.648 | INFO     | __main__:stability_tester:113 - Stability test for [Razer_Abyssus_Ambidextrous_Gaming_Mouse]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Ortho_Forward_Facing_CkAW6rL25xH.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:11,  2.81it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 88.36it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   1%|▏         | 5/360 [00:00<00:08, 44.36it/s][A
+Test Push Object::   3%|▎         | 10/360 [00:00<00:07, 44.57it/s][A
+Test Push Object::   4%|▍         | 15/360 [00:00<00:07, 45.08it/s][A
+Test Push Object::   6%|▌         | 20/360 [00:00<00:07, 44.88it/s][A
+Test Push Object::   7%|▋         | 25/360 [00:00<00:07, 44.71it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:07, 44.36it/s][A
+Test Push Object::  10%|▉         | 35/360 [00:00<00:07, 44.35it/s][A
+Test Push Object::  11%|█         | 40/360 [00:00<00:07, 44.27it/s][A
+Test Push Object::  12%|█▎        | 45/360 [00:01<00:07, 44.17it/s][A
+Test Push Object::  14%|█▍        | 50/360 [00:01<00:07, 44.20it/s][A
+Test Push Object::  15%|█▌        | 55/360 [00:01<00:06, 44.49it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:06, 44.55it/s][A
+Test Push Object::  18%|█▊        | 65/360 [00:01<00:06, 44.18it/s][A
+Test Push Object::  19%|█▉        | 70/360 [00:01<00:06, 44.35it/s][A
+Test Push Object::  21%|██        | 75/360 [00:01<00:06, 44.64it/s][A
+Test Push Object::  22%|██▏       | 80/360 [00:01<00:06, 44.62it/s][A
+Test Push Object::  24%|██▎       | 85/360 [00:01<00:06, 44.74it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:02<00:05, 45.15it/s][A
+Test Push Object::  26%|██▋       | 95/360 [00:02<00:05, 45.26it/s][A
+Test Push Object::  28%|██▊       | 100/360 [00:02<00:05, 45.51it/s][A
+Test Push Object::  29%|██▉       | 105/360 [00:02<00:05, 45.25it/s][A
+Test Push Object::  31%|███       | 110/360 [00:02<00:05, 45.32it/s][A
+Test Push Object::  32%|███▏      | 115/360 [00:02<00:05, 45.74it/s][A
+Test Push Object::  33%|███▎      | 120/360 [00:02<00:05, 45.58it/s][A
+Test Push Object::  35%|███▍      | 125/360 [00:02<00:05, 45.20it/s][A
+Test Push Object::  36%|███▌      | 130/360 [00:02<00:05, 44.78it/s][A
+Test Push Object::  38%|███▊      | 135/360 [00:03<00:05, 44.33it/s][A
+Test Push Object::  39%|███▉      | 140/360 [00:03<00:04, 44.48it/s][A
+Test Push Object::  40%|████      | 145/360 [00:03<00:04, 44.47it/s][A
+Test Push Object::  42%|████▏     | 150/360 [00:03<00:04, 44.64it/s][A
+Test Push Object::  43%|████▎     | 155/360 [00:03<00:04, 44.69it/s][A
+Test Push Object::  44%|████▍     | 160/360 [00:03<00:04, 45.11it/s][A
+Test Push Object::  46%|████▌     | 165/360 [00:03<00:04, 45.53it/s][A
+Test Push Object::  47%|████▋     | 170/360 [00:03<00:04, 45.17it/s][A
+Test Push Object::  49%|████▊     | 175/360 [00:03<00:04, 45.26it/s][A
+Test Push Object::  50%|█████     | 180/360 [00:04<00:03, 45.14it/s][A
+Test Push Object::  51%|█████▏    | 185/360 [00:04<00:03, 45.60it/s][A
+Test Push Object::  53%|█████▎    | 190/360 [00:04<00:03, 46.12it/s][A
+Test Push Object::  54%|█████▍    | 195/360 [00:04<00:03, 45.98it/s][A
+Test Push Object::  56%|█████▌    | 200/360 [00:04<00:03, 45.99it/s][A
+Test Push Object::  57%|█████▋    | 205/360 [00:04<00:03, 46.37it/s][A
+Test Push Object::  58%|█████▊    | 210/360 [00:04<00:03, 46.50it/s][A
+Test Push Object::  60%|█████▉    | 215/360 [00:04<00:03, 46.25it/s][A
+Test Push Object::  61%|██████    | 220/360 [00:04<00:03, 46.31it/s][A
+Test Push Object::  62%|██████▎   | 225/360 [00:04<00:02, 46.23it/s][A
+Test Push Object::  64%|██████▍   | 230/360 [00:05<00:02, 46.23it/s][A
+Test Push Object::  65%|██████▌   | 235/360 [00:05<00:02, 46.46it/s][A
+Test Push Object::  67%|██████▋   | 240/360 [00:05<00:02, 46.15it/s][A
+Test Push Object::  68%|██████▊   | 245/360 [00:05<00:02, 45.99it/s][A
+Test Push Object::  69%|██████▉   | 250/360 [00:05<00:02, 45.80it/s][A
+Test Push Object::  71%|███████   | 255/360 [00:05<00:02, 45.62it/s][A
+Test Push Object::  72%|███████▏  | 260/360 [00:05<00:02, 45.12it/s][A
+Test Push Object::  74%|███████▎  | 265/360 [00:05<00:02, 44.72it/s][A
+Test Push Object::  75%|███████▌  | 270/360 [00:05<00:02, 44.54it/s][A
+Test Push Object::  76%|███████▋  | 275/360 [00:06<00:01, 44.59it/s][A
+Test Push Object::  78%|███████▊  | 280/360 [00:06<00:01, 44.40it/s][A
+Test Push Object::  79%|███████▉  | 285/360 [00:06<00:01, 44.71it/s][A
+Test Push Object::  81%|████████  | 290/360 [00:06<00:01, 44.56it/s][A
+Test Push Object::  82%|████████▏ | 295/360 [00:06<00:01, 44.90it/s][A
+Test Push Object::  83%|████████▎ | 300/360 [00:06<00:01, 44.65it/s][A
+Test Push Object::  85%|████████▍ | 305/360 [00:06<00:01, 44.66it/s][A
+Test Push Object::  86%|████████▌ | 310/360 [00:06<00:01, 44.78it/s][A
+Test Push Object::  88%|████████▊ | 315/360 [00:06<00:01, 44.87it/s][A
+Test Push Object::  89%|████████▉ | 320/360 [00:07<00:00, 44.92it/s][A
+Test Push Object::  90%|█████████ | 325/360 [00:07<00:00, 44.91it/s][A
+Test Push Object::  92%|█████████▏| 330/360 [00:07<00:00, 44.62it/s][A
+Test Push Object::  93%|█████████▎| 335/360 [00:07<00:00, 44.40it/s][A
+Test Push Object::  94%|█████████▍| 340/360 [00:07<00:00, 44.54it/s][A
+Test Push Object::  96%|█████████▌| 345/360 [00:07<00:00, 44.70it/s][A
+Test Push Object::  97%|█████████▋| 350/360 [00:07<00:00, 44.44it/s][A
+Test Push Object::  99%|█████████▊| 355/360 [00:07<00:00, 44.33it/s][A
+Test Push Object:: 100%|██████████| 360/360 [00:07<00:00, 44.42it/s][ATest Push Object:: 100%|██████████| 360/360 [00:07<00:00, 45.02it/s]
+2026-09-30 09:47:58.178 | INFO     | __main__:stability_tester:143 - Success rate of [Razer_Abyssus_Ambidextrous_Gaming_Mouse]: 18 / 32
+ 66%|██████▌   | 21/32 [04:29<02:25, 13.24s/it]2026-09-30 09:47:58.346 | INFO     | __main__:stability_tester:113 - Stability test for [Razer_Blackwidow_Tournament_Edition_Keyboard]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Razer_Abyssus_Ambidextrous_Gaming_Mouse.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:09,  3.36it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 105.86it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   2%|▏         | 6/360 [00:00<00:06, 51.76it/s][A
+Test Push Object::   3%|▎         | 12/360 [00:00<00:06, 52.08it/s][A
+Test Push Object::   5%|▌         | 18/360 [00:00<00:06, 53.33it/s][A
+Test Push Object::   7%|▋         | 24/360 [00:00<00:06, 53.32it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:06, 52.32it/s][A
+Test Push Object::  10%|█         | 36/360 [00:00<00:06, 51.75it/s][A
+Test Push Object::  12%|█▏        | 42/360 [00:00<00:06, 51.12it/s][A
+Test Push Object::  13%|█▎        | 48/360 [00:00<00:06, 50.57it/s][A
+Test Push Object::  15%|█▌        | 54/360 [00:01<00:05, 51.03it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:05, 51.60it/s][A
+Test Push Object::  18%|█▊        | 66/360 [00:01<00:05, 51.49it/s][A
+Test Push Object::  20%|██        | 72/360 [00:01<00:05, 51.78it/s][A
+Test Push Object::  22%|██▏       | 78/360 [00:01<00:05, 52.39it/s][A
+Test Push Object::  23%|██▎       | 84/360 [00:01<00:05, 52.38it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:01<00:05, 52.66it/s][A
+Test Push Object::  27%|██▋       | 96/360 [00:01<00:05, 52.49it/s][A
+Test Push Object::  28%|██▊       | 102/360 [00:01<00:04, 52.77it/s][A
+Test Push Object::  30%|███       | 108/360 [00:02<00:04, 52.20it/s][A
+Test Push Object::  32%|███▏      | 114/360 [00:02<00:04, 52.96it/s][A
+Test Push Object::  33%|███▎      | 120/360 [00:02<00:04, 53.70it/s][A
+Test Push Object::  35%|███▌      | 126/360 [00:02<00:04, 53.17it/s][A
+Test Push Object::  37%|███▋      | 132/360 [00:02<00:04, 52.02it/s][A
+Test Push Object::  38%|███▊      | 138/360 [00:02<00:04, 51.36it/s][A
+Test Push Object::  40%|████      | 144/360 [00:02<00:04, 51.71it/s][A
+Test Push Object::  42%|████▏     | 150/360 [00:02<00:04, 51.24it/s][A
+Test Push Object::  43%|████▎     | 156/360 [00:03<00:04, 50.99it/s][A
+Test Push Object::  45%|████▌     | 162/360 [00:03<00:03, 50.60it/s][A
+Test Push Object::  47%|████▋     | 168/360 [00:03<00:03, 51.83it/s][A
+Test Push Object::  48%|████▊     | 174/360 [00:03<00:03, 53.02it/s][A
+Test Push Object::  50%|█████     | 180/360 [00:03<00:03, 53.41it/s][A
+Test Push Object::  52%|█████▏    | 186/360 [00:03<00:03, 52.03it/s][A
+Test Push Object::  53%|█████▎    | 192/360 [00:03<00:03, 52.39it/s][A
+Test Push Object::  55%|█████▌    | 198/360 [00:03<00:03, 53.10it/s][A
+Test Push Object::  57%|█████▋    | 204/360 [00:03<00:03, 51.83it/s][A
+Test Push Object::  58%|█████▊    | 210/360 [00:04<00:02, 52.23it/s][A
+Test Push Object::  60%|██████    | 216/360 [00:04<00:02, 51.90it/s][A
+Test Push Object::  62%|██████▏   | 222/360 [00:04<00:02, 52.72it/s][A
+Test Push Object::  63%|██████▎   | 228/360 [00:04<00:02, 51.65it/s][A
+Test Push Object::  65%|██████▌   | 234/360 [00:04<00:02, 51.39it/s][A
+Test Push Object::  67%|██████▋   | 240/360 [00:04<00:02, 51.55it/s][A
+Test Push Object::  68%|██████▊   | 246/360 [00:04<00:02, 52.33it/s][A
+Test Push Object::  70%|███████   | 252/360 [00:04<00:02, 52.63it/s][A
+Test Push Object::  72%|███████▏  | 258/360 [00:04<00:01, 52.78it/s][A
+Test Push Object::  73%|███████▎  | 264/360 [00:05<00:01, 53.58it/s][A
+Test Push Object::  75%|███████▌  | 270/360 [00:05<00:01, 52.62it/s][A
+Test Push Object::  77%|███████▋  | 276/360 [00:05<00:01, 52.12it/s][A
+Test Push Object::  78%|███████▊  | 282/360 [00:05<00:01, 52.63it/s][A
+Test Push Object::  80%|████████  | 288/360 [00:05<00:01, 53.44it/s][A
+Test Push Object::  82%|████████▏ | 294/360 [00:05<00:01, 54.68it/s][A
+Test Push Object::  83%|████████▎ | 300/360 [00:05<00:01, 55.15it/s][A
+Test Push Object::  85%|████████▌ | 306/360 [00:05<00:00, 54.95it/s][A
+Test Push Object::  87%|████████▋ | 312/360 [00:05<00:00, 53.91it/s][A
+Test Push Object::  88%|████████▊ | 318/360 [00:06<00:00, 53.09it/s][A
+Test Push Object::  90%|█████████ | 324/360 [00:06<00:00, 53.06it/s][A
+Test Push Object::  92%|█████████▏| 330/360 [00:06<00:00, 52.72it/s][A
+Test Push Object::  93%|█████████▎| 336/360 [00:06<00:00, 51.66it/s][A
+Test Push Object::  95%|█████████▌| 342/360 [00:06<00:00, 51.71it/s][A
+Test Push Object::  97%|█████████▋| 348/360 [00:06<00:00, 51.70it/s][A
+Test Push Object::  98%|█████████▊| 354/360 [00:06<00:00, 51.16it/s][A
+Test Push Object:: 100%|██████████| 360/360 [00:06<00:00, 50.52it/s][ATest Push Object:: 100%|██████████| 360/360 [00:06<00:00, 52.25it/s]
+2026-09-30 09:48:10.586 | INFO     | __main__:stability_tester:143 - Success rate of [Razer_Blackwidow_Tournament_Edition_Keyboard]: 11 / 32
+ 69%|██████▉   | 22/32 [04:41<02:09, 12.99s/it]2026-09-30 09:48:10.752 | INFO     | __main__:stability_tester:113 - Stability test for [Razer_Goliathus_Control_Edition_Small_Soft_Gaming_Mouse_Mat]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Razer_Blackwidow_Tournament_Edition_Keyboard.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+Enumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 332.01it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   2%|▏         | 6/360 [00:00<00:06, 58.36it/s][A
+Test Push Object::   3%|▎         | 12/360 [00:00<00:06, 57.89it/s][A
+Test Push Object::   5%|▌         | 18/360 [00:00<00:05, 57.96it/s][A
+Test Push Object::   7%|▋         | 24/360 [00:00<00:05, 57.32it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:05, 57.55it/s][A
+Test Push Object::  10%|█         | 36/360 [00:00<00:05, 57.51it/s][A
+Test Push Object::  12%|█▏        | 42/360 [00:00<00:05, 57.90it/s][A
+Test Push Object::  13%|█▎        | 48/360 [00:00<00:05, 58.45it/s][A
+Test Push Object::  15%|█▌        | 54/360 [00:00<00:05, 58.36it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:05, 58.28it/s][A
+Test Push Object::  18%|█▊        | 66/360 [00:01<00:05, 58.46it/s][A
+Test Push Object::  20%|██        | 72/360 [00:01<00:04, 58.06it/s][A
+Test Push Object::  22%|██▏       | 78/360 [00:01<00:04, 57.73it/s][A
+Test Push Object::  23%|██▎       | 84/360 [00:01<00:04, 57.79it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:01<00:04, 57.68it/s][A
+Test Push Object::  27%|██▋       | 96/360 [00:01<00:04, 57.37it/s][A
+Test Push Object::  28%|██▊       | 102/360 [00:01<00:04, 57.63it/s][A
+Test Push Object::  30%|███       | 108/360 [00:01<00:04, 56.76it/s][A
+Test Push Object::  32%|███▏      | 114/360 [00:01<00:04, 56.52it/s][A
+Test Push Object::  33%|███▎      | 120/360 [00:02<00:04, 56.20it/s][A
+Test Push Object::  35%|███▌      | 126/360 [00:02<00:04, 55.95it/s][A
+Test Push Object::  37%|███▋      | 132/360 [00:02<00:04, 56.22it/s][A
+Test Push Object::  38%|███▊      | 138/360 [00:02<00:03, 55.86it/s][A
+Test Push Object::  40%|████      | 144/360 [00:02<00:03, 54.75it/s][A
+Test Push Object::  42%|████▏     | 150/360 [00:02<00:03, 54.11it/s][A
+Test Push Object::  43%|████▎     | 156/360 [00:02<00:03, 54.48it/s][A
+Test Push Object::  45%|████▌     | 162/360 [00:02<00:03, 54.25it/s][A
+Test Push Object::  47%|████▋     | 168/360 [00:02<00:03, 54.23it/s][A
+Test Push Object::  48%|████▊     | 174/360 [00:03<00:03, 53.96it/s][A
+Test Push Object::  50%|█████     | 180/360 [00:03<00:03, 54.35it/s][A
+Test Push Object::  52%|█████▏    | 186/360 [00:03<00:03, 54.02it/s][A
+Test Push Object::  53%|█████▎    | 192/360 [00:03<00:03, 53.84it/s][A
+Test Push Object::  55%|█████▌    | 198/360 [00:03<00:02, 54.21it/s][A
+Test Push Object::  57%|█████▋    | 204/360 [00:03<00:02, 55.13it/s][A
+Test Push Object::  58%|█████▊    | 210/360 [00:03<00:02, 55.16it/s][A
+Test Push Object::  60%|██████    | 216/360 [00:03<00:02, 54.64it/s][A
+Test Push Object::  62%|██████▏   | 222/360 [00:03<00:02, 55.37it/s][A
+Test Push Object::  63%|██████▎   | 228/360 [00:04<00:02, 55.77it/s][A
+Test Push Object::  65%|██████▌   | 234/360 [00:04<00:02, 54.98it/s][A
+Test Push Object::  67%|██████▋   | 240/360 [00:04<00:02, 55.46it/s][A
+Test Push Object::  68%|██████▊   | 246/360 [00:04<00:02, 56.01it/s][A
+Test Push Object::  70%|███████   | 252/360 [00:04<00:01, 56.70it/s][A
+Test Push Object::  72%|███████▏  | 258/360 [00:04<00:01, 57.06it/s][A
+Test Push Object::  73%|███████▎  | 264/360 [00:04<00:01, 57.31it/s][A
+Test Push Object::  75%|███████▌  | 270/360 [00:04<00:01, 57.63it/s][A
+Test Push Object::  77%|███████▋  | 276/360 [00:04<00:01, 57.82it/s][A
+Test Push Object::  78%|███████▊  | 282/360 [00:05<00:01, 57.85it/s][A
+Test Push Object::  80%|████████  | 288/360 [00:05<00:01, 58.17it/s][A
+Test Push Object::  82%|████████▏ | 294/360 [00:05<00:01, 57.64it/s][A
+Test Push Object::  83%|████████▎ | 300/360 [00:05<00:01, 57.67it/s][A
+Test Push Object::  85%|████████▌ | 306/360 [00:05<00:00, 58.28it/s][A
+Test Push Object::  87%|████████▋ | 312/360 [00:05<00:00, 58.72it/s][A
+Test Push Object::  88%|████████▊ | 318/360 [00:05<00:00, 58.77it/s][A
+Test Push Object::  90%|█████████ | 324/360 [00:05<00:00, 58.85it/s][A
+Test Push Object::  92%|█████████▏| 330/360 [00:05<00:00, 59.00it/s][A
+Test Push Object::  93%|█████████▎| 336/360 [00:05<00:00, 58.02it/s][A
+Test Push Object::  95%|█████████▌| 342/360 [00:06<00:00, 58.08it/s][A
+Test Push Object::  97%|█████████▋| 348/360 [00:06<00:00, 57.75it/s][A
+Test Push Object::  98%|█████████▊| 354/360 [00:06<00:00, 58.23it/s][ATest Push Object:: 100%|██████████| 360/360 [00:06<00:00, 56.80it/s]
+2026-09-30 09:48:22.359 | INFO     | __main__:stability_tester:143 - Success rate of [Razer_Goliathus_Control_Edition_Small_Soft_Gaming_Mouse_Mat]: 23 / 32
+ 72%|███████▏  | 23/32 [04:53<01:53, 12.63s/it]2026-09-30 09:48:22.533 | INFO     | __main__:stability_tester:113 - Stability test for [Remington_TStudio_Hair_Dryer]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Razer_Goliathus_Control_Edition_Small_Soft_Gaming_Mouse_Mat.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:17,  1.75it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 55.37it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   1%|▏         | 5/360 [00:00<00:07, 47.27it/s][A
+Test Push Object::   3%|▎         | 10/360 [00:00<00:07, 48.00it/s][A
+Test Push Object::   4%|▍         | 15/360 [00:00<00:07, 48.10it/s][A
+Test Push Object::   6%|▌         | 20/360 [00:00<00:07, 48.03it/s][A
+Test Push Object::   7%|▋         | 25/360 [00:00<00:06, 47.86it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:06, 47.75it/s][A
+Test Push Object::  10%|▉         | 35/360 [00:00<00:06, 47.47it/s][A
+Test Push Object::  11%|█         | 40/360 [00:00<00:06, 47.55it/s][A
+Test Push Object::  12%|█▎        | 45/360 [00:00<00:06, 47.60it/s][A
+Test Push Object::  14%|█▍        | 50/360 [00:01<00:06, 48.03it/s][A
+Test Push Object::  15%|█▌        | 55/360 [00:01<00:06, 48.61it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:06, 48.40it/s][A
+Test Push Object::  18%|█▊        | 65/360 [00:01<00:06, 47.23it/s][A
+Test Push Object::  19%|█▉        | 70/360 [00:01<00:06, 46.53it/s][A
+Test Push Object::  21%|██        | 75/360 [00:01<00:06, 45.95it/s][A
+Test Push Object::  22%|██▏       | 80/360 [00:01<00:06, 45.74it/s][A
+Test Push Object::  24%|██▎       | 85/360 [00:01<00:05, 46.22it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:01<00:05, 46.41it/s][A
+Test Push Object::  26%|██▋       | 95/360 [00:02<00:05, 46.49it/s][A
+Test Push Object::  28%|██▊       | 100/360 [00:02<00:05, 46.29it/s][A
+Test Push Object::  29%|██▉       | 105/360 [00:02<00:05, 46.37it/s][A
+Test Push Object::  31%|███       | 110/360 [00:02<00:05, 46.38it/s][A
+Test Push Object::  32%|███▏      | 115/360 [00:02<00:05, 46.43it/s][A
+Test Push Object::  33%|███▎      | 120/360 [00:02<00:05, 46.45it/s][A
+Test Push Object::  35%|███▍      | 125/360 [00:02<00:05, 46.09it/s][A
+Test Push Object::  36%|███▌      | 130/360 [00:02<00:04, 46.27it/s][A
+Test Push Object::  38%|███▊      | 135/360 [00:02<00:04, 46.38it/s][A
+Test Push Object::  39%|███▉      | 140/360 [00:02<00:04, 46.47it/s][A
+Test Push Object::  40%|████      | 145/360 [00:03<00:04, 46.33it/s][A
+Test Push Object::  42%|████▏     | 150/360 [00:03<00:04, 46.39it/s][A
+Test Push Object::  43%|████▎     | 155/360 [00:03<00:04, 46.30it/s][A
+Test Push Object::  44%|████▍     | 160/360 [00:03<00:04, 46.57it/s][A
+Test Push Object::  46%|████▌     | 165/360 [00:03<00:04, 46.52it/s][A
+Test Push Object::  47%|████▋     | 170/360 [00:03<00:04, 47.06it/s][A
+Test Push Object::  49%|████▊     | 175/360 [00:03<00:03, 47.25it/s][A
+Test Push Object::  50%|█████     | 180/360 [00:03<00:03, 47.06it/s][A
+Test Push Object::  51%|█████▏    | 185/360 [00:03<00:03, 46.97it/s][A
+Test Push Object::  53%|█████▎    | 190/360 [00:04<00:03, 46.67it/s][A
+Test Push Object::  54%|█████▍    | 195/360 [00:04<00:03, 46.63it/s][A
+Test Push Object::  56%|█████▌    | 200/360 [00:04<00:03, 46.83it/s][A
+Test Push Object::  57%|█████▋    | 205/360 [00:04<00:03, 46.79it/s][A
+Test Push Object::  58%|█████▊    | 210/360 [00:04<00:03, 46.69it/s][A
+Test Push Object::  60%|█████▉    | 215/360 [00:04<00:03, 46.73it/s][A
+Test Push Object::  61%|██████    | 220/360 [00:04<00:02, 46.85it/s][A
+Test Push Object::  62%|██████▎   | 225/360 [00:04<00:02, 46.92it/s][A
+Test Push Object::  64%|██████▍   | 230/360 [00:04<00:02, 46.93it/s][A
+Test Push Object::  65%|██████▌   | 235/360 [00:05<00:02, 46.76it/s][A
+Test Push Object::  67%|██████▋   | 240/360 [00:05<00:02, 46.39it/s][A
+Test Push Object::  68%|██████▊   | 245/360 [00:05<00:02, 46.51it/s][A
+Test Push Object::  69%|██████▉   | 250/360 [00:05<00:02, 46.37it/s][A
+Test Push Object::  71%|███████   | 255/360 [00:05<00:02, 47.04it/s][A
+Test Push Object::  72%|███████▏  | 260/360 [00:05<00:02, 47.74it/s][A
+Test Push Object::  74%|███████▎  | 265/360 [00:05<00:01, 48.19it/s][A
+Test Push Object::  75%|███████▌  | 270/360 [00:05<00:01, 48.63it/s][A
+Test Push Object::  77%|███████▋  | 276/360 [00:05<00:01, 48.94it/s][A
+Test Push Object::  78%|███████▊  | 281/360 [00:05<00:01, 48.91it/s][A
+Test Push Object::  79%|███████▉  | 286/360 [00:06<00:01, 48.72it/s][A
+Test Push Object::  81%|████████  | 291/360 [00:06<00:01, 49.00it/s][A
+Test Push Object::  82%|████████▏ | 296/360 [00:06<00:01, 48.71it/s][A
+Test Push Object::  84%|████████▎ | 301/360 [00:06<00:01, 48.58it/s][A
+Test Push Object::  85%|████████▌ | 306/360 [00:06<00:01, 48.41it/s][A
+Test Push Object::  86%|████████▋ | 311/360 [00:06<00:01, 48.53it/s][A
+Test Push Object::  88%|████████▊ | 316/360 [00:06<00:00, 48.57it/s][A
+Test Push Object::  89%|████████▉ | 321/360 [00:06<00:00, 48.03it/s][A
+Test Push Object::  91%|█████████ | 326/360 [00:06<00:00, 48.07it/s][A
+Test Push Object::  92%|█████████▏| 331/360 [00:07<00:00, 47.97it/s][A
+Test Push Object::  93%|█████████▎| 336/360 [00:07<00:00, 48.51it/s][A
+Test Push Object::  95%|█████████▍| 341/360 [00:07<00:00, 48.53it/s][A
+Test Push Object::  96%|█████████▌| 346/360 [00:07<00:00, 48.49it/s][A
+Test Push Object::  98%|█████████▊| 351/360 [00:07<00:00, 47.49it/s][A
+Test Push Object::  99%|█████████▉| 356/360 [00:07<00:00, 46.87it/s][ATest Push Object:: 100%|██████████| 360/360 [00:07<00:00, 47.23it/s]
+2026-09-30 09:48:36.487 | INFO     | __main__:stability_tester:143 - Success rate of [Remington_TStudio_Hair_Dryer]: 12 / 32
+ 75%|███████▌  | 24/32 [05:07<01:44, 13.07s/it]2026-09-30 09:48:36.653 | INFO     | __main__:stability_tester:113 - Stability test for [Sushi_Mat]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Remington_TStudio_Hair_Dryer.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:06,  4.53it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 141.73it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   2%|▏         | 6/360 [00:00<00:06, 53.70it/s][A
+Test Push Object::   3%|▎         | 12/360 [00:00<00:06, 53.64it/s][A
+Test Push Object::   5%|▌         | 18/360 [00:00<00:06, 52.33it/s][A
+Test Push Object::   7%|▋         | 24/360 [00:00<00:06, 50.44it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:06, 49.55it/s][A
+Test Push Object::  10%|▉         | 35/360 [00:00<00:06, 48.93it/s][A
+Test Push Object::  11%|█         | 40/360 [00:00<00:06, 48.52it/s][A
+Test Push Object::  12%|█▎        | 45/360 [00:00<00:06, 48.40it/s][A
+Test Push Object::  14%|█▍        | 50/360 [00:01<00:06, 48.19it/s][A
+Test Push Object::  15%|█▌        | 55/360 [00:01<00:06, 48.64it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:06, 48.68it/s][A
+Test Push Object::  18%|█▊        | 66/360 [00:01<00:05, 49.92it/s][A
+Test Push Object::  20%|██        | 72/360 [00:01<00:05, 50.35it/s][A
+Test Push Object::  22%|██▏       | 78/360 [00:01<00:05, 50.53it/s][A
+Test Push Object::  23%|██▎       | 84/360 [00:01<00:05, 50.17it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:01<00:05, 49.52it/s][A
+Test Push Object::  26%|██▋       | 95/360 [00:01<00:05, 49.02it/s][A
+Test Push Object::  28%|██▊       | 100/360 [00:02<00:05, 48.79it/s][A
+Test Push Object::  29%|██▉       | 105/360 [00:02<00:05, 48.33it/s][A
+Test Push Object::  31%|███       | 110/360 [00:02<00:05, 48.41it/s][A
+Test Push Object::  32%|███▏      | 116/360 [00:02<00:04, 50.11it/s][A
+Test Push Object::  34%|███▍      | 122/360 [00:02<00:04, 50.07it/s][A
+Test Push Object::  36%|███▌      | 128/360 [00:02<00:04, 50.15it/s][A
+Test Push Object::  37%|███▋      | 134/360 [00:02<00:04, 50.11it/s][A
+Test Push Object::  39%|███▉      | 140/360 [00:02<00:04, 49.51it/s][A
+Test Push Object::  40%|████      | 145/360 [00:02<00:04, 49.15it/s][A
+Test Push Object::  42%|████▏     | 150/360 [00:03<00:04, 48.86it/s][A
+Test Push Object::  43%|████▎     | 156/360 [00:03<00:04, 49.22it/s][A
+Test Push Object::  45%|████▌     | 162/360 [00:03<00:03, 50.05it/s][A
+Test Push Object::  47%|████▋     | 168/360 [00:03<00:03, 51.00it/s][A
+Test Push Object::  48%|████▊     | 174/360 [00:03<00:03, 50.41it/s][A
+Test Push Object::  50%|█████     | 180/360 [00:03<00:03, 49.75it/s][A
+Test Push Object::  52%|█████▏    | 186/360 [00:03<00:03, 51.16it/s][A
+Test Push Object::  53%|█████▎    | 192/360 [00:03<00:03, 52.02it/s][A
+Test Push Object::  55%|█████▌    | 198/360 [00:03<00:03, 53.23it/s][A
+Test Push Object::  57%|█████▋    | 204/360 [00:04<00:02, 53.21it/s][A
+Test Push Object::  58%|█████▊    | 210/360 [00:04<00:02, 53.75it/s][A
+Test Push Object::  60%|██████    | 216/360 [00:04<00:02, 53.84it/s][A
+Test Push Object::  62%|██████▏   | 222/360 [00:04<00:02, 53.46it/s][A
+Test Push Object::  63%|██████▎   | 228/360 [00:04<00:02, 53.52it/s][A
+Test Push Object::  65%|██████▌   | 234/360 [00:04<00:02, 53.32it/s][A
+Test Push Object::  67%|██████▋   | 240/360 [00:04<00:02, 52.99it/s][A
+Test Push Object::  68%|██████▊   | 246/360 [00:04<00:02, 52.99it/s][A
+Test Push Object::  70%|███████   | 252/360 [00:04<00:01, 54.23it/s][A
+Test Push Object::  72%|███████▏  | 258/360 [00:05<00:01, 53.67it/s][A
+Test Push Object::  73%|███████▎  | 264/360 [00:05<00:01, 53.86it/s][A
+Test Push Object::  75%|███████▌  | 270/360 [00:05<00:01, 53.99it/s][A
+Test Push Object::  77%|███████▋  | 276/360 [00:05<00:01, 53.44it/s][A
+Test Push Object::  78%|███████▊  | 282/360 [00:05<00:01, 53.20it/s][A
+Test Push Object::  80%|████████  | 288/360 [00:05<00:01, 53.64it/s][A
+Test Push Object::  82%|████████▏ | 294/360 [00:05<00:01, 53.79it/s][A
+Test Push Object::  83%|████████▎ | 300/360 [00:05<00:01, 53.86it/s][A
+Test Push Object::  85%|████████▌ | 306/360 [00:05<00:01, 53.83it/s][A
+Test Push Object::  87%|████████▋ | 312/360 [00:06<00:00, 52.20it/s][A
+Test Push Object::  88%|████████▊ | 318/360 [00:06<00:00, 50.60it/s][A
+Test Push Object::  90%|█████████ | 324/360 [00:06<00:00, 50.61it/s][A
+Test Push Object::  92%|█████████▏| 330/360 [00:06<00:00, 51.52it/s][A
+Test Push Object::  93%|█████████▎| 336/360 [00:06<00:00, 52.73it/s][A
+Test Push Object::  95%|█████████▌| 342/360 [00:06<00:00, 51.48it/s][A
+Test Push Object::  97%|█████████▋| 348/360 [00:06<00:00, 50.15it/s][A
+Test Push Object::  98%|█████████▊| 354/360 [00:06<00:00, 49.25it/s][A
+Test Push Object:: 100%|█████████▉| 359/360 [00:07<00:00, 48.90it/s][ATest Push Object:: 100%|██████████| 360/360 [00:07<00:00, 51.06it/s]
+2026-09-30 09:48:49.805 | INFO     | __main__:stability_tester:143 - Success rate of [Sushi_Mat]: 25 / 32
+ 78%|███████▊  | 25/32 [05:20<01:32, 13.15s/it]2026-09-30 09:48:49.972 | INFO     | __main__:stability_tester:113 - Stability test for [TERREX_FAST_X_GTX]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Sushi_Mat.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:11,  2.62it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 82.65it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   1%|▏         | 5/360 [00:00<00:07, 47.51it/s][A
+Test Push Object::   3%|▎         | 10/360 [00:00<00:07, 47.84it/s][A
+Test Push Object::   4%|▍         | 15/360 [00:00<00:07, 48.31it/s][A
+Test Push Object::   6%|▌         | 20/360 [00:00<00:07, 48.33it/s][A
+Test Push Object::   7%|▋         | 25/360 [00:00<00:06, 48.35it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:06, 48.26it/s][A
+Test Push Object::  10%|▉         | 35/360 [00:00<00:06, 48.67it/s][A
+Test Push Object::  11%|█         | 40/360 [00:00<00:06, 48.87it/s][A
+Test Push Object::  12%|█▎        | 45/360 [00:00<00:06, 48.77it/s][A
+Test Push Object::  14%|█▍        | 50/360 [00:01<00:06, 48.57it/s][A
+Test Push Object::  16%|█▌        | 56/360 [00:01<00:06, 49.45it/s][A
+Test Push Object::  17%|█▋        | 61/360 [00:01<00:06, 49.11it/s][A
+Test Push Object::  18%|█▊        | 66/360 [00:01<00:06, 48.35it/s][A
+Test Push Object::  20%|█▉        | 71/360 [00:01<00:06, 47.81it/s][A
+Test Push Object::  21%|██        | 76/360 [00:01<00:05, 48.21it/s][A
+Test Push Object::  22%|██▎       | 81/360 [00:01<00:05, 47.83it/s][A
+Test Push Object::  24%|██▍       | 86/360 [00:01<00:05, 47.36it/s][A
+Test Push Object::  25%|██▌       | 91/360 [00:01<00:05, 47.50it/s][A
+Test Push Object::  27%|██▋       | 96/360 [00:01<00:05, 47.14it/s][A
+Test Push Object::  28%|██▊       | 101/360 [00:02<00:05, 47.14it/s][A
+Test Push Object::  29%|██▉       | 106/360 [00:02<00:05, 47.12it/s][A
+Test Push Object::  31%|███       | 111/360 [00:02<00:05, 46.89it/s][A
+Test Push Object::  32%|███▏      | 116/360 [00:02<00:05, 46.85it/s][A
+Test Push Object::  34%|███▎      | 121/360 [00:02<00:05, 47.59it/s][A
+Test Push Object::  35%|███▌      | 127/360 [00:02<00:04, 48.59it/s][A
+Test Push Object::  37%|███▋      | 133/360 [00:02<00:04, 49.52it/s][A
+Test Push Object::  39%|███▊      | 139/360 [00:02<00:04, 50.08it/s][A
+Test Push Object::  40%|████      | 145/360 [00:02<00:04, 49.75it/s][A
+Test Push Object::  42%|████▏     | 150/360 [00:03<00:04, 49.76it/s][A
+Test Push Object::  43%|████▎     | 156/360 [00:03<00:04, 50.17it/s][A
+Test Push Object::  45%|████▌     | 162/360 [00:03<00:03, 51.13it/s][A
+Test Push Object::  47%|████▋     | 168/360 [00:03<00:03, 51.06it/s][A
+Test Push Object::  48%|████▊     | 174/360 [00:03<00:03, 51.68it/s][A
+Test Push Object::  50%|█████     | 180/360 [00:03<00:03, 51.76it/s][A
+Test Push Object::  52%|█████▏    | 186/360 [00:03<00:03, 52.02it/s][A
+Test Push Object::  53%|█████▎    | 192/360 [00:03<00:03, 52.00it/s][A
+Test Push Object::  55%|█████▌    | 198/360 [00:04<00:03, 52.17it/s][A
+Test Push Object::  57%|█████▋    | 204/360 [00:04<00:02, 52.29it/s][A
+Test Push Object::  58%|█████▊    | 210/360 [00:04<00:02, 52.28it/s][A
+Test Push Object::  60%|██████    | 216/360 [00:04<00:02, 52.36it/s][A
+Test Push Object::  62%|██████▏   | 222/360 [00:04<00:02, 52.32it/s][A
+Test Push Object::  63%|██████▎   | 228/360 [00:04<00:02, 53.28it/s][A
+Test Push Object::  65%|██████▌   | 234/360 [00:04<00:02, 51.84it/s][A
+Test Push Object::  67%|██████▋   | 240/360 [00:04<00:02, 50.13it/s][A
+Test Push Object::  68%|██████▊   | 246/360 [00:04<00:02, 48.85it/s][A
+Test Push Object::  70%|██████▉   | 251/360 [00:05<00:02, 48.31it/s][A
+Test Push Object::  71%|███████   | 256/360 [00:05<00:02, 47.75it/s][A
+Test Push Object::  72%|███████▎  | 261/360 [00:05<00:02, 47.63it/s][A
+Test Push Object::  74%|███████▍  | 266/360 [00:05<00:01, 47.62it/s][A
+Test Push Object::  75%|███████▌  | 271/360 [00:05<00:01, 47.50it/s][A
+Test Push Object::  77%|███████▋  | 276/360 [00:05<00:01, 47.30it/s][A
+Test Push Object::  78%|███████▊  | 281/360 [00:05<00:01, 47.14it/s][A
+Test Push Object::  79%|███████▉  | 286/360 [00:05<00:01, 47.11it/s][A
+Test Push Object::  81%|████████  | 291/360 [00:05<00:01, 47.90it/s][A
+Test Push Object::  82%|████████▏ | 296/360 [00:06<00:01, 48.15it/s][A
+Test Push Object::  84%|████████▎ | 301/360 [00:06<00:01, 47.57it/s][A
+Test Push Object::  85%|████████▌ | 306/360 [00:06<00:01, 47.31it/s][A
+Test Push Object::  86%|████████▋ | 311/360 [00:06<00:01, 47.91it/s][A
+Test Push Object::  88%|████████▊ | 316/360 [00:06<00:00, 47.61it/s][A
+Test Push Object::  89%|████████▉ | 321/360 [00:06<00:00, 47.24it/s][A
+Test Push Object::  91%|█████████ | 326/360 [00:06<00:00, 47.36it/s][A
+Test Push Object::  92%|█████████▏| 331/360 [00:06<00:00, 47.55it/s][A
+Test Push Object::  93%|█████████▎| 336/360 [00:06<00:00, 48.14it/s][A
+Test Push Object::  95%|█████████▍| 341/360 [00:06<00:00, 47.69it/s][A
+Test Push Object::  96%|█████████▌| 346/360 [00:07<00:00, 47.40it/s][A
+Test Push Object::  98%|█████████▊| 351/360 [00:07<00:00, 47.06it/s][A
+Test Push Object::  99%|█████████▉| 356/360 [00:07<00:00, 47.03it/s][ATest Push Object:: 100%|██████████| 360/360 [00:07<00:00, 48.81it/s]
+2026-09-30 09:49:03.027 | INFO     | __main__:stability_tester:143 - Success rate of [TERREX_FAST_X_GTX]: 17 / 32
+ 81%|████████▏ | 26/32 [05:34<01:19, 13.17s/it]2026-09-30 09:49:03.190 | INFO     | __main__:stability_tester:113 - Stability test for [Threshold_Hand_Towel_Blue_Medallion_16_x_27]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/TERREX_FAST_X_GTX.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:07,  3.99it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 125.40it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   2%|▏         | 6/360 [00:00<00:06, 57.33it/s][A
+Test Push Object::   4%|▎         | 13/360 [00:00<00:05, 59.16it/s][A
+Test Push Object::   5%|▌         | 19/360 [00:00<00:05, 59.27it/s][A
+Test Push Object::   7%|▋         | 26/360 [00:00<00:05, 59.72it/s][A
+Test Push Object::   9%|▉         | 32/360 [00:00<00:05, 59.72it/s][A
+Test Push Object::  11%|█         | 39/360 [00:00<00:05, 59.94it/s][A
+Test Push Object::  13%|█▎        | 46/360 [00:00<00:05, 60.18it/s][A
+Test Push Object::  15%|█▍        | 53/360 [00:00<00:05, 59.99it/s][A
+Test Push Object::  16%|█▋        | 59/360 [00:00<00:05, 59.87it/s][A
+Test Push Object::  18%|█▊        | 66/360 [00:01<00:04, 60.08it/s][A
+Test Push Object::  20%|██        | 73/360 [00:01<00:04, 58.77it/s][A
+Test Push Object::  22%|██▏       | 79/360 [00:01<00:04, 58.22it/s][A
+Test Push Object::  24%|██▎       | 85/360 [00:01<00:04, 58.50it/s][A
+Test Push Object::  25%|██▌       | 91/360 [00:01<00:04, 58.47it/s][A
+Test Push Object::  27%|██▋       | 98/360 [00:01<00:04, 59.15it/s][A
+Test Push Object::  29%|██▉       | 104/360 [00:01<00:04, 59.33it/s][A
+Test Push Object::  31%|███       | 110/360 [00:01<00:04, 59.36it/s][A
+Test Push Object::  32%|███▏      | 116/360 [00:01<00:04, 59.50it/s][A
+Test Push Object::  34%|███▍      | 122/360 [00:02<00:04, 59.25it/s][A
+Test Push Object::  36%|███▌      | 128/360 [00:02<00:03, 59.08it/s][A
+Test Push Object::  37%|███▋      | 134/360 [00:02<00:03, 58.75it/s][A
+Test Push Object::  39%|███▉      | 140/360 [00:02<00:03, 59.01it/s][A
+Test Push Object::  41%|████      | 147/360 [00:02<00:03, 59.19it/s][A
+Test Push Object::  42%|████▎     | 153/360 [00:02<00:03, 59.05it/s][A
+Test Push Object::  44%|████▍     | 160/360 [00:02<00:03, 59.46it/s][A
+Test Push Object::  46%|████▋     | 167/360 [00:02<00:03, 59.63it/s][A
+Test Push Object::  48%|████▊     | 173/360 [00:02<00:03, 59.72it/s][A
+Test Push Object::  50%|█████     | 180/360 [00:03<00:03, 59.88it/s][A
+Test Push Object::  52%|█████▏    | 186/360 [00:03<00:02, 59.86it/s][A
+Test Push Object::  53%|█████▎    | 192/360 [00:03<00:02, 59.69it/s][A
+Test Push Object::  55%|█████▌    | 199/360 [00:03<00:02, 60.12it/s][A
+Test Push Object::  57%|█████▋    | 206/360 [00:03<00:02, 59.93it/s][A
+Test Push Object::  59%|█████▉    | 212/360 [00:03<00:02, 59.29it/s][A
+Test Push Object::  61%|██████    | 218/360 [00:03<00:02, 58.68it/s][A
+Test Push Object::  62%|██████▏   | 224/360 [00:03<00:02, 58.19it/s][A
+Test Push Object::  64%|██████▍   | 231/360 [00:03<00:02, 58.51it/s][A
+Test Push Object::  66%|██████▌   | 237/360 [00:04<00:02, 58.00it/s][A
+Test Push Object::  68%|██████▊   | 243/360 [00:04<00:02, 58.14it/s][A
+Test Push Object::  69%|██████▉   | 249/360 [00:04<00:01, 58.59it/s][A
+Test Push Object::  71%|███████   | 256/360 [00:04<00:01, 59.04it/s][A
+Test Push Object::  73%|███████▎  | 263/360 [00:04<00:01, 59.26it/s][A
+Test Push Object::  75%|███████▌  | 270/360 [00:04<00:01, 59.47it/s][A
+Test Push Object::  77%|███████▋  | 276/360 [00:04<00:01, 59.60it/s][A
+Test Push Object::  79%|███████▊  | 283/360 [00:04<00:01, 59.79it/s][A
+Test Push Object::  81%|████████  | 290/360 [00:04<00:01, 59.98it/s][A
+Test Push Object::  82%|████████▏ | 296/360 [00:04<00:01, 59.89it/s][A
+Test Push Object::  84%|████████▍ | 303/360 [00:05<00:00, 59.96it/s][A
+Test Push Object::  86%|████████▌ | 309/360 [00:05<00:00, 59.95it/s][A
+Test Push Object::  88%|████████▊ | 315/360 [00:05<00:00, 59.95it/s][A
+Test Push Object::  89%|████████▉ | 321/360 [00:05<00:00, 59.54it/s][A
+Test Push Object::  91%|█████████ | 327/360 [00:05<00:00, 59.63it/s][A
+Test Push Object::  92%|█████████▎| 333/360 [00:05<00:00, 59.61it/s][A
+Test Push Object::  94%|█████████▍| 339/360 [00:05<00:00, 59.29it/s][A
+Test Push Object::  96%|█████████▌| 346/360 [00:05<00:00, 59.76it/s][A
+Test Push Object::  98%|█████████▊| 353/360 [00:05<00:00, 59.85it/s][A
+Test Push Object:: 100%|█████████▉| 359/360 [00:06<00:00, 59.79it/s][ATest Push Object:: 100%|██████████| 360/360 [00:06<00:00, 59.38it/s]
+2026-09-30 09:49:14.276 | INFO     | __main__:stability_tester:143 - Success rate of [Threshold_Hand_Towel_Blue_Medallion_16_x_27]: 5 / 32
+ 84%|████████▍ | 27/32 [05:45<01:02, 12.59s/it]2026-09-30 09:49:14.445 | INFO     | __main__:stability_tester:113 - Stability test for [Threshold_Porcelain_Pitcher_White]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Threshold_Hand_Towel_Blue_Medallion_16_x_27.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:04,  7.11it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 219.02it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   2%|▏         | 6/360 [00:00<00:06, 52.41it/s][A
+Test Push Object::   3%|▎         | 12/360 [00:00<00:06, 51.73it/s][A
+Test Push Object::   5%|▌         | 18/360 [00:00<00:06, 52.90it/s][A
+Test Push Object::   7%|▋         | 24/360 [00:00<00:06, 52.45it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:06, 51.48it/s][A
+Test Push Object::  10%|█         | 36/360 [00:00<00:06, 51.26it/s][A
+Test Push Object::  12%|█▏        | 42/360 [00:00<00:06, 50.96it/s][A
+Test Push Object::  13%|█▎        | 48/360 [00:00<00:06, 50.61it/s][A
+Test Push Object::  15%|█▌        | 54/360 [00:01<00:06, 50.32it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:05, 50.04it/s][A
+Test Push Object::  18%|█▊        | 66/360 [00:01<00:05, 49.85it/s][A
+Test Push Object::  20%|██        | 72/360 [00:01<00:05, 51.25it/s][A
+Test Push Object::  22%|██▏       | 78/360 [00:01<00:05, 51.80it/s][A
+Test Push Object::  23%|██▎       | 84/360 [00:01<00:05, 51.05it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:01<00:05, 51.10it/s][A
+Test Push Object::  27%|██▋       | 96/360 [00:01<00:05, 51.14it/s][A
+Test Push Object::  28%|██▊       | 102/360 [00:01<00:05, 50.81it/s][A
+Test Push Object::  30%|███       | 108/360 [00:02<00:05, 50.39it/s][A
+Test Push Object::  32%|███▏      | 114/360 [00:02<00:04, 50.23it/s][A
+Test Push Object::  33%|███▎      | 120/360 [00:02<00:04, 50.61it/s][A
+Test Push Object::  35%|███▌      | 126/360 [00:02<00:04, 50.83it/s][A
+Test Push Object::  37%|███▋      | 132/360 [00:02<00:04, 52.25it/s][A
+Test Push Object::  38%|███▊      | 138/360 [00:02<00:04, 52.65it/s][A
+Test Push Object::  40%|████      | 144/360 [00:02<00:04, 52.32it/s][A
+Test Push Object::  42%|████▏     | 150/360 [00:02<00:03, 52.62it/s][A
+Test Push Object::  43%|████▎     | 156/360 [00:03<00:03, 53.27it/s][A
+Test Push Object::  45%|████▌     | 162/360 [00:03<00:03, 52.80it/s][A
+Test Push Object::  47%|████▋     | 168/360 [00:03<00:03, 53.84it/s][A
+Test Push Object::  48%|████▊     | 174/360 [00:03<00:03, 52.98it/s][A
+Test Push Object::  50%|█████     | 180/360 [00:03<00:03, 52.29it/s][A
+Test Push Object::  52%|█████▏    | 186/360 [00:03<00:03, 51.51it/s][A
+Test Push Object::  53%|█████▎    | 192/360 [00:03<00:03, 51.01it/s][A
+Test Push Object::  55%|█████▌    | 198/360 [00:03<00:03, 51.18it/s][A
+Test Push Object::  57%|█████▋    | 204/360 [00:03<00:03, 51.96it/s][A
+Test Push Object::  58%|█████▊    | 210/360 [00:04<00:02, 52.29it/s][A
+Test Push Object::  60%|██████    | 216/360 [00:04<00:02, 52.47it/s][A
+Test Push Object::  62%|██████▏   | 222/360 [00:04<00:02, 52.33it/s][A
+Test Push Object::  63%|██████▎   | 228/360 [00:04<00:02, 52.08it/s][A
+Test Push Object::  65%|██████▌   | 234/360 [00:04<00:02, 51.59it/s][A
+Test Push Object::  67%|██████▋   | 240/360 [00:04<00:02, 51.83it/s][A
+Test Push Object::  68%|██████▊   | 246/360 [00:04<00:02, 52.43it/s][A
+Test Push Object::  70%|███████   | 252/360 [00:04<00:02, 52.88it/s][A
+Test Push Object::  72%|███████▏  | 258/360 [00:04<00:01, 53.52it/s][A
+Test Push Object::  73%|███████▎  | 264/360 [00:05<00:01, 53.50it/s][A
+Test Push Object::  75%|███████▌  | 270/360 [00:05<00:01, 53.65it/s][A
+Test Push Object::  77%|███████▋  | 276/360 [00:05<00:01, 53.44it/s][A
+Test Push Object::  78%|███████▊  | 282/360 [00:05<00:01, 54.32it/s][A
+Test Push Object::  80%|████████  | 288/360 [00:05<00:01, 54.72it/s][A
+Test Push Object::  82%|████████▏ | 294/360 [00:05<00:01, 55.62it/s][A
+Test Push Object::  83%|████████▎ | 300/360 [00:05<00:01, 55.96it/s][A
+Test Push Object::  85%|████████▌ | 306/360 [00:05<00:00, 55.39it/s][A
+Test Push Object::  87%|████████▋ | 312/360 [00:05<00:00, 54.93it/s][A
+Test Push Object::  88%|████████▊ | 318/360 [00:06<00:00, 54.37it/s][A
+Test Push Object::  90%|█████████ | 324/360 [00:06<00:00, 54.24it/s][A
+Test Push Object::  92%|█████████▏| 330/360 [00:06<00:00, 54.02it/s][A
+Test Push Object::  93%|█████████▎| 336/360 [00:06<00:00, 54.01it/s][A
+Test Push Object::  95%|█████████▌| 342/360 [00:06<00:00, 54.89it/s][A
+Test Push Object::  97%|█████████▋| 348/360 [00:06<00:00, 54.27it/s][A
+Test Push Object::  98%|█████████▊| 354/360 [00:06<00:00, 53.84it/s][A
+Test Push Object:: 100%|██████████| 360/360 [00:06<00:00, 53.62it/s][ATest Push Object:: 100%|██████████| 360/360 [00:06<00:00, 52.52it/s]
+2026-09-30 09:49:26.359 | INFO     | __main__:stability_tester:143 - Success rate of [Threshold_Porcelain_Pitcher_White]: 7 / 32
+ 88%|████████▊ | 28/32 [05:57<00:49, 12.44s/it]2026-09-30 09:49:26.526 | INFO     | __main__:stability_tester:113 - Stability test for [Threshold_Salad_Plate_Square_Rim_Porcelain]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Threshold_Porcelain_Pitcher_White.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::  78%|███████▊  | 25/32 [00:00<00:00, 249.85it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 315.46it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   1%|▏         | 5/360 [00:00<00:07, 45.53it/s][A
+Test Push Object::   3%|▎         | 10/360 [00:00<00:07, 46.17it/s][A
+Test Push Object::   4%|▍         | 15/360 [00:00<00:07, 46.43it/s][A
+Test Push Object::   6%|▌         | 20/360 [00:00<00:07, 46.74it/s][A
+Test Push Object::   7%|▋         | 25/360 [00:00<00:07, 46.79it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:06, 47.41it/s][A
+Test Push Object::  10%|▉         | 35/360 [00:00<00:06, 47.32it/s][A
+Test Push Object::  11%|█         | 40/360 [00:00<00:06, 47.36it/s][A
+Test Push Object::  12%|█▎        | 45/360 [00:00<00:06, 47.00it/s][A
+Test Push Object::  14%|█▍        | 50/360 [00:01<00:06, 46.66it/s][A
+Test Push Object::  15%|█▌        | 55/360 [00:01<00:06, 46.70it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:06, 46.07it/s][A
+Test Push Object::  18%|█▊        | 65/360 [00:01<00:06, 45.76it/s][A
+Test Push Object::  20%|█▉        | 71/360 [00:01<00:06, 47.30it/s][A
+Test Push Object::  21%|██▏       | 77/360 [00:01<00:05, 48.22it/s][A
+Test Push Object::  23%|██▎       | 83/360 [00:01<00:05, 49.07it/s][A
+Test Push Object::  24%|██▍       | 88/360 [00:01<00:05, 48.42it/s][A
+Test Push Object::  26%|██▌       | 93/360 [00:01<00:05, 47.62it/s][A
+Test Push Object::  27%|██▋       | 98/360 [00:02<00:05, 47.63it/s][A
+Test Push Object::  29%|██▊       | 103/360 [00:02<00:05, 47.48it/s][A
+Test Push Object::  30%|███       | 108/360 [00:02<00:05, 47.30it/s][A
+Test Push Object::  31%|███▏      | 113/360 [00:02<00:05, 47.26it/s][A
+Test Push Object::  33%|███▎      | 118/360 [00:02<00:05, 47.00it/s][A
+Test Push Object::  34%|███▍      | 123/360 [00:02<00:05, 46.85it/s][A
+Test Push Object::  36%|███▌      | 128/360 [00:02<00:04, 47.04it/s][A
+Test Push Object::  37%|███▋      | 133/360 [00:02<00:04, 47.08it/s][A
+Test Push Object::  38%|███▊      | 138/360 [00:02<00:04, 46.96it/s][A
+Test Push Object::  40%|███▉      | 143/360 [00:03<00:04, 47.08it/s][A
+Test Push Object::  41%|████      | 148/360 [00:03<00:04, 46.73it/s][A
+Test Push Object::  42%|████▎     | 153/360 [00:03<00:04, 46.74it/s][A
+Test Push Object::  44%|████▍     | 158/360 [00:03<00:04, 46.93it/s][A
+Test Push Object::  45%|████▌     | 163/360 [00:03<00:04, 47.15it/s][A
+Test Push Object::  47%|████▋     | 168/360 [00:03<00:04, 47.27it/s][A
+Test Push Object::  48%|████▊     | 173/360 [00:03<00:03, 47.08it/s][A
+Test Push Object::  49%|████▉     | 178/360 [00:03<00:03, 47.30it/s][A
+Test Push Object::  51%|█████     | 183/360 [00:03<00:03, 47.29it/s][A
+Test Push Object::  52%|█████▏    | 188/360 [00:03<00:03, 46.66it/s][A
+Test Push Object::  54%|█████▎    | 193/360 [00:04<00:03, 46.49it/s][A
+Test Push Object::  55%|█████▌    | 198/360 [00:04<00:03, 46.61it/s][A
+Test Push Object::  56%|█████▋    | 203/360 [00:04<00:03, 46.31it/s][A
+Test Push Object::  58%|█████▊    | 208/360 [00:04<00:03, 46.84it/s][A
+Test Push Object::  59%|█████▉    | 213/360 [00:04<00:03, 47.09it/s][A
+Test Push Object::  61%|██████    | 218/360 [00:04<00:02, 47.51it/s][A
+Test Push Object::  62%|██████▏   | 223/360 [00:04<00:02, 47.96it/s][A
+Test Push Object::  63%|██████▎   | 228/360 [00:04<00:02, 48.02it/s][A
+Test Push Object::  65%|██████▍   | 233/360 [00:04<00:02, 47.24it/s][A
+Test Push Object::  66%|██████▌   | 238/360 [00:05<00:02, 47.12it/s][A
+Test Push Object::  68%|██████▊   | 243/360 [00:05<00:02, 46.91it/s][A
+Test Push Object::  69%|██████▉   | 248/360 [00:05<00:02, 46.59it/s][A
+Test Push Object::  70%|███████   | 253/360 [00:05<00:02, 46.11it/s][A
+Test Push Object::  72%|███████▏  | 258/360 [00:05<00:02, 45.86it/s][A
+Test Push Object::  73%|███████▎  | 264/360 [00:05<00:02, 47.10it/s][A
+Test Push Object::  75%|███████▍  | 269/360 [00:05<00:01, 46.89it/s][A
+Test Push Object::  76%|███████▌  | 274/360 [00:05<00:01, 46.59it/s][A
+Test Push Object::  78%|███████▊  | 279/360 [00:05<00:01, 46.28it/s][A
+Test Push Object::  79%|███████▉  | 284/360 [00:06<00:01, 45.93it/s][A
+Test Push Object::  80%|████████  | 289/360 [00:06<00:01, 45.68it/s][A
+Test Push Object::  82%|████████▏ | 294/360 [00:06<00:01, 45.56it/s][A
+Test Push Object::  83%|████████▎ | 299/360 [00:06<00:01, 45.57it/s][A
+Test Push Object::  84%|████████▍ | 304/360 [00:06<00:01, 45.22it/s][A
+Test Push Object::  86%|████████▌ | 309/360 [00:06<00:01, 45.17it/s][A
+Test Push Object::  87%|████████▋ | 314/360 [00:06<00:01, 45.05it/s][A
+Test Push Object::  89%|████████▊ | 319/360 [00:06<00:00, 45.48it/s][A
+Test Push Object::  90%|█████████ | 324/360 [00:06<00:00, 45.48it/s][A
+Test Push Object::  91%|█████████▏| 329/360 [00:07<00:00, 45.38it/s][A
+Test Push Object::  93%|█████████▎| 334/360 [00:07<00:00, 45.53it/s][A
+Test Push Object::  94%|█████████▍| 339/360 [00:07<00:00, 46.05it/s][A
+Test Push Object::  96%|█████████▌| 344/360 [00:07<00:00, 45.85it/s][A
+Test Push Object::  97%|█████████▋| 349/360 [00:07<00:00, 45.83it/s][A
+Test Push Object::  98%|█████████▊| 354/360 [00:07<00:00, 45.79it/s][A
+Test Push Object:: 100%|█████████▉| 359/360 [00:07<00:00, 46.03it/s][ATest Push Object:: 100%|██████████| 360/360 [00:07<00:00, 46.66it/s]
+2026-09-30 09:49:39.890 | INFO     | __main__:stability_tester:143 - Success rate of [Threshold_Salad_Plate_Square_Rim_Porcelain]: 26 / 32
+ 91%|█████████ | 29/32 [06:10<00:38, 12.77s/it]2026-09-30 09:49:40.059 | INFO     | __main__:stability_tester:113 - Stability test for [Timberland_Mens_Earthkeepers_Stormbuck_Lite_Plain_Toe_Oxford]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Threshold_Salad_Plate_Square_Rim_Porcelain.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:06,  4.66it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 145.13it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   1%|▏         | 5/360 [00:00<00:07, 45.76it/s][A
+Test Push Object::   3%|▎         | 10/360 [00:00<00:07, 45.95it/s][A
+Test Push Object::   4%|▍         | 15/360 [00:00<00:07, 45.93it/s][A
+Test Push Object::   6%|▌         | 20/360 [00:00<00:07, 46.69it/s][A
+Test Push Object::   7%|▋         | 25/360 [00:00<00:07, 46.51it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:07, 46.29it/s][A
+Test Push Object::  10%|▉         | 35/360 [00:00<00:07, 46.14it/s][A
+Test Push Object::  11%|█         | 40/360 [00:00<00:06, 46.09it/s][A
+Test Push Object::  12%|█▎        | 45/360 [00:00<00:06, 46.90it/s][A
+Test Push Object::  14%|█▍        | 50/360 [00:01<00:06, 46.73it/s][A
+Test Push Object::  15%|█▌        | 55/360 [00:01<00:06, 46.54it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:06, 46.34it/s][A
+Test Push Object::  18%|█▊        | 65/360 [00:01<00:06, 46.29it/s][A
+Test Push Object::  19%|█▉        | 70/360 [00:01<00:06, 46.79it/s][A
+Test Push Object::  21%|██        | 75/360 [00:01<00:06, 46.60it/s][A
+Test Push Object::  22%|██▏       | 80/360 [00:01<00:06, 46.44it/s][A
+Test Push Object::  24%|██▎       | 85/360 [00:01<00:05, 47.08it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:01<00:05, 47.36it/s][A
+Test Push Object::  26%|██▋       | 95/360 [00:02<00:05, 47.02it/s][A
+Test Push Object::  28%|██▊       | 100/360 [00:02<00:05, 47.31it/s][A
+Test Push Object::  29%|██▉       | 105/360 [00:02<00:05, 46.69it/s][A
+Test Push Object::  31%|███       | 110/360 [00:02<00:05, 47.10it/s][A
+Test Push Object::  32%|███▏      | 115/360 [00:02<00:05, 46.89it/s][A
+Test Push Object::  33%|███▎      | 120/360 [00:02<00:05, 46.51it/s][A
+Test Push Object::  35%|███▍      | 125/360 [00:02<00:05, 46.76it/s][A
+Test Push Object::  36%|███▌      | 130/360 [00:02<00:04, 46.69it/s][A
+Test Push Object::  38%|███▊      | 135/360 [00:02<00:04, 46.47it/s][A
+Test Push Object::  39%|███▉      | 140/360 [00:03<00:04, 46.53it/s][A
+Test Push Object::  40%|████      | 145/360 [00:03<00:04, 46.71it/s][A
+Test Push Object::  42%|████▏     | 150/360 [00:03<00:04, 46.47it/s][A
+Test Push Object::  43%|████▎     | 155/360 [00:03<00:04, 47.07it/s][A
+Test Push Object::  45%|████▍     | 161/360 [00:03<00:04, 48.53it/s][A
+Test Push Object::  46%|████▋     | 167/360 [00:03<00:03, 49.21it/s][A
+Test Push Object::  48%|████▊     | 173/360 [00:03<00:03, 49.94it/s][A
+Test Push Object::  50%|████▉     | 179/360 [00:03<00:03, 50.47it/s][A
+Test Push Object::  51%|█████▏    | 185/360 [00:03<00:03, 50.49it/s][A
+Test Push Object::  53%|█████▎    | 191/360 [00:04<00:03, 50.41it/s][A
+Test Push Object::  55%|█████▍    | 197/360 [00:04<00:03, 50.26it/s][A
+Test Push Object::  56%|█████▋    | 203/360 [00:04<00:03, 50.14it/s][A
+Test Push Object::  58%|█████▊    | 209/360 [00:04<00:02, 50.42it/s][A
+Test Push Object::  60%|█████▉    | 215/360 [00:04<00:02, 50.53it/s][A
+Test Push Object::  61%|██████▏   | 221/360 [00:04<00:02, 50.54it/s][A
+Test Push Object::  63%|██████▎   | 227/360 [00:04<00:02, 50.57it/s][A
+Test Push Object::  65%|██████▍   | 233/360 [00:04<00:02, 50.37it/s][A
+Test Push Object::  66%|██████▋   | 239/360 [00:04<00:02, 50.37it/s][A
+Test Push Object::  68%|██████▊   | 245/360 [00:05<00:02, 50.68it/s][A
+Test Push Object::  70%|██████▉   | 251/360 [00:05<00:02, 50.86it/s][A
+Test Push Object::  71%|███████▏  | 257/360 [00:05<00:02, 51.03it/s][A
+Test Push Object::  73%|███████▎  | 263/360 [00:05<00:01, 49.65it/s][A
+Test Push Object::  74%|███████▍  | 268/360 [00:05<00:01, 48.84it/s][A
+Test Push Object::  76%|███████▌  | 273/360 [00:05<00:01, 48.44it/s][A
+Test Push Object::  77%|███████▋  | 278/360 [00:05<00:01, 48.39it/s][A
+Test Push Object::  79%|███████▊  | 283/360 [00:05<00:01, 47.70it/s][A
+Test Push Object::  80%|████████  | 288/360 [00:05<00:01, 47.21it/s][A
+Test Push Object::  81%|████████▏ | 293/360 [00:06<00:01, 47.38it/s][A
+Test Push Object::  83%|████████▎ | 298/360 [00:06<00:01, 47.84it/s][A
+Test Push Object::  84%|████████▍ | 304/360 [00:06<00:01, 48.55it/s][A
+Test Push Object::  86%|████████▌ | 310/360 [00:06<00:01, 49.20it/s][A
+Test Push Object::  88%|████████▊ | 315/360 [00:06<00:00, 49.31it/s][A
+Test Push Object::  89%|████████▉ | 321/360 [00:06<00:00, 50.29it/s][A
+Test Push Object::  91%|█████████ | 327/360 [00:06<00:00, 50.42it/s][A
+Test Push Object::  92%|█████████▎| 333/360 [00:06<00:00, 50.60it/s][A
+Test Push Object::  94%|█████████▍| 339/360 [00:07<00:00, 50.79it/s][A
+Test Push Object::  96%|█████████▌| 345/360 [00:07<00:00, 50.54it/s][A
+Test Push Object::  98%|█████████▊| 351/360 [00:07<00:00, 49.90it/s][A
+Test Push Object::  99%|█████████▉| 356/360 [00:07<00:00, 48.74it/s][ATest Push Object:: 100%|██████████| 360/360 [00:07<00:00, 48.37it/s]
+2026-09-30 09:49:53.349 | INFO     | __main__:stability_tester:143 - Success rate of [Timberland_Mens_Earthkeepers_Stormbuck_Lite_Plain_Toe_Oxford]: 19 / 32
+ 94%|█████████▍| 30/32 [06:24<00:25, 12.97s/it]2026-09-30 09:49:53.516 | INFO     | __main__:stability_tester:113 - Stability test for [W_Lou_z0dkC78niiZ]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/Timberland_Mens_Earthkeepers_Stormbuck_Lite_Plain_Toe_Oxford.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 32
+Simulator: creating agents
+
+  0%|          | 0/32 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/32 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+
+Enumerating envs::   3%|▎         | 1/32 [00:00<00:04,  6.90it/s][AEnumerating envs:: 100%|██████████| 32/32 [00:00<00:00, 212.87it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   2%|▏         | 6/360 [00:00<00:06, 52.23it/s][A
+Test Push Object::   3%|▎         | 12/360 [00:00<00:06, 52.86it/s][A
+Test Push Object::   5%|▌         | 18/360 [00:00<00:06, 54.38it/s][A
+Test Push Object::   7%|▋         | 24/360 [00:00<00:06, 54.75it/s][A
+Test Push Object::   8%|▊         | 30/360 [00:00<00:05, 55.60it/s][A
+Test Push Object::  10%|█         | 36/360 [00:00<00:05, 55.51it/s][A
+Test Push Object::  12%|█▏        | 42/360 [00:00<00:05, 55.47it/s][A
+Test Push Object::  13%|█▎        | 48/360 [00:00<00:05, 54.86it/s][A
+Test Push Object::  15%|█▌        | 54/360 [00:00<00:05, 54.17it/s][A
+Test Push Object::  17%|█▋        | 60/360 [00:01<00:05, 53.96it/s][A
+Test Push Object::  18%|█▊        | 66/360 [00:01<00:05, 53.68it/s][A
+Test Push Object::  20%|██        | 72/360 [00:01<00:05, 53.55it/s][A
+Test Push Object::  22%|██▏       | 78/360 [00:01<00:05, 54.05it/s][A
+Test Push Object::  23%|██▎       | 84/360 [00:01<00:05, 54.60it/s][A
+Test Push Object::  25%|██▌       | 90/360 [00:01<00:04, 55.09it/s][A
+Test Push Object::  27%|██▋       | 96/360 [00:01<00:04, 55.27it/s][A
+Test Push Object::  28%|██▊       | 102/360 [00:01<00:04, 55.00it/s][A
+Test Push Object::  30%|███       | 108/360 [00:01<00:04, 54.94it/s][A
+Test Push Object::  32%|███▏      | 114/360 [00:02<00:04, 54.46it/s][A
+Test Push Object::  33%|███▎      | 120/360 [00:02<00:04, 54.78it/s][A
+Test Push Object::  35%|███▌      | 126/360 [00:02<00:04, 55.26it/s][A
+Test Push Object::  37%|███▋      | 132/360 [00:02<00:04, 54.86it/s][A
+Test Push Object::  38%|███▊      | 138/360 [00:02<00:04, 54.76it/s][A
+Test Push Object::  40%|████      | 144/360 [00:02<00:03, 54.46it/s][A
+Test Push Object::  42%|████▏     | 150/360 [00:02<00:03, 55.10it/s][A
+Test Push Object::  43%|████▎     | 156/360 [00:02<00:03, 55.13it/s][A
+Test Push Object::  45%|████▌     | 162/360 [00:02<00:03, 55.34it/s][A
+Test Push Object::  47%|████▋     | 168/360 [00:03<00:03, 55.50it/s][A
+Test Push Object::  48%|████▊     | 174/360 [00:03<00:03, 54.79it/s][A
+Test Push Object::  50%|█████     | 180/360 [00:03<00:03, 54.54it/s][A
+Test Push Object::  52%|█████▏    | 186/360 [00:03<00:03, 54.97it/s][A
+Test Push Object::  53%|█████▎    | 192/360 [00:03<00:02, 56.05it/s][A
+Test Push Object::  55%|█████▌    | 198/360 [00:03<00:02, 55.32it/s][A
+Test Push Object::  57%|█████▋    | 204/360 [00:03<00:02, 54.90it/s][A
+Test Push Object::  58%|█████▊    | 210/360 [00:03<00:02, 55.15it/s][A
+Test Push Object::  60%|██████    | 216/360 [00:03<00:02, 54.49it/s][A
+Test Push Object::  62%|██████▏   | 222/360 [00:04<00:02, 55.05it/s][A
+Test Push Object::  63%|██████▎   | 228/360 [00:04<00:02, 55.07it/s][A
+Test Push Object::  65%|██████▌   | 234/360 [00:04<00:02, 55.98it/s][A
+Test Push Object::  67%|██████▋   | 240/360 [00:04<00:02, 56.36it/s][A
+Test Push Object::  68%|██████▊   | 246/360 [00:04<00:01, 57.05it/s][A
+Test Push Object::  70%|███████   | 253/360 [00:04<00:01, 58.18it/s][A
+Test Push Object::  72%|███████▏  | 260/360 [00:04<00:01, 58.71it/s][A
+Test Push Object::  74%|███████▍  | 266/360 [00:04<00:01, 59.03it/s][A
+Test Push Object::  76%|███████▌  | 272/360 [00:04<00:01, 59.24it/s][A
+Test Push Object::  78%|███████▊  | 279/360 [00:05<00:01, 59.58it/s][A
+Test Push Object::  79%|███████▉  | 285/360 [00:05<00:01, 58.72it/s][A
+Test Push Object::  81%|████████  | 291/360 [00:05<00:01, 58.32it/s][A
+Test Push Object::  82%|████████▎ | 297/360 [00:05<00:01, 57.56it/s][A
+Test Push Object::  84%|████████▍ | 303/360 [00:05<00:01, 56.64it/s][A
+Test Push Object::  86%|████████▌ | 309/360 [00:05<00:00, 56.08it/s][A
+Test Push Object::  88%|████████▊ | 315/360 [00:05<00:00, 57.05it/s][A
+Test Push Object::  89%|████████▉ | 321/360 [00:05<00:00, 57.46it/s][A
+Test Push Object::  91%|█████████ | 327/360 [00:05<00:00, 57.72it/s][A
+Test Push Object::  92%|█████████▎| 333/360 [00:05<00:00, 57.69it/s][A
+Test Push Object::  94%|█████████▍| 339/360 [00:06<00:00, 57.66it/s][A
+Test Push Object::  96%|█████████▌| 345/360 [00:06<00:00, 57.43it/s][A
+Test Push Object::  98%|█████████▊| 351/360 [00:06<00:00, 57.22it/s][A
+Test Push Object::  99%|█████████▉| 357/360 [00:06<00:00, 56.54it/s][ATest Push Object:: 100%|██████████| 360/360 [00:06<00:00, 55.86it/s]
+2026-09-30 09:50:05.134 | INFO     | __main__:stability_tester:143 - Success rate of [W_Lou_z0dkC78niiZ]: 15 / 32
+ 97%|█████████▋| 31/32 [06:36<00:12, 12.62s/it]2026-09-30 09:50:05.303 | INFO     | __main__:stability_tester:113 - Stability test for [YumYum_D3_Liquid]
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/W_Lou_z0dkC78niiZ.obj'
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Simulator: number of objects 1
+Simulator: number of environments 31
+Simulator: creating agents
+
+  0%|          | 0/31 [00:00<?, ?it/s][A
+Enumerating envs::   0%|          | 0/31 [00:00<?, ?it/s][A
+
+  0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Loading assets::   0%|          | 0/1 [00:00<?, ?it/s][A[ALoading assets::   0%|          | 0/1 [00:00<?, ?it/s]
+Enumerating envs:: 100%|██████████| 31/31 [00:00<00:00, 322.96it/s]
+
+Test Push Object::   0%|          | 0/360 [00:00<?, ?it/s][A
+Test Push Object::   2%|▏         | 6/360 [00:00<00:06, 56.46it/s][A
+Test Push Object::   3%|▎         | 12/360 [00:00<00:06, 56.82it/s][A
+Test Push Object::   5%|▌         | 18/360 [00:00<00:06, 56.93it/s][A
+Test Push Object::   7%|▋         | 25/360 [00:00<00:05, 58.20it/s][A
+Test Push Object::   9%|▊         | 31/360 [00:00<00:05, 58.43it/s][A
+Test Push Object::  10%|█         | 37/360 [00:00<00:05, 58.84it/s][A
+Test Push Object::  12%|█▏        | 44/360 [00:00<00:05, 59.34it/s][A
+Test Push Object::  14%|█▍        | 50/360 [00:00<00:05, 58.74it/s][A
+Test Push Object::  16%|█▌        | 56/360 [00:00<00:05, 59.10it/s][A
+Test Push Object::  17%|█▋        | 62/360 [00:01<00:05, 58.79it/s][A
+Test Push Object::  19%|█▉        | 68/360 [00:01<00:04, 58.69it/s][A
+Test Push Object::  21%|██        | 74/360 [00:01<00:04, 58.60it/s][A
+Test Push Object::  22%|██▏       | 80/360 [00:01<00:04, 58.60it/s][A
+Test Push Object::  24%|██▍       | 86/360 [00:01<00:04, 58.79it/s][A
+Test Push Object::  26%|██▌       | 92/360 [00:01<00:04, 58.52it/s][A
+Test Push Object::  27%|██▋       | 98/360 [00:01<00:04, 58.50it/s][A
+Test Push Object::  29%|██▉       | 105/360 [00:01<00:04, 59.17it/s][A
+Test Push Object::  31%|███       | 112/360 [00:01<00:04, 59.62it/s][A
+Test Push Object::  33%|███▎      | 118/360 [00:02<00:04, 59.50it/s][A
+Test Push Object::  35%|███▍      | 125/360 [00:02<00:03, 59.71it/s][A
+Test Push Object::  37%|███▋      | 132/360 [00:02<00:03, 59.98it/s][A
+Test Push Object::  39%|███▊      | 139/360 [00:02<00:03, 60.09it/s][A
+Test Push Object::  41%|████      | 146/360 [00:02<00:03, 60.23it/s][A
+Test Push Object::  42%|████▎     | 153/360 [00:02<00:03, 60.44it/s][A
+Test Push Object::  44%|████▍     | 160/360 [00:02<00:03, 60.45it/s][A
+Test Push Object::  46%|████▋     | 167/360 [00:02<00:03, 60.57it/s][A
+Test Push Object::  48%|████▊     | 174/360 [00:02<00:03, 60.55it/s][A
+Test Push Object::  50%|█████     | 181/360 [00:03<00:02, 60.38it/s][A
+Test Push Object::  52%|█████▏    | 188/360 [00:03<00:02, 60.50it/s][A
+Test Push Object::  54%|█████▍    | 195/360 [00:03<00:02, 60.35it/s][A
+Test Push Object::  56%|█████▌    | 202/360 [00:03<00:02, 60.28it/s][A
+Test Push Object::  58%|█████▊    | 209/360 [00:03<00:02, 60.07it/s][A
+Test Push Object::  60%|██████    | 216/360 [00:03<00:02, 60.04it/s][A
+Test Push Object::  62%|██████▏   | 223/360 [00:03<00:02, 60.07it/s][A
+Test Push Object::  64%|██████▍   | 230/360 [00:03<00:02, 60.27it/s][A
+Test Push Object::  66%|██████▌   | 237/360 [00:03<00:02, 60.31it/s][A
+Test Push Object::  68%|██████▊   | 244/360 [00:04<00:01, 60.35it/s][A
+Test Push Object::  70%|██████▉   | 251/360 [00:04<00:01, 60.40it/s][A
+Test Push Object::  72%|███████▏  | 258/360 [00:04<00:01, 60.51it/s][A
+Test Push Object::  74%|███████▎  | 265/360 [00:04<00:01, 60.60it/s][A
+Test Push Object::  76%|███████▌  | 272/360 [00:04<00:01, 60.70it/s][A
+Test Push Object::  78%|███████▊  | 279/360 [00:04<00:01, 60.60it/s][A
+Test Push Object::  79%|███████▉  | 286/360 [00:04<00:01, 60.72it/s][A
+Test Push Object::  81%|████████▏ | 293/360 [00:04<00:01, 60.36it/s][A
+Test Push Object::  83%|████████▎ | 300/360 [00:05<00:00, 60.42it/s][A
+Test Push Object::  85%|████████▌ | 307/360 [00:05<00:00, 60.28it/s][A
+Test Push Object::  87%|████████▋ | 314/360 [00:05<00:00, 59.12it/s][A
+Test Push Object::  89%|████████▉ | 320/360 [00:05<00:00, 59.00it/s][A
+Test Push Object::  91%|█████████ | 326/360 [00:05<00:00, 58.60it/s][A
+Test Push Object::  92%|█████████▏| 332/360 [00:05<00:00, 58.68it/s][A
+Test Push Object::  94%|█████████▍| 338/360 [00:05<00:00, 59.00it/s][A
+Test Push Object::  96%|█████████▌| 344/360 [00:05<00:00, 58.66it/s][A
+Test Push Object::  97%|█████████▋| 350/360 [00:05<00:00, 58.64it/s][A
+Test Push Object::  99%|█████████▉| 356/360 [00:05<00:00, 58.79it/s][ATest Push Object:: 100%|██████████| 360/360 [00:06<00:00, 59.56it/s]
+2026-09-30 09:50:16.283 | INFO     | __main__:stability_tester:143 - Success rate of [YumYum_D3_Liquid]: 25 / 31
+100%|██████████| 32/32 [06:47<00:00, 12.18s/it]100%|██████████| 32/32 [06:47<00:00, 12.73s/it]
+2026-09-30 09:50:16.450 | INFO     | __main__:stability_tester:152 - **Success Rate** across all objects: 581 / 1016, succ rate: 0.5718503937007874
+2026-09-30 09:50:16.450 | INFO     | __main__:stability_tester:153 - **GWH_IOU** across all objects: 0.17869870364665985
+2026-09-30 09:50:16.450 | INFO     | __main__:stability_tester:154 - **STD** across all objects: 0.3066190481185913
+2026-09-30 09:50:16.450 | INFO     | __main__:main:173 - End evaluating..
+Found existing convex decomposition for mesh './data/mgg_pc/objects/obj_density/YumYum_D3_Liquid.obj'
